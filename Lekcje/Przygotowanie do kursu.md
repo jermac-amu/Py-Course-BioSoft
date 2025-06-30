@@ -2,26 +2,34 @@
 
 Cześć!
 
-Zanim zaczniesz programować, musisz najpierw zainstalować wszystkie niezbędne narzędzia.
+Python to jeden z najbardziej popularnych języków programowania na świecie.
+<br/>Nadaje się on do różnorodnych zastosowań, choć jako interpretowany język wysokiego poziomu do pewnego stopnia priorytetyzuje wygodę oraz prędkość pisania kodu ponad wydajność programów.
+
+> Dodatek - [Języki interpretowane vs kompilowane](./Assets/przygotowanie/Bonus.md#języki-interpretowane-vs-kompilowane)
+
+<br/>Zanim zaczniesz programować, musisz najpierw zainstalować wszystkie niezbędne narzędzia.
 Przede wszystkim potrzebujesz interpretera języka Python, aby uruchomić swój kod.
+> Jeśli jesteś ciekaw, co to interpreter, zajrzyj pod link powyżej.
 
 Dodatkowo, aby napisać jakikolwiek bardziej złożony program, potrzebny ci będzie dowolny edytor tekstu lub IDE
 (*Integrated Development Environment*, czyli program, który zawiera w sobie wszystkie podstawowe narzędzia potrzebne programiście).
 
-Poniżej znajdziesz instrukcje instalacji oraz podstaw użytkowania Pythona w środowisku (IDE) Pycharm, lub bez niego, z dowolnym edytorem tekstu.
-Jeśli nie masz żadnego doświadczenia z programowaniem i nie wiesz, czy używać IDE, czy nie, to najpierw spróbuj z nim - będzie ci łatwiej na początku.
+Poniżej znajdziesz instrukcje instalacji oraz podstaw użytkowania Pythona w środowisku (IDE) Pycharm lub bez niego.
+<br/>Jeśli nie masz żadnego doświadczenia z programowaniem i nie wiesz, czy używać IDE, czy nie, to najpierw spróbuj z nim - będzie ci łatwiej na początku.
+
+**Jeśli masz już zainstalowanego Pythona i własny zestaw narzędzi do edycji kodu - możesz pominąć tę lekcję.**
 
 Zwróć uwagę, że wszystkie te programy, włącznie z samym Pythonem są wciąż rozwijane, więc pewne rzeczy mogły się zmienić od kiedy napisałem te instrukcje.
-<br>
+<br/>
 ## Spis treści
 - [Instalacja interpretera Python](#instalacja-interpretera-python)
-- [Używanie Pythona w środowisku Pycharm](#używanie-pythona-w-środowisku-pycharm)
-- [Używanie Pythona z edytorem tekstu](#używanie-pythona-z-edytorem-tekstu)
-<br><br>
+- [Praca w środowisku Pycharm](#praca-w-środowisku-pycharm)
+- [Praca z Pythonem bez IDE](#praca-z-pythonem-bez-ide)
+<br/><br/>
 ## Instalacja interpretera Python
 Oficjalna strona z paczkami instalacyjnymi: https://www.python.org/downloads/
-<br>Opisuję tu instalację w systemie Windows. Jeśli korzystasz z innego systemu, skorzystaj ze strony powyżej lub sklepu/menedżera pakietów wbudowanego w twój system (np. apt w Linuxach z rodziny Debian)
-<br>
+<br/>Opisuję tu instalację w systemie Windows. Jeśli korzystasz z innego systemu, skorzystaj ze strony powyżej lub sklepu/menedżera pakietów wbudowanego w twój system (np. apt w Linuxach z rodziny Debian)
+<br/>
 ### Z Microsoft Store
 Możesz pobrać interpreter z Microsoft Store. Uruchom sklep lub wejdź na jego stronę, wyszukaj "Python" i wybierz dowolną (ale lepiej jedną z najnowszych) wersję.
 Pythona 3.12, którego ja obecnie używam, znajdziesz pod adresem https://apps.microsoft.com/detail/9ncvdn91xzqp?hl=pl-PL&gl=PL .
@@ -30,48 +38,75 @@ Pythona 3.12, którego ja obecnie używam, znajdziesz pod adresem https://apps.m
 
 Następnie kliknij po prostu "Pobierz". Jeśli jesteś w przeglądarce, musisz jeszcze uruchomić pobrany plik.
 W każdym razie system Windows przeprowadzi resztę instalacji automatycznie.
-<br><br>
+<br/><br/>
 ### Ręcznie
 Jeśli wolisz przeprowadzić instalację ręcznie, wejdź na oficjalną stronę z paczkami do pobrania (link u góry tej sekcji).
-<br>Kliknij żółty przycisk pod napisem "Download the latest source release" aby pobrać najnowszą wersję.
-<br>Inne wersje są dostępne poniżej, ale możliwe, że będziesz się musiał/a trochę naszukać żeby znaleźć tam instalator.
+<br/>Kliknij żółty przycisk pod napisem "Download the latest source release" aby pobrać najnowszą wersję.
+<br/>Inne wersje są dostępne poniżej, ale możliwe, że będziesz się musiał/a trochę naszukać żeby znaleźć tam instalator.
 
 Uruchom pobrany plik - powinno się otworzyć okno instalatora.
 Upewnij się, że okienko "Add python.exe to PATH" jest zaznaczone, a następnie wybierz "Customize installation".
 
 *![Tu powinien być obraz, ale coś poszło nie tak...](./Assets/przygotowanie/Python_install1.png)*
 
-<br>W kolejnym oknie po prostu kiliknij "Next".
+<br/>W kolejnym oknie po prostu kiliknij "Next".
 
 *![Tu powinien być obraz, ale coś poszło nie tak...](./Assets/przygotowanie/Python_install2.png)*
 
-<br>W tym oknie zaznacz opcje:<br>
+<br/>W tym oknie zaznacz opcje:<br/>
 - "Associate files with Python (requires the 'py' launcher)"
 - "Create shortcuts for installed applications"
 - "Add Python to environment variables"
 - "Precompile standard library"
 
 W okienku na dole możesz wybrać miejsce instalacji.
-<br>Kliknij teraz "Install", aby rozpocząć instalację.
+<br/>Kliknij teraz "Install", aby rozpocząć instalację.
 
 *![Tu powinien być obraz, ale coś poszło nie tak...](./Assets/przygotowanie/Python_install3.png)*
 
 Po zakończeniu instalacji możesz już zamknąć okno.
-<br><br>
-## Używanie Pythona w środowisku Pycharm
+<br/><br/>
+## Praca w środowisku Pycharm
 IDE takie jak Pycharm to najwygodniejsza opcja jeśli chodzi o narzędzia do tworzenia kodu, oferująca wiele ułatwień.
-<br>Poza Pycharmem istnieją też inne opcje, które możesz wypróbować (jeśli instalowałeś/aś Pythona w systemie Windows, prawdopodobnie masz już też dołączone do niego, minimalistyczne środowisko IDLE).
+<br/>Poza Pycharmem istnieją też inne opcje, które możesz wypróbować (jeśli instalowałeś/aś Pythona w systemie Windows, prawdopodobnie masz już też dołączone do niego, minimalistyczne środowisko IDLE).
 
 ### Instalacja
 Ponownie, opisuję instalację na systemie Windows, ale z tej samej strony możesz również pobrać Pycharm na inne systemy.
-<br><br>
+<br/><br/>
 Wejdź na stronę https://www.jetbrains.com/pycharm/download/ i kliknij na przycisk "Download" (ten poniżej, nie w nagłówku strony).
-<br>Uruchom pobrany plik instalatora. Prawdopodobnie będziesz musiał/a zezwolić na użycie uprawnień administratora.
-<br>W pierwszym oknie kliknij "Next", następnie wybierz miejsce instalacji, "Next" i zaznacz wszystkie opcje (może poza "Create Dektop Shortcut", jeśli nie chcesz skrótu na pulpicie)
+<br/>Uruchom pobrany plik instalatora. Prawdopodobnie będziesz musiał/a zezwolić na użycie uprawnień administratora.
+<br/>W pierwszym oknie kliknij "Next", następnie wybierz miejsce instalacji, "Next" i zaznacz wszystkie opcje (może poza "Create Dektop Shortcut", jeśli nie chcesz skrótu na pulpicie)
 
 *![Tu powinien być obraz, ale coś poszło nie tak...](./Assets/przygotowanie/Pycharm_install.png)*
 
 "Next", folder Start Menu możesz zostawić domyślny. No i na koniec "Install".
-<br>
-Po zakończeniu instalacji konieczny będzie restart komputera. Upewnij się, że masz wszystko zapisane, zaznacz "Reboot now" i kliknij "Finish".
-<br>Twój komputer zostanie zrestartowany, po czym będziesz już mógł/mogła uruchomić Pycharm.
+<br/>
+<br/>Po zakończeniu instalacji konieczny będzie restart komputera.
+<br/>Upewnij się, że masz wszystko zapisane, zaznacz "Reboot now" i kliknij "Finish".
+<br/>
+<br/>Twój komputer zostanie zrestartowany, po czym będziesz już mógł/mogła uruchomić Pycharm.
+<br/><br/>
+### Używanie
+> Uwaga: przedstawiam tu tylko kilka podstawowych funkcji, które oferuje środowisko Pycharm. Ja sam nie używam go na co dzień, więc nie znam wielu z jego funkcji.
+<br/>
+Przy pierwszym uruchomieniu, Pycharm zapewne zapyta się o wersję "pro". Po prostu zamknij okno, które wyskoczy lub wybierz, że zostajesz przy darmowej wersji i pozwól mu zrestartować program w wersji darmowej.
+<br/>
+<br/>Zobaczysz zapewne (mniej więcej) taki ekran startowy:
+
+*![Tu powinien być obraz, ale coś poszło nie tak...](./Assets/przygotowanie/Pycharm_main.png)*
+
+Wybierz "New project".
+<br/>Otworzy się okno tworzenia nowego projektu.
+<br/>W pasku u góry możesz wybrać lokalizację, w której będą przechowywane pliki tego projektu (albo po prostu zostaw domyślną).
+<br/>Upewnij się, że w panelu po lewej wybrana jest opcja "Pure Python", a następnie w opcji "Interpreter type" zaznacz "Custom environment".
+<br/><br/>W menu, które się pojawi, zaznacz:
+<br/>**Environment:** Select existing
+<br/>**Type:** Python
+
+<br/>Następnie kliknij "Create".
+
+*![Tu powinien być obraz, ale coś poszło nie tak...](./Assets/przygotowanie/Pycharm_new_project.png)*
+
+> To nieco bardziej zaawansowana kwestia, ale jeśli jesteś ciekaw/a, to wyjaśniam, co właśnie zrobiliśmy [tutaj](./Assets/przygotowanie/Bonus.md#środowiska_wirtualne).
+
+Otworzy się pusty projekt.
