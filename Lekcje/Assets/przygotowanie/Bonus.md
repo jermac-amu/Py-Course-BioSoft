@@ -45,14 +45,14 @@ ${\color{forestgreen} \textbf{Języki interpretowane}}$ - nowszy i popularny ze 
 ## Środowiska wirtualne
 ### [🠉](#spis-treści)
 Masz już zainstalowanego "czystego" Pythona, ale czasem do stworzenia projektów potrzebne są różne modyfikacje i dodatkowe narzędzia.
-<br/>Programiści nie zawsze chcą takie zasoby instalować bezpośrednio w swoim "głównym" Pythonie, dlatego z tzw. **środowisk wirtualnych**. (*virtual environment*)
+<br/>Programiści nie zawsze chcą takie zasoby instalować bezpośrednio w swoim "głównym" Pythonie, dlatego korzystają z tzw. **środowisk wirtualnych**. (*virtual environment*)
 <br/>Są to odizolowane "paczki", zawierające kopię (lub nawet inną wersję) interpretera oraz wybrane dodatkowe narzędzia czy biblioteki.
 
 Środowisko wirtualne można aktywować, dzięki czemu programy, które uruchamiamy, korzystają ze znajdujących się w nim narzędzi.
 <br/>Kiedy potrzebujemy innego zestawu narzędzi - możemy dezaktywować środowisko i aktywować inne.
 
-Własne środwisko wirtualne można stworzyć z pomocą samego Pythona, lub też specjalnych narzędzi, takich jak np. conda - ale nie będę się wdawał w szczegóły w tym kursie.
+Własne środwisko wirtualne można stworzyć z pomocą samego Pythona, lub też specjalnych narzędzi, takich jak np. conda - ale nie będę wdawał się w szczegóły w tym kursie.
 
 ${\color{green} \textbf{Jeśli chodzi o Pycharm:}}$
 <br/>Pycharm domyślnie proponuje tworzenie oddzielnego środowiska wirtualnego dla każdego nowego projektu, który tworzysz.
-<br/>Jako, że na razie nie będziesz korzystać z żadnych dodatkowych narzędzi, w trakcie lekcji "Przygotowanie do kursu" skonfigurowaliśmy twój pierwszy projekt, żeby zamiast tego korzystał z 
+<br/>Jako, że na razie nie będziesz korzystać z żadnych dodatkowych narzędzi, w trakcie lekcji "Przygotowanie do kursu" skonfigurowaliśmy twój pierwszy projekt tak, żeby zamiast tego korzystał z istniejącej podstawowej instalacji interpretera.
