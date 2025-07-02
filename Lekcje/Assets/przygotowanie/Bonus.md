@@ -8,6 +8,7 @@
 <br/>
 
 ## Języki interpretowane vs kompilowane
+### [🠉](#spis-treści)
 Jak być może słyszałeś/aś, komputer "rozumie" tylko informacje w postaci kodu binarnego.
 <br/>Jeśli natomiast kiedykolwiek widziałeś/aś jak wygląda zdanie zapisane w nim, to zapewne wiesz też, że z kolei ludzie nie za bardzo umieją czytać kod binarny.
 <br/>To oczywiście problem, ponieważ jako programiści chcemy "porozumieć się" z komputerem.
@@ -42,6 +43,7 @@ ${\color{forestgreen} \textbf{Języki interpretowane}}$ - nowszy i popularny ze 
 <br/>
 
 ## Środowiska wirtualne
+### [🠉](#spis-treści)
 Masz już zainstalowanego "czystego" Pythona, ale czasem do stworzenia projektów potrzebne są różne modyfikacje i dodatkowe narzędzia.
 <br/>Programiści nie zawsze chcą takie zasoby instalować bezpośrednio w swoim "głównym" Pythonie, dlatego z tzw. **środowisk wirtualnych**. (*virtual environment*)
 <br/>Są to odizolowane "paczki", zawierające kopię (lub nawet inną wersję) interpretera oraz wybrane dodatkowe narzędzia czy biblioteki.
