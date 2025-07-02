@@ -27,6 +27,7 @@ Zwróć uwagę, że wszystkie te programy, włącznie z samym Pythonem są wcią
 - [Praca z Pythonem bez IDE](#praca-z-pythonem-bez-ide)
 <br/><br/>
 ## Instalacja interpretera Python
+### [🠉](#spis-treści)
 Oficjalna strona z paczkami instalacyjnymi: https://www.python.org/downloads/
 <br/>Opisuję tu instalację w systemie Windows. Jeśli korzystasz z innego systemu, skorzystaj ze strony powyżej lub sklepu/menedżera pakietów wbudowanego w twój system (np. apt w Linuxach z rodziny Debian)
 <br/>
@@ -67,6 +68,7 @@ W okienku na dole możesz wybrać miejsce instalacji.
 Po zakończeniu instalacji możesz już zamknąć okno.
 <br/><br/>
 ## Praca w środowisku Pycharm
+### [🠉](#spis-treści)
 IDE takie jak Pycharm to najwygodniejsza opcja jeśli chodzi o narzędzia do tworzenia kodu, oferująca wiele ułatwień.
 <br/>Poza Pycharmem istnieją też inne opcje, które możesz wypróbować (jeśli instalowałeś/aś Pythona w systemie Windows, prawdopodobnie masz już też dołączone do niego, minimalistyczne środowisko IDLE).
 
