@@ -19,7 +19,7 @@ Poniżej znajdziesz instrukcje instalacji oraz podstaw użytkowania Pythona w ś
 
 **Jeśli masz już zainstalowanego Pythona i własny zestaw narzędzi do edycji kodu - możesz pominąć tę lekcję.**
 
-Zwróć uwagę, że wszystkie te programy, włącznie z samym Pythonem są wciąż rozwijane, więc pewne rzeczy mogły się zmienić od kiedy napisałem te instrukcje.
+Zwróć uwagę, że wszystkie te programy, włącznie z samym Pythonem, są wciąż rozwijane, więc pewne rzeczy mogły się zmienić od kiedy napisałem ten kurs.
 <br/>
 ## Spis treści
 - [Instalacja interpretera Python](#instalacja-interpretera-python)
@@ -33,12 +33,12 @@ Oficjalna strona z paczkami instalacyjnymi: https://www.python.org/downloads/
 <br/>
 ### Z Microsoft Store
 Możesz pobrać interpreter z Microsoft Store. Uruchom sklep lub wejdź na jego stronę, wyszukaj "Python" i wybierz dowolną (ale lepiej jedną z najnowszych) wersję.
-Pythona 3.12, którego ja obecnie używam, znajdziesz pod adresem https://apps.microsoft.com/detail/9ncvdn91xzqp?hl=pl-PL&gl=PL .
+<br/>Pythona 3.12, którego ja obecnie używam, znajdziesz pod adresem https://apps.microsoft.com/detail/9ncvdn91xzqp?hl=pl-PL&gl=PL .
 
 *![Tu powinien być obraz, ale coś poszło nie tak...](./Assets/przygotowanie/Store_python.png)*
 
 Następnie kliknij po prostu "Pobierz". Jeśli jesteś w przeglądarce, musisz jeszcze uruchomić pobrany plik.
-W każdym razie system Windows przeprowadzi resztę instalacji automatycznie.
+<br/>W każdym razie system Windows przeprowadzi resztę instalacji automatycznie.
 <br/><br/>
 ### Ręcznie
 Jeśli wolisz przeprowadzić instalację ręcznie, wejdź na oficjalną stronę z paczkami do pobrania (link u góry tej sekcji).
@@ -46,7 +46,7 @@ Jeśli wolisz przeprowadzić instalację ręcznie, wejdź na oficjalną stronę 
 <br/>Inne wersje są dostępne poniżej, ale możliwe, że będziesz się musiał/a trochę naszukać żeby znaleźć tam instalator.
 
 Uruchom pobrany plik - powinno się otworzyć okno instalatora.
-Upewnij się, że okienko "Add python.exe to PATH" jest zaznaczone, a następnie wybierz "Customize installation".
+<br/>Upewnij się, że okienko "Add python.exe to PATH" jest zaznaczone, a następnie wybierz "Customize installation".
 
 *![Tu powinien być obraz, ale coś poszło nie tak...](./Assets/przygotowanie/Python_install1.png)*
 
@@ -95,7 +95,7 @@ Przy pierwszym uruchomieniu, Pycharm zapewne zapyta się o wersję "pro". Po pro
 <br/>
 <br/>Zobaczysz zapewne (mniej więcej) taki ekran startowy:
 
-*![Tu powinien być obraz, ale coś poszło nie tak...](./Assets/przygotowanie/Pycharm_main.png)*
+<br/>*![Tu powinien być obraz, ale coś poszło nie tak...](./Assets/przygotowanie/Pycharm_main.png)*
 
 Wybierz "New project".
 <br/>Otworzy się okno tworzenia nowego projektu.
@@ -137,7 +137,7 @@ W okienku, które wyskoczy, wpisz nazwę swojego pierwszego programu - zgodnie z
 
 > '.py' jest rozszerzeniem nazwy pliku, które informuje użytkownika oraz system, że plik zawiera kod napisany w języku Python.
 
-Stworzyłeś/aś właśnie swój pierwszy plik z kodem. W panelu z drzewem plików powinien być tera widoczny plik z wybraną nazwą i symbolem Pythona (jeśli go nie widzisz, kliknij na folder prejktu, aby otworzyć jego zawartość).
+Stworzyłeś/aś właśnie swój pierwszy plik z kodem. W panelu z drzewem plików powinien być teraz widoczny plik z wybraną nazwą i symbolem Pythona (jeśli go nie widzisz, kliknij na folder prejktu, aby otworzyć jego zawartość).
 <br/>Natomiast w panelu po prawej otwarło się teraz okno edycji pliku.
 
 *![Tu powinien być obraz, ale coś poszło nie tak...](./Assets/przygotowanie/Pycharm_hello.png)*
@@ -153,17 +153,17 @@ Kiedy skończysz, kliknij na zielony trójkąt ponad panelem edycji pliku, aby u
 
 *![Tu powinien być obraz, ale coś poszło nie tak...](./Assets/przygotowanie/Pycharm_hello_results.png)*
 
-Przeanalizujmy teraz dokładniej co zawierają:
+Przeanalizujmy dokładniej, co zawierają:
 
 *![Tu powinien być obraz, ale coś poszło nie tak...](./Assets/przygotowanie/Pycharm_hello_results_detailed.png)*
 
-Dwa napisy zaznaczone na niebiesko to polecenie, które Pycharm wykonał w powłoce systemowej (terminalu), aby uruchomić twój program.
+Dwa napisy zaznaczone na ${\color{blue} \textbf{niebiesko}}$ to polecenie, które Pycharm wykonał w powłoce systemowej (terminalu), aby uruchomić twój program.
 <br/>Odpowiadają one lokalizacji dwóch programów, które zostały uruchomione - pierwszego, interpretera Pythona, oraz drugiego, twojego (uruchomionego już *przez* Pythona).
 
-Napis w zielonej ramce to informacja, którą wypisał twój program - to właśnie robi polecenie `print()`, którego użyliśmy.
+Napis w ${\color{green} \textbf{zielonej}}$ ramce to informacja, którą wypisał twój program - to właśnie robi polecenie `print()`, którego użyliśmy.
 <br/>Spróbuj zmienić napis w cudysłowiu wewnątrz tego polecenia i uruchom program ponownie, a zobaczysz, że napis w wynikach również się zmieni.
 
-Napis zaznaczony na pomarańczowo to informacja o zakończeniu działania programu. W tym wypadku program zakończył działanie i automatycznie wysłał do systemu informację zwrotną w postaci liczby 0 - tak właśnie powinno być.
+Napis zaznaczony na ${\color{orange} \textbf{pomarańczowo}}$ to informacja o zakończeniu działania programu. W tym wypadku program zakończył działanie i automatycznie wysłał do systemu informację zwrotną w postaci liczby 0 - tak właśnie powinno być.
 
 > Co prawda liczba, którą zwraca program może być zmieniona wedle woli programisty, ale przyjęło się, że liczba 0 oznacza pomyślne zakończenie działania programu, natomiast każda inna oznacza, że program zakończył działanie w wyniku jakiegoś błędu.
 
@@ -182,3 +182,94 @@ Po kolei od góry do dołu:
 - ${\color{cyan} \textbf{Terminal}}$ - tudzież powłoka systemowa - to poprzez nią tak naprawdę odbywa się uruchomienie twojego programu. Jeśli przekopiujesz tutaj linijkę, którą zaznaczyłem na niebiesko w wynikach Hello.py, uruchomisz go "ręcznie", bez pośrednictwa Pycharma.
 - ${\color{red} \textbf{Błędy}}$ - znajdziesz tu listę błędów w kodzie, które automatycznie wykryło IDE.
 - ${\color{plum} \textbf{Kontrola wersji}}$ - służy do wersjonowania kodu, nie przyda ci się dopóki nie zabierzesz się za jakiś duży, długterminowy projekt.
+
+Ostatnią ważną rzeczą jest pasek z narzędziami ukryty pod przyciskiem z poziomymi paskami w lewym górnym rogu.
+<br/>Po jego kliknięciu pojawi się cały szereg zakładek z wieloma opcjami, ale najistotniejsze z nich znajdują się w zakładce "File".
+- New project - pozwala stworzyć nowy projekt
+- New File or Directory - inny sposób na stworzenie nowego pliku lub folderu
+- Close Project - zamyka obecny projekt i powraca do ekranu startowego
+- Settings - otwiera obszerne menu z rozmaitymi ustawieniami
+
+To by było na tyle jeśli chodzi o krótki wstęp w programowaniu w Pycharm. Jeśli postanowisz korzystać z niego w przyszłości z pewnością samemu odkryjesz wiele innych możliwości, jakie oferuje.
+<br/><br/>
+## Praca z Pythonem bez IDE
+### [🠉](#spis-treści)
+Jeśli przytłacza cię multum opcji i ułatwień, które oferują IDE albo chcesz spróbować programowania bez ułatwień w postaci specjalistycznego oprogramowania, to rzecz jasna, wszystko da się zrobić bez instalowania dodatkowych narzędzi (poza Pythonem rzecz jasna).
+
+Bedzie ci potrzebny terminal/powłoka systemowa - w systemie Windows jest to Command Line ("wiersz polecenia") lub PowerShell - oraz dowolny edytor tekstu.
+<br/>Może to być Notepad, Notepad++, nano, Vim, VS Code itp.
+<br/>Jeśli używasz Windowsa, na pewno masz już Notepad, aczkolwiek o ile nie poszukujesz naprawdę ***szczególnego*** wyzwania, zalecałbym jednak coś wygodniejszego, chociażby Notepad++.
+
+Nie będę tu opisywał dostępnych opcji - musisz sam/a znaleźć coś dla siebie.
+
+Kiedy już będziesz mmiał/a edytor tekstu, otwórz terminal właściwy dla swojego systemu - w systemie Windows wpisz po prostu w pasek wyszukiwania "PowerShell" i uruchom aplikację która wyskoczy.
+<br/>Powita cię zapewne proste, jednokolorowe okno z jakimś tekstem powitalnym.
+
+*![Tu powinien być obraz, ale coś poszło nie tak...](./Assets/przygotowanie/Powershell_start.png)*
+
+Ten najniżej wskazuje na ścieżkę, (folder) w której się obecnie znajdujesz.
+
+Na początek wypróbujmy Pythona.
+<br/>O ile został on zainstalowany poprawnie, wpisanie któregoś z poniższych poleceń i zatwierdzenie enterem powinno wyświetlić komunikat o uruchomieniu Pythona. (przetestuj wszystkie, któreś powinno zadziałać)
+<br/>`py`, `python`, `python3`
+<br/>Jeśli otrzymujesz komunikat o nierozpoznanym poleceniu albo zostajesz wysłany na stronę Pythona w sklepie - to raczej nie to.
+
+*![Tu powinien być obraz, ale coś poszło nie tak...](./Assets/przygotowanie/Powershell_python.png)*
+
+Jeśli już znalazłeś/łaś tę właściwą opcję, znajdujesz się teraz w konsoli interpretera. Niewiele się zmieniło prawda? Cóż, jeszcze jest szansa żeby wrócić do ładnego IDE... 😉
+<br/>Wpisz lub przekopiuj do interpretera poniższe polecenie:
+```py
+print("Hello World")
+```
+
+I zatwierdź klikając enter.
+
+*![Tu powinien być obraz, ale coś poszło nie tak...](./Assets/przygotowanie/Powershell_hello.png)*
+
+
+<br/>Pierwsze wykonane przez ciebie polecenie programistyczne nie jest być może zbyt spektakularne, ale to dobry początek.
+<br/>Funkcja `print()` wypisuje tekst to konsoli.
+<br/>(na razie może się to wydawać mało użyteczne, ale później okaże się przydatne)
+
+<br/>Narazie wyjdźmy z interpretera. Możesz go opuścić, wpisując polecenie `quit()` lub `exit()`.
+
+Stwórz teraz, za pomocą swojego edytora tekstu, nowy plik o nazwie "Hello.py" i przekopiuj do niego ten sam kod:
+```py
+print("Hello World")
+```
+
+*![Tu powinien być obraz, ale coś poszło nie tak...](./Assets/przygotowanie/Notepad_hello.png)*
+<br/>${\color{gray} \scriptsize \textit{To jest Notepad. Ale nie bierz ze mnie przykładu. Na co dzień używam nano.}}$
+<br/>${\color{gray} \scriptsize \textit{...Tu w sumie też nie bierz ze mnie przykładu, są wygodniejsze opcje.}}$
+
+Teraz za pomocą terminala spróbujemy znaleźć ten plik. Ale najpierw pozbądźmy się niepotrzebnego tekstu, który zaśmieca nam terminal.
+<br/>Zrobisz to poleceniem `cls` (PowerShell i cmd, od *CLear Screen) lub `clear` (niektóre inne terminale/powłoki, np. bash).
+
+Jak wspomniałem, napis przed polem do wpisywania poleceń wskazuje na lokalizację, w której obecnie się znajdujesz.
+<br/>Lokalizację w większości terminali zmienia się poleceniem `cd` (od *Change Directory*). Jeśli więc na przykład stworzyłeś swój plik w folderze "Python" na dysku C, to możesz się tam dostać za pomocą polecenia:
+<br/>`cd C:\Python\`
+
+Jeśli nie wiesz, jaka *ścieżka* prowadzi do twojego pliku, być może łatwiej będzie ci znaleźć go najpierw w swoim systemowym eksploratorze plików. Jeśli wejdziesz we właściwości tego pliku, powinna się tam znajdować informacja o jego lokalizacji (zwykle: prawy przycisk myszy na pliku -> właściwości).
+
+Upewnij się tylko, że zmieniasz lokalizację na folder, nie na plik!
+<br/>Np. `cd C:\Python\` a nie `C:\Python\Hello.py`
+
+<details>
+<summary>Inne detale nawigacji za pomocą cd</summary>
+Warto wiedzieć, że nie zawsze trzeba wpisywać całą ścieżkę. Jeśli np. znajdujemy się w `C:\Python\`, w którym jest folder "Programy", to możemy do niego przejść za pomocą:
+<br/>`cd Programy` lub `cd ./Programy` (kropka oznacza lokalizację, w której obecnie się znajdujemy.
+
+Jeśli następnie chcielibyśmy wrócić do `C:\Python`, możemy skorzystać z operatora dwóch kropek:
+<br/>`cd ..`
+<br/>Symbolizują one folder nadrzędny (poprzedni).
+</details>
+
+Kiedy znajdziesz się już w docelowym folderze, być może chciałbyś/chciałabyś sprawdzić, co się w nim znajduje. Zrobisz to poleceniem `dir` (PowerShell / cmd) lub `ls` (bash).
+
+No dobrze, a teraz uruchommy wreszcie ten program. Zrobisz to poprzez połączenie polecenia uruchamiającego Pythona oraz nazwy pliku (właściwie - poprzez *przekazanie* nazwy pliku Pythonowi).
+<br/>`py Hello.py`, `python3 Hello.py` itp.
+
+*![Tu powinien być obraz, ale coś poszło nie tak...](./Assets/przygotowanie/Powershell_program_hello.png)*
+
+W ten sposób możesz napisać dowolny program w swoim edytorze tekstu, a następnie uruchomić go z poziomu terminala.
+<br/>Na koniec możesz zamknąć terminal poleceniem `exit`.
