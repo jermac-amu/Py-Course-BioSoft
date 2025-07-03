@@ -112,8 +112,8 @@ Wybierz "New project".
 > To nieco bardziej zaawansowana kwestia, ale jeśli jesteś ciekaw/a, to wyjaśniam, co właśnie zrobiliśmy [tutaj](./Assets/przygotowanie/Bonus.md#środowiska_wirtualne).
 
 Otworzy się pusty projekt.
-<br/>W centrum ekarnu znajdują się 2 główne panele - drzewo plików po lewej, oraz panel, w którym widać zawartość otwartych plików, po prawej.
-<br/>Na samym skraju okna po lewej jest również wąski pasek narzędzi, w którm możesz schować albo zmodyfikować lewy panel, a także otworzyć trzeci panel u dołu ekranu.
+<br/>W centrum ekranu znajdują się 2 główne panele - drzewo plików po lewej, oraz panel, w którym widać zawartość otwartych plików, po prawej.
+<br/>Na samym skraju okna po lewej jest również wąski pasek narzędzi, w którym możesz schować albo zmodyfikować lewy panel, a także otworzyć trzeci panel u dołu ekranu.
 
 Jak na razie w plikach powinieneś/powinnaś widzieć pusty folder o nazwie twojego projektu, (jeśli nie zmieniałeś/aś lokalizacji projektu jest to zapewne coś w rodzaju "PythonProject") folder "External Libraries" oraz "Scratches and Consoles".
 <br/>Dwa ostatnie możesz na tę chwilę zupełnie zignorować.
@@ -121,7 +121,7 @@ Jak na razie w plikach powinieneś/powinnaś widzieć pusty folder o nazwie two
 <details>
 <summary>${\color{gray} \textit{Jesteś ciekaw czym są?}}$</summary>
 "External Libraries" to folder, w którym zawierają się pliki twojej instalacji Pythona (w tym ewentualne dodatkowe biblioteki, gdybyś miał/a jakieś zainstalowane).
-<br/>Możesz tam znaleźć między innymi kod programistyczny, który tworzy sam język Python (choć ostrzegam, nawet mi jest trudno się w tym połapać. Możesz tam zajrzeć w ramach ciekawostki, ale w rzeczywistości bardzo trudno czegokolwiek się w ten sposób dowiedzieć).
+<br/>Możesz tam znaleźć między innymi kod programistyczny, który tworzy sam język Python (choć ostrzegam, nawet mi jest trudno się w nim połapać. Możesz tam zajrzeć w ramach ciekawostki, ale w rzeczywistości bardzo trudno czegokolwiek się w ten sposób dowiedzieć).
 
 Folder "Scratches and Consoles" służy do tworzenia plików i notatek, które nie są "przywiązane" do projektu, w którym obecnie pracujesz, i do których można się dostać również z poziomu innych projektów.
 </details>
@@ -132,3 +132,53 @@ Kliknij teraz prawym przyciskiem myszy na folder twojego projektu.
 <br/>Powinno otworzyć się menu kontekstowe. Najedź na opcję "New" u jego szczytu i wybierz "Python File".
 
 *![Tu powinien być obraz, ale coś poszło nie tak...](./Assets/przygotowanie/Pycharm_context_menu_file.png)*
+
+W okienku, które wyskoczy, wpisz nazwę swojego pierwszego programu - zgodnie z programistyczną tradycją, proponuję, żeby było to "Hello.py".
+
+> '.py' jest rozszerzeniem nazwy pliku, które informuje użytkownika oraz system, że plik zawiera kod napisany w języku Python.
+
+Stworzyłeś/aś właśnie swój pierwszy plik z kodem. W panelu z drzewem plików powinien być tera widoczny plik z wybraną nazwą i symbolem Pythona (jeśli go nie widzisz, kliknij na folder prejktu, aby otworzyć jego zawartość).
+<br/>Natomiast w panelu po prawej otwarło się teraz okno edycji pliku.
+
+*![Tu powinien być obraz, ale coś poszło nie tak...](./Assets/przygotowanie/Pycharm_hello.png)*
+
+Napisz teraz swój pierwszy program (również zgodnie z programistyczną tradycją).
+<br/>Przepisz (lub lepiej, przekopiuj) po prostu kod poniżej do okna edycji pliku:
+```py
+print("Hello World!")
+```
+
+Kiedy skończysz, kliknij na zielony trójkąt ponad panelem edycji pliku, aby uruchomić swój program.
+<br/>Automatycznie wyskoczy dolny panel z wynikami działania programu.
+
+*![Tu powinien być obraz, ale coś poszło nie tak...](./Assets/przygotowanie/Pycharm_hello_results.png)*
+
+Przeanalizujmy teraz dokładniej co zawierają:
+
+*![Tu powinien być obraz, ale coś poszło nie tak...](./Assets/przygotowanie/Pycharm_hello_results_detailed.png)*
+
+Dwa napisy zaznaczone na niebiesko to polecenie, które Pycharm wykonał w powłoce systemowej (terminalu), aby uruchomić twój program.
+<br/>Odpowiadają one lokalizacji dwóch programów, które zostały uruchomione - pierwszego, interpretera Pythona, oraz drugiego, twojego (uruchomionego już *przez* Pythona).
+
+Napis w zielonej ramce to informacja, którą wypisał twój program - to właśnie robi polecenie `print()`, którego użyliśmy.
+<br/>Spróbuj zmienić napis w cudysłowiu wewnątrz tego polecenia i uruchom program ponownie, a zobaczysz, że napis w wynikach również się zmieni.
+
+Napis zaznaczony na pomarańczowo to informacja o zakończeniu działania programu. W tym wypadku program zakończył działanie i automatycznie wysłał do systemu informację zwrotną w postaci liczby 0 - tak właśnie powinno być.
+
+> Co prawda liczba, którą zwraca program może być zmieniona wedle woli programisty, ale przyjęło się, że liczba 0 oznacza pomyślne zakończenie działania programu, natomiast każda inna oznacza, że program zakończył działanie w wyniku jakiegoś błędu.
+
+Przyjrzyjmy się teraz paskowi narzędziowemu po lewej:
+
+*![Tu powinien być obraz, ale coś poszło nie tak...](./Assets/przygotowanie/Pycharm_toolbar.png)*
+
+Po kolei od góry do dołu:
+- ${\color{dandelion} \textbf{Panel z drzewem plików}}$
+- ${\color{orange} \textbf{Panel struktury kodu}}$ - przydatny przy nawigowaniu w kodzie bardziej skomplikowanych programów, w przypadku Hello.py raczej nic tam nie zobaczysz.
+- ${\color{blue} \textbf{Dodatkowe panele}}$ - można tam znaleźć sporo dodatkowych funkcji, ale trudno, żeby opisywał wszystkie.
+- ${\color{green} \textbf{Wyniki uruchomienia programu}}$
+- ${\color{pink} \textbf{Konsola interpretera}}$ - możesz tu wykonywać Pythonowy kod bez tworzenia pliku - spróbuj przekopiować tu linijkę kodu z Hello.py i kliknąć Enter a by wykonać.
+- ${\color{purple} \textbf{Dodatkowe paczki}}$ - można tu przejrzeć zainstalowane dodatkowe "narzędzia", ale na razie nie będziemy z nich korzystać.
+- ${\color{gray} \textbf{Usługi}}$ - to zaawansowana funkcja Pycharm, która pozwala na połączenie dodatkowych funkcji ze swoim IDE.
+- ${\color{cyan} \textbf{Terminal}}$ - tudzież powłoka systemowa - to poprzez nią tak naprawdę odbywa się uruchomienie twojego programu. Jeśli przekopiujesz tutaj linijkę, którą zaznaczyłem na niebiesko w wynikach Hello.py, uruchomisz go "ręcznie", bez pośrednictwa Pycharma.
+- ${\color{red} \textbf{Błędy}}$ - znajdziesz tu listę błędów w kodzie, które automatycznie wykryło IDE.
+- ${\color{plum} \textbf{Kontrola wersji}}$ - służy do wersjonowania kodu, nie przyda ci się dopóki nie zabierzesz się za jakiś duży, długterminowy projekt.
