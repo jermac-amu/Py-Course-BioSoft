@@ -112,3 +112,23 @@ Wybierz "New project".
 > To nieco bardziej zaawansowana kwestia, ale jeśli jesteś ciekaw/a, to wyjaśniam, co właśnie zrobiliśmy [tutaj](./Assets/przygotowanie/Bonus.md#środowiska_wirtualne).
 
 Otworzy się pusty projekt.
+<br/>W centrum ekarnu znajdują się 2 główne panele - drzewo plików po lewej, oraz panel, w którym widać zawartość otwartych plików, po prawej.
+<br/>Na samym skraju okna po lewej jest również wąski pasek narzędzi, w którm możesz schować albo zmodyfikować lewy panel, a także otworzyć trzeci panel u dołu ekranu.
+
+Jak na razie w plikach powinieneś/powinnaś widzieć pusty folder o nazwie twojego projektu, (jeśli nie zmieniałeś/aś lokalizacji projektu jest to zapewne coś w rodzaju "PythonProject") folder "External Libraries" oraz "Scratches and Consoles".
+<br/>Dwa ostatnie możesz na tę chwilę zupełnie zignorować.
+
+<details>
+<summary>${\color{gray} \textit{Jesteś ciekaw czym są?}}$</summary>
+"External Libraries" to folder, w którym zawierają się pliki twojej instalacji Pythona (w tym ewentualne dodatkowe biblioteki, gdybyś miał/a jakieś zainstalowane).
+<br/>Możesz tam znaleźć między innymi kod programistyczny, który tworzy sam język Python (choć ostrzegam, nawet mi jest trudno się w tym połapać. Możesz tam zajrzeć w ramach ciekawostki, ale w rzeczywistości bardzo trudno czegokolwiek się w ten sposób dowiedzieć).
+
+Folder "Scratches and Consoles" służy do tworzenia plików i notatek, które nie są "przywiązane" do projektu, w którym obecnie pracujesz, i do których można się dostać również z poziomu innych projektów.
+</details>
+
+*![Tu powinien być obraz, ale coś poszło nie tak...](./Assets/przygotowanie/Pycharm_empty_project.png)*
+
+Kliknij teraz prawym przyciskiem myszy na folder twojego projektu.
+<br/>Powinno otworzyć się menu kontekstowe. Najedź na opcję "New" u jego szczytu i wybierz "Python File".
+
+*![Tu powinien być obraz, ale coś poszło nie tak...](./Assets/przygotowanie/Pycharm_context_menu_file.png)*
