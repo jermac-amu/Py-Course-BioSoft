@@ -14,3 +14,4 @@ Zasadniczo kurs jest (w założeniu) stworzony tak, żeby osoby z bardzo różny
 
 ## Spis treści
 - [Przygotowanie do kursu](<./Lekcje/Przygotowanie do kursu.md>)
+- [Czym są zmienne?](<./Lekcje/Czym są zmienne.md>)
