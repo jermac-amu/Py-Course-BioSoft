@@ -35,10 +35,10 @@ Aby odróżnić jedną zmienną od drugiej, musimy nadać im ${\color{black} \te
 <br/>Właściwie, nie różni się to wcale od opisywania pudełek ze starymi gratami, które porzucamy w garażu...
 
 ```py
-moja_liczba = 12
+my_number = 12
 ```
 
-Użyłem właśnie *operatora przypisania* (=), aby przypisać zmiennej o nazwie 'moja_liczba' liczbę 12 - a więc "wrzuciłem" liczbę 12 do pudełka i opisałem je 'moja_liczba'.
+Użyłem właśnie *operatora przypisania* (=), aby przypisać zmiennej o nazwie 'my_number' liczbę 12 - a więc "wrzuciłem" liczbę 12 do pudełka i opisałem je 'my_number'.
 
 > ${\color{orange} \small \textit{Uwaga: przy nazywaniu zmiennych musimy trzymać się pewnych zasad.}}$
 > ${\color{orange} \small \textit{W nazwie zmiennej mogą znajdować się tylko litery, podkreślniki oraz cyfry - z zastrzeżeniem, że pierwszy znak nazwy nie może być cyfrą.}}$
@@ -48,8 +48,8 @@ Jeśli przeczytałeś poprzednią lekcję, wiesz już, że polecenie `print()` p
 <br/>Spróbujmy teraz użyć go, aby zajrzeć do naszego pudełka.
 
 ```py
-moja_liczba = 12
-print(moja_liczba)
+my_number = 12
+print(my_number)
 ```
 > ${\color{orange} \small \textit{Uwaga: w przeciwieństwie do wypisywania tekstu, kiedy chcemy wypisać zawartość zmiennej, nie umieszczamy jej nazwy w cudzysłowie.}}$
 > ${\color{orange} \small \textit{Dlaczego tak jest, dowiesz się w następnej lekcji.}}$
@@ -57,8 +57,8 @@ print(moja_liczba)
 Jeśli wykonaliście powyższy kod z pliku lub przez konsolę interpretera, powinniście zobaczyć w wynikach liczbę 12.
 
 ```py
-moja_liczba = 12
-moja_liczba2 = 8
+my_number = 12
+my_number2 = 8
 ```
 
 Jeśli chcemy zapamiętać więcej liczb, musimy im nadać inne nazwy.
@@ -69,16 +69,16 @@ Rzecz jasna, w naszym garażu możemy dwa pudełka opisać dokładnie tak samo, 
 <br/>Jeśli koniecznie chcemy wrzucić coś do pudełka o tej samej nazwie, to musimy najpierw wyrzucić z niego wszystko, co już się w nim znajduje.
 
 ```py
-moja_liczba = 12
+my_number = 12
 print("Moja liczba na początku:")
-print(moja_liczba)
+print(my_number)
 
-moja_liczba = 20
+my_number = 20
 print("Moja liczba po zamianie:")
-print(moja_liczba)
+print(my_number)
 ```
 
-Jeśli wykonacie powyższy kod, przekonacie się, że po przypisaniu do zmiennej 'moja_liczba' liczby 20, zniknęła z niego liczba 12, którą wcześniej tam trzymaliśmy.
+Jeśli wykonacie powyższy kod, przekonacie się, że po przypisaniu do zmiennej 'my_number' liczby 20, zniknęła z niej liczba 12, którą wcześniej tam trzymaliśmy.
 <br/>**Takiej wyrzuconej zawartości zmiennej nie da się już odzyskać.**
 
 *![Tu powinien być obraz, ale coś poszło nie tak...](./Assets/Zmienne/Zmienne.png)*
@@ -87,10 +87,10 @@ A co jeśli nie potrzebujesz już liczby ani pudełka?
 <br/>Możesz je wtedy wyrzucić za pomocą polecenia `del` - zauważ, że w tym wypadku nie używamy nawiasów.
 
 ```py
-moja_liczba = 12
-print(moja_liczba)
+my_number = 12
+print(my_number)
 
-del moja_liczba
+del my_number
 ```
 
 ## A wracając do notatek... - Komentarze
@@ -105,8 +105,8 @@ Do zostawiania notatek w kodzie służą **komentarze**.
 
 ```py
 # Liczba pudełek po butach w moim garażu
-moja_liczba = 12
-print(moja_liczba)
+my_number = 12
+print(my_number)
 ```
 
 Pierwsza linijka w powyższym kodzie to właśnie komentarz.
@@ -115,16 +115,18 @@ Pierwsza linijka w powyższym kodzie to właśnie komentarz.
 
 ```py
 # Liczba pudełek po butach w moim garażu
-moja_liczba = 12
-print(moja_liczba)
+my_number = 12
+print(my_number)
 
 '''
 Znalazłem jeszcze kilka pudełek,
 na strychu i w piwnicy,
 a nawet jedno pod łóżkiem.
 '''
-moja_liczba = 20
-print(moja_liczba)
+my_number = 20
+print(my_number)
 ```
 
 > Właściwie, to tak naprawdę nie jest komentarz, tylko wielolinijkowy string. Ale o tym w następnej lekcji...
+
+${\color{green} \textbf{Jesteś teraz gotowy/a aby przejść do lekcji numer 3:}}$ [Typy danych I](<./Typy danych I.md>)
