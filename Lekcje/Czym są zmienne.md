@@ -10,6 +10,7 @@ Zanim zaczniesz pisać skomplikowane programy, istnieje kilka podstawowych konce
 ## Spis treści
 - [Wstęp](#wstęp)
 - [Używanie zmiennych](#używanie-zmiennych)
+- [A wracając do notatek... - Komentarze](#a-wracając-do-notatek---komentarze)
 
 ## Wstęp
 ### [🠉](#spis-treści)
@@ -65,14 +66,50 @@ Rzecz jasna, w naszym garażu możemy dwa pudełka opisać dokładnie tak samo, 
 <br/>Jeśli koniecznie chcemy wrzucić coś do pudełka o tej samej nazwie, to musimy najpierw wyrzucić z niego wszystko, co już się w nim znajduje.
 
 ```py
-liczba = 12
+moja_liczba = 12
 print("Moja liczba na początku:")
 print(moja_liczba)
 
-liczba = 20
+moja_liczba = 20
 print("Moja liczba po zamianie:")
 print(moja_liczba)
 ```
 
 Jeśli wykonacie powyższy kod, przekonacie się, że po przypisaniu do zmiennej 'moja_liczba' liczby 20, zniknęła z niego liczba 12, którą wcześniej tam trzymaliśmy.
 <br/>**Takiej wyrzuconej zawartości pudełka nie da się już odzyskać.**
+
+## A wracając do notatek... - Komentarze
+### [🠉](#spis-treści)
+Wiesz już o co chodzi w zmiennych, ale zanim przejdziesz do następnej lekcji, chciałem pokazać ci coś jeszcze.
+<br/>Mówiłem, jak to zmienne nie nadają się do przechowywania notatek. Ale podczas pisania kodu notatki są ważne.
+<br/>No przecież, jeśli porzucimy teraz nasz program i wrócimy do niego za miesiąc, (tak, to się zdarza) to nie będziemy pamiętać, co ta nasza liczba w ogóle oznaczała.
+
+Do zostawiania notatek w kodzie służą **komentarze**.
+<br/>Nie wiem, czy już próbowałeś/aś, ale jeśli by tak napisać byle co gdzieś w programie i spróbować go uruchomić, to interpreter zapewne radośnie zapełni twój ekran komunikatami o błędach.
+<br/>Jest jednak sposób, żeby Python zupełnie zignorował linijkę takiego nie-kodu - trzeba oznaczyć ją znakiem #.
+
+```py
+# Liczba pudełek po butach w moim garażu
+moja_liczba = 12
+print(moja_liczba)
+```
+
+Pierwsza linijka w powyższym kodzie to właśnie komentarz.
+<br/>Kiedy Python "widzi" znak #, to wie, że reszta linijki jest komentarzem i w ogóle tam nie zagląda.
+<br/>Możliwe jest też napisanie komentarza, który obejmuje więcej niż jedną linijkę. Trzabe tylko otoczyć go trzema znakami cudzysłowu z każdej strony:
+
+```py
+# Liczba pudełek po butach w moim garażu
+moja_liczba = 12
+print(moja_liczba)
+
+'''
+Znalazłem jeszcze kilka pudełek,
+na strychu i w piwnicy,
+a nawet jedno pod łóżkiem.
+'''
+moja_liczba = 20
+print(moja_liczba)
+```
+
+> Właściwie, to tak naprawdę nie jest komentarz, tylko wielolinijkowy string. Ale o tym w następnej lekcji...
