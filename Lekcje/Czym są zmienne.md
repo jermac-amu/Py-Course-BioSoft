@@ -31,25 +31,28 @@ Natomiast zmienne znikają bezpowrotnie w momencie, kiedy nasz program przestaje
 
 ## Używanie zmiennych
 ### [🠉](#spis-treści)
-Aby odróżnić jedną zmienną od drugiej, musimy nadać im **unikalne** nazwy.
+Aby odróżnić jedną zmienną od drugiej, musimy nadać im ${\color{black} \textbf{unikalne}}$ nazwy.
 <br/>Właściwie, nie różni się to wcale od opisywania pudełek ze starymi gratami, które porzucamy w garażu...
 
 ```py
 moja_liczba = 12
 ```
 
-Użyłem właśnie *operatora przypisania* (=) aby przypisać zmiennej o nazwie 'moja_liczba' liczbę 12 - a więc "wrzuciłem" liczbę 12 do pudełka i opisałem je 'moja_liczba'.
+Użyłem właśnie *operatora przypisania* (=), aby przypisać zmiennej o nazwie 'moja_liczba' liczbę 12 - a więc "wrzuciłem" liczbę 12 do pudełka i opisałem je 'moja_liczba'.
 
-> Uwaga: przy nazywaniu zmiennych musimy trzymać się pewnych zasad. W nazwie zmiennej mogą znajdować się tylko litery, podkreślniki (_) oraz cyfry - z zastrzeżeniem, że pierwszy znak nazwy nie może być cyfrą. Tak więc np. spacje odpadają.
+> ${\color{orange} \small \textit{Uwaga: przy nazywaniu zmiennych musimy trzymać się pewnych zasad.}}$
+> ${\color{orange} \small \textit{W nazwie zmiennej mogą znajdować się tylko litery, podkreślniki oraz cyfry - z zastrzeżeniem, że pierwszy znak nazwy nie może być cyfrą.}}$
+> ${\color{orange} \small \textit{Tak więc np. spacje odpadają.}}$
 
-<br/>Jeśli przeczytałeś dokładnie poprzednią lekcję, wiesz już, że polecenie `print()` pozwala nam na wypisanie tekstu do konsoli.
+Jeśli przeczytałeś poprzednią lekcję, wiesz już, że polecenie `print()` pozwala nam na wypisanie tekstu do konsoli.
 <br/>Spróbujmy teraz użyć go, aby zajrzeć do naszego pudełka.
 
 ```py
 moja_liczba = 12
 print(moja_liczba)
 ```
-> Uwaga: w przeciwieństwie do wypisywania tekstu, kiedy chcemy wypisać zawartość zmiennej, nie umieszczamy jej nazwy w cudzysłowie. Dlaczego tak jest, dowiesz się w następnej lekcji.
+> ${\color{orange} \small \textit{Uwaga: w przeciwieństwie do wypisywania tekstu, kiedy chcemy wypisać zawartość zmiennej, nie umieszczamy jej nazwy w cudzysłowie.}}$
+> ${\color{orange} \small \textit{Dlaczego tak jest, dowiesz się w następnej lekcji.}}$
 
 Jeśli wykonaliście powyższy kod z pliku lub przez konsolę interpretera, powinniście zobaczyć w wynikach liczbę 12.
 
@@ -77,6 +80,8 @@ print(moja_liczba)
 
 Jeśli wykonacie powyższy kod, przekonacie się, że po przypisaniu do zmiennej 'moja_liczba' liczby 20, zniknęła z niego liczba 12, którą wcześniej tam trzymaliśmy.
 <br/>**Takiej wyrzuconej zawartości zmiennej nie da się już odzyskać.**
+
+*![Tu powinien być obraz, ale coś poszło nie tak...](./Assets/Zmienne/Zmienne.png)*
 
 A co jeśli nie potrzebujesz już liczby ani pudełka?
 <br/>Możesz je wtedy wyrzucić za pomocą polecenia `del` - zauważ, że w tym wypadku nie używamy nawiasów.
