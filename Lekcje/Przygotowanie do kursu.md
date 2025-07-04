@@ -1,3 +1,5 @@
+*[Spis treści kursu](<../README.md#spis-treści>)*
+
 # Przygotowanie do kursu
 
 Cześć!
@@ -191,6 +193,8 @@ Ostatnią ważną rzeczą jest pasek z narzędziami ukryty pod przyciskiem z poz
 - Settings - otwiera obszerne menu z rozmaitymi ustawieniami
 
 To by było na tyle jeśli chodzi o krótki wstęp w programowaniu w Pycharm. Jeśli postanowisz korzystać z niego w przyszłości z pewnością samemu odkryjesz wiele innych możliwości, jakie oferuje.
+
+${\color{green} \textbf{Jesteś teraz gotów/gotowa aby przejść do lekcji numer 2:}}$ [Czym są zmienne?](<./Czym są zmienne.md>)
 <br/><br/>
 ## Praca z Pythonem bez IDE
 ### [🠉](#spis-treści)
@@ -273,3 +277,5 @@ No dobrze, a teraz uruchommy wreszcie ten program. Zrobisz to poprzez połączen
 
 W ten sposób możesz napisać dowolny program w swoim edytorze tekstu, a następnie uruchomić go z poziomu terminala.
 <br/>Na koniec możesz zamknąć terminal poleceniem `exit`.
+
+${\color{green} \textbf{Jesteś teraz gotów/gotowa aby przejść do lekcji numer 2:}}$ [Czym są zmienne?](<./Czym są zmienne.md>)
