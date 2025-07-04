@@ -1,4 +1,4 @@
-*[Spis treści kursu](<../README.md>)*
+*[Spis treści kursu](<../README.md#spis-treści>)*
 
 # Czym są zmienne?
 
