@@ -50,8 +50,9 @@ Przy okazji użyłem też operatorów otwarcia i zamknięcia nawiasu, których d
 
 ## String
 ### [🠉](#spis-treści)
-Typ danych służący do przechowywania tekstu.
-<br/>W Pythonie nazywany skrótowo `str`
+Typ danych służący do przechowywania tekstu. 'String' oznacza dosłownie sznurek. Bierze się ona z tego, że każdy string jest *łańcuchem znaków*.
+<br/>Znak jest to pojedyncza litera, cyfra itp.
+<br/>W Pythonie string jest nazywany skrótowo `str`.
 <br/>Zmienną tego typu można stworzyć poprzez przypisanie tekstu otoczonego cudzysłowem, (pojedynczym lub podwójnym, nie ma to znaczenia - o ile jesteśmy konsekwentni) lub za pomocą polecenia `str()`.
 
 ```py
@@ -68,10 +69,22 @@ więc podzieliłem go na
 kilka linijek.'''
 ```
 
+Dane typu string można konkatenować (łączyć, *concatenate*) za pomocą operatora `+`:
+
+```py
+a = "Hello"
+b = " World!"
+
+print(a + b)
+```
+
+*![Tu powinien być obraz, ale coś poszło nie tak...](./Assets/Typy_I/concatenation.png)*
+
 Warto jeszcze zaznaczyć, że dane typu string są *niemutowalne*, czyli niezmienne.
 <br/>W praktyce oznacza to, że nie da się ich zmodyfikować - jeśli chcemy np. zmienić jedną literę w jakimś napisie, to musimy cały wyrzucić i zastąpić nowym, ze zmienioną literą.
 
-### Metody
+<br/>${\color{blue} \huge \textbf{Metody}}$
+
 Dane typu string posiadają cały zestaw metod, czyli specjalnych poleceń, które służą głównie do stworzenia nowego tekstu na podstawie tego, na którym używamy polecenia.
 <br/>W związku z niemutowalnością danych typu string, musimy pamiętać, żeby po użyciu takiej metody przypisać wynik jej działania do nowej zmiennej (albo tej samej, wyrzucając w ten sposób oryginał).
 
@@ -108,4 +121,69 @@ Kilka bardziej użytecznych metod, których można użyć na danych typu string 
 
 Takich metod istnieje znacznie więcej. Po kompletną listę odsyłam do [dokumentacji Pythona](https://docs.python.org/3/library/stdtypes.html#string-methods) - choć na razie pewnie ci się nie przyda.
 
-### Splicing
+<br/>${\color{blue} \huge \textbf{Slicing}}$
+
+*Slicing* (ang. dosł. kroić) to technika pozwalająca nam "wyciąć" z dłuższego tekstu jakiś jego fragment.
+<br/>W tym celu wykorzystuje się operator nawiasów kwadratowych.
+
+Trzeba tu wspomnieć, że każdy znak w string-u - łańcuchu znaków - ma przypisany swój numer, nazywany indeksem (*index*).
+<br/>W języku Python pierwszy znak ma zawsze indeks 0.
+<br/>Slicing odbywa się poprzez umieszczenie indeksów pierwszego oraz ostatniego znaku we fragmencie, który chcemy wyciąć, wewnątrz operatora nawiasów kwadratowych - oddzielonych dwukropkiem.
+
+```py
+chain = "0123456789abcdef"
+part1 = chain[0:6]
+part2 = chain[9:16]
+
+print(part1)
+print(part2)
+```
+
+*![Tu powinien być obraz, ale coś poszło nie tak...](./Assets/Typy_I/slicing1.png)*
+
+Ale zaraz. Czy aby pierwszy fragment nie miał obejmować cyfr od 0 do 6?
+<br/>Okazuje się, że dla Pythona "od 0 do 6" oznacza wszystko pomiędzy 0 a 6, ale z wyłączeniem samego 6.
+<br/>Trzeba o tym pamiętać, inaczej w kółko będziemy gubili ostatnią literę...
+
+Jeśli chcemy wyciąć fragment obejmujący początek lub koniec stringu, możemy pominąć indeks pierwszego lub ostatniego znaku:
+
+```py
+chain = "0123456789abcdef"
+part1 = chain[:6]
+part2 = chain[9:]
+part3 = chain[:] # Whole string from start to beginning!
+
+print(part1)
+print(part2)
+print(part3)
+```
+
+*![Tu powinien być obraz, ale coś poszło nie tak...](./Assets/Typy_I/slicing2.png)*
+
+Możemy też wyciąć co drugi albo co trzeci itd. znak, dodając trzecią liczbę:
+
+```py
+chain = "0123456789abcdef"
+part1 = chain[:10:2]
+part2 = chain[:10:3]
+
+print(part1)
+print(part2)
+```
+
+*![Tu powinien być obraz, ale coś poszło nie tak...](./Assets/Typy_I/slicing3.png)*
+
+No i na koniec, możemy skorzystać z indeksów ujemnych.
+<br/>-n-ty indeks oznacza n-ty indeks od końca:
+```py
+chain = "0123456789abcdef"
+#                     ^-3
+part1 = chain[:-3] # 16-3 = 13
+
+print(part1)
+```
+
+*![Tu powinien być obraz, ale coś poszło nie tak...](./Assets/Typy_I/slicing4.png)*
+
+A co się stanie jeśli zmienimy indeksy miejscami?
+<br/>Przekonaj się sam/a...
