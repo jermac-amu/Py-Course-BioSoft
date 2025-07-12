@@ -1,3 +1,5 @@
+${\color{gray} \small \texttt{Napisał Jeremi Maciejewski}}$
+
 # Tematy dodatkowe do lekcji "Przygotowanie do kursu"
 <br/>
 

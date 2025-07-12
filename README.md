@@ -1,6 +1,6 @@
+${\color{gray} \small \texttt{Autorzy: Kacper Dudczak, Jeremi Maciejewski}}$
 # Kurs Programowania w języku Python
 ##### Sekcja Oprogramowania Biologicznego - Koło Naukowe Przyrodników na UAM w Poznaniu
-${\color{gray} \small \texttt{Autorzy: Kacper Dudczak, Jeremi Maciejewski}}$
 
 W trakcie tego kursu nauczysz się podstaw programowania w języku Python.
 

@@ -1,4 +1,5 @@
-*[Spis treści kursu](<../README.md#spis-treści>)*
+${\color{gray} \small \texttt{Napisał Jeremi Maciejewski}}$
+<br/>*[Spis treści kursu](<../README.md#spis-treści>)*
 
 # Czym są zmienne?
 
