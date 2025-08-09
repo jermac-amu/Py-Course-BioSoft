@@ -92,7 +92,6 @@ print(a + b)
 ```
 
 `Hello World!`
-<!-- *![Tu powinien być obraz, ale coś poszło nie tak...](./Assets/Typy_I/concatenation.png)* -->
 
 String można również powielić za pomocą operatora `*`:
 
@@ -129,7 +128,6 @@ print(TEXT)
 
 `mój napis`
 <br/>`MÓJ NAPIS`
-<!--*![Tu powinien być obraz, ale coś poszło nie tak...](./Assets/Typy_I/text1.png)*-->
 
 Użyłem właśnie metody `upper()`, która na podstawie napisu zawartego w zmiennej `text`, stworzyła nowy, zapisany wielkimi literami.
 <br/>Zauważ, że zmienna `text` nie zmieniła swojej zawartości. Wynik działania metody musiałem zapisać w zmiennej `TEXT`.
@@ -143,7 +141,6 @@ print(text)
 ```
 
 `MÓJ NAPIS`
-<!--*![Tu powinien być obraz, ale coś poszło nie tak...](./Assets/Typy_I/text2.png)*-->
 
 Kilka bardziej użytecznych metod, których można użyć na danych typu string znajdziecie poniżej:
 - `upper()` - zmienia wszystkie litery na wielkie
