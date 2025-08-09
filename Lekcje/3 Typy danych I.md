@@ -4,7 +4,7 @@ ${\color{gray} \small \texttt{Napisał Jeremi Maciejewski}}$
 # Typy danych I
 
 Kolejny koncept programistyczny, który omówimy to typy danych.
-<br/>Wiesz już, [jak przechowywać dane w zmiennych](<./Czym są zmienne.md>), więc czas się dowiedzieć, co konkretnie można w nich przechowywać.
+<br/>Wiesz już, [jak przechowywać dane w zmiennych](<2 Czym sa zmienne.md>), więc czas się dowiedzieć, co konkretnie można w nich przechowywać.
 
 Każda zmienna ma swój typ.
 <br/>${\color{lightgray} \tiny \textit{I nie mowa tu o facetach...}}$
