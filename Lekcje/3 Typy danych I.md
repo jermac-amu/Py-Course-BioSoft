@@ -18,6 +18,7 @@ Zaczniemy od nich, a następnie przejdziemy do pozostałych typów danych.
 ## Spis treści
 - [Integer](#integer)
 - [String](#string)
+  - [Metody](#metody)
 
 ## Integer
 ### [🠉](#spis-treści)
@@ -47,14 +48,16 @@ square_root_of_2 = 2 ** (1/2)
 
 Przy okazji użyłem też operatorów otwarcia i zamknięcia nawiasu, których działanie, jak sądzę, jest oczywiste.
 
-> Przypomnienie ze szkoły na wszelki wypadek: ${\sqrt[y]{x} = x^{\frac{1}{y}}}$
+> Przypomnienie ze szkoły na wszelki wypadek: ${\Large \sqrt[y]{x} = x^{\frac{1}{y}}}$
 
 ## String
 ### [🠉](#spis-treści)
-Typ danych służący do przechowywania tekstu. 'String' oznacza dosłownie sznurek. Bierze się ona z tego, że każdy string jest *łańcuchem znaków*.
+Typ danych służący do przechowywania tekstu.
+<br/>Nazwa 'String' oznacza dosłownie sznurek. Bierze się ona z tego, że każdy string jest *łańcuchem znaków*.
 <br/>Znak jest to pojedyncza litera, cyfra itp.
-<br/>W Pythonie string jest nazywany skrótowo `str`.
-<br/>Zmienną tego typu można stworzyć poprzez przypisanie tekstu otoczonego cudzysłowem, (pojedynczym lub podwójnym, nie ma to znaczenia - o ile jesteśmy konsekwentni) lub za pomocą polecenia `str()`.
+
+<br/>W Pythonie string jest zwykle nazywany skrótowo `str`.
+<br/>Zmienną tego typu można stworzyć poprzez przypisanie tekstu otoczonego cudzysłowem, (pojedynczym lub podwójnym, nie ma to znaczenia. O ile jesteśmy konsekwentni) lub za pomocą polecenia `str()`.
 
 ```py
 hello = "Cześć!"
@@ -79,15 +82,31 @@ b = " World!"
 print(a + b)
 ```
 
-*![Tu powinien być obraz, ale coś poszło nie tak...](./Assets/Typy_I/concatenation.png)*
+`Hello World!`
+<!-- *![Tu powinien być obraz, ale coś poszło nie tak...](./Assets/Typy_I/concatenation.png)* -->
 
-Warto jeszcze zaznaczyć, że dane typu string są *niemutowalne*, czyli niezmienne.
+String można również powielić za pomocą operatora `*`:
+
+```py
+a = "Hello"
+b = a * 3
+
+print(b)
+```
+
+`HelloHelloHello`
+
+<br/>Warto jeszcze zaznaczyć, że dane typu string są *niemutowalne*, czyli niezmienne.
 <br/>W praktyce oznacza to, że nie da się ich zmodyfikować - jeśli chcemy np. zmienić jedną literę w jakimś napisie, to musimy cały wyrzucić i zastąpić nowym, ze zmienioną literą.
+<br/>
 
-<br/>${\color{blue} \huge \textbf{Metody}}$
+<div id="Metody">
+
+${\color{blue} \huge \textbf{Metody}}$
 
 Dane typu string posiadają cały zestaw metod, czyli specjalnych poleceń, które służą głównie do stworzenia nowego tekstu na podstawie tego, na którym używamy polecenia.
-<br/>W związku z niemutowalnością danych typu string, musimy pamiętać, żeby po użyciu takiej metody przypisać wynik jej działania do nowej zmiennej (albo tej samej, wyrzucając w ten sposób oryginał).
+<br/>W związku z niemutowalnością danych typu string, musimy pamiętać, że zawartość zmiennej nie zmieni się sama.
+<br/>A więc po użyciu takiej metody zwykle chcemy przypisać wynik jej działania do nowej zmiennej (albo i tej samej, zastępując w ten sposób oryginał).
 
 ```py
 text = "mój napis"
@@ -97,11 +116,13 @@ print(text)
 print(TEXT)
 ```
 
-*![Tu powinien być obraz, ale coś poszło nie tak...](./Assets/Typy_I/text1.png)*
+`mój napis`
+<br/>`MÓJ NAPIS`
+<!--*![Tu powinien być obraz, ale coś poszło nie tak...](./Assets/Typy_I/text1.png)*-->
 
-Użyłem właśnie metody `upper()`, która na podstawie napisu w zmiennej `text` stworzyła nowy, zapisany wielkimi literami.
+Użyłem właśnie metody `upper()`, która na podstawie napisu zawartego w zmiennej `text`, stworzyła nowy, zapisany wielkimi literami.
 <br/>Zauważ, że zmienna `text` nie zmieniła swojej zawartości. Wynik działania metody musiałem zapisać w zmiennej `TEXT`.
-<br/>Oczywiście, jeśli nie byłby mi już potrzebny oryginalny napis, mógłbym zrobić tak:
+<br/>Co prawda, jeśli nie byłby mi już potrzebny oryginalny napis, mógłbym zrobić tak:
 
 ```py
 text = "mój napis"
@@ -110,19 +131,22 @@ text = text.upper()
 print(text)
 ```
 
-*![Tu powinien być obraz, ale coś poszło nie tak...](./Assets/Typy_I/text2.png)*
+`MÓJ NAPIS`
+<!--*![Tu powinien być obraz, ale coś poszło nie tak...](./Assets/Typy_I/text2.png)*-->
 
 Kilka bardziej użytecznych metod, których można użyć na danych typu string znajdziecie poniżej:
-- upper() - zmienia wszystkie litery na wielkie
-- lower() - zmienia wszystkie litery na małe
-- capitalize() - zmienia pierwszą literę na wielką, np. `"ania ma kota".capitalize()` = "Ania ma kota"
-- title() - zmienia pierwszą literę **każdego słowa** na wielką, np. `"ania ma kota".title()` = "Ania Ma Kota"
-- replace(x, y) - zmienia wszystkie wystąpienia litery/słowa x na y, np. `"ania ma kota".replace('a', '.')` = ".ni. m. kot."
-- count(x) - zwraca liczbę wystąpień litery/słowa x, np. `"ania ma kota".count('a')` = 4
+- `upper()` - zmienia wszystkie litery na wielkie
+- `lower()` - zmienia wszystkie litery na małe
+- `capitalize()` - zmienia pierwszą literę na wielką, np. `"ania ma kota".capitalize()` = `"Ania ma kota"`
+- `title()` - zmienia pierwszą literę **każdego słowa** na wielką, np. `"ania ma kota".title()` = `"Ania Ma Kota"`
+- `replace(x, y)` - zmienia wszystkie wystąpienia litery/słowa `x` na `y`, np. `"ania ma kota".replace('a', '*')` = `"*ni* m* kot*"`
+- `count(x)` - zwraca liczbę wystąpień litery/słowa `x`, np. `"ania ma kota".count('a')` = `4`
 
 Takich metod istnieje znacznie więcej. Po kompletną listę odsyłam do [dokumentacji Pythona](https://docs.python.org/3/library/stdtypes.html#string-methods) - choć na razie pewnie ci się nie przyda.
 
-<br/>${\color{blue} \huge \textbf{Slicing}}$
+<div id="Slicing">
+
+${\color{blue} \huge \textbf{Slicing}}$
 
 *Slicing* (ang. dosł. kroić) to technika pozwalająca nam "wyciąć" z dłuższego tekstu jakiś jego fragment.
 <br/>W tym celu wykorzystuje się operator nawiasów kwadratowych.
@@ -178,7 +202,7 @@ No i na koniec, możemy skorzystać z indeksów ujemnych.
 <br/>-n-ty indeks oznacza n-ty indeks od końca:
 ```py
 chain = "0123456789abcdef"
-#                     ^-3
+#                     🠉-3
 part1 = chain[:-3] # 16-3 = 13
 
 print(part1)
@@ -186,5 +210,9 @@ print(part1)
 
 *![Tu powinien być obraz, ale coś poszło nie tak...](./Assets/Typy_I/slicing4.png)*
 
-A co się stanie jeśli zmienimy indeksy miejscami?
+A co się stanie jeśli zamienimy indeksy początku i końca miejscami?
 <br/>Przekonaj się sam/a...
+
+<div id="Fstring">
+
+<br/>${\color{blue} \huge \textbf{F-string}}$
