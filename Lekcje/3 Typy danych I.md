@@ -19,6 +19,11 @@ Zaczniemy od nich, a następnie przejdziemy do pozostałych typów danych.
 - [Integer](#integer)
 - [String](#string)
   - [Metody](#metody)
+  - [Slicing](#slicing)
+  - [F-string](#fstring)
+- [Float](#float)
+- [Boolean](#boolean)
+- [Konwersja typów](#konwersja-typów)
 
 ## Integer
 ### [🠉](#spis-treści)
@@ -31,7 +36,11 @@ my_number = 12
 second_number = int() # Automatycznie otrzyma wartość 0
 ```
 
-Na wartościach tego typu można używać *operatorów* matematycznych:
+<div id="Matematyka">
+
+${\color{blue} \huge \textbf{Matematyka}}$
+
+Na wartościach tego typu można używać *operatorów matematycznych*:
 - `+` - dodawanie
 - `-` - odejmowanie
 - `*` - mnożenie
@@ -48,12 +57,12 @@ square_root_of_2 = 2 ** (1/2)
 
 Przy okazji użyłem też operatorów otwarcia i zamknięcia nawiasu, których działanie, jak sądzę, jest oczywiste.
 
-> Przypomnienie ze szkoły na wszelki wypadek: ${\Large \sqrt[y]{x} = x^{\frac{1}{y}}}$
+> Przypomnienie ze szkoły na wszelki wypadek: ${\Large \sqrt[y]{x} = x^{\frac{1}{y}}}$ zatem ${\Large \sqrt[2]{2} = 2^{\frac{1}{2}}}$
 
 ## String
 ### [🠉](#spis-treści)
 Typ danych służący do przechowywania tekstu.
-<br/>Nazwa 'String' oznacza dosłownie sznurek. Bierze się ona z tego, że każdy string jest *łańcuchem znaków*.
+<br/>Nazwa 'string' oznacza dosłownie sznurek. Bierze się ona z tego, że każdy string jest *łańcuchem znaków* (tudzież "sznurkiem znaków" jeśli wolisz 😉).
 <br/>Znak jest to pojedyncza litera, cyfra itp.
 
 <br/>W Pythonie string jest zwykle nazywany skrótowo `str`.
@@ -98,6 +107,8 @@ print(b)
 
 <br/>Warto jeszcze zaznaczyć, że dane typu string są *niemutowalne*, czyli niezmienne.
 <br/>W praktyce oznacza to, że nie da się ich zmodyfikować - jeśli chcemy np. zmienić jedną literę w jakimś napisie, to musimy cały wyrzucić i zastąpić nowym, ze zmienioną literą.
+
+W poniższych podrozdziałach opiszę cały szereg możliwości, które udostępnia nam string.
 <br/>
 
 <div id="Metody">
@@ -216,3 +227,145 @@ A co się stanie jeśli zamienimy indeksy początku i końca miejscami?
 <div id="Fstring">
 
 <br/>${\color{blue} \huge \textbf{F-string}}$
+
+Czasem możesz potrzebować napisu, który zawiera wartość jakiejś zmiennej albo wyrażenia (np. matematycznego).
+<br/>Proponuję, żebyś spróbował/a teraz wykonać proste ćwiczenie:
+
+Dokończ poniższy program tak, aby wypisać oczekiwany wynik:
+<br/>(I nie chodzi tu po prostu o wpisanie wyniku "na sztywno" - spróbuj faktycznie wykorzystać zmienną `name`)
+```py
+name = "Andrzej"
+
+print(???)
+```
+
+Wynik:
+`Cześć, Andrzej!`
+
+<details>
+<summary>Rozwiązanie</summary>
+  Można to zrobić na kilka sposobów:
+  ```py
+  print("Cześć, " + name + "!")
+  ```
+
+  Albo:
+  ```py
+  print("Cześć, ", name, "!", sep="")
+  ```
+
+  W powyższym rozwiązaniu wykorzystałem dwie właściwości polecenia `print()`, o których być może jeszcze nie wiesz:
+  - podanie do polecenia kilku wartości po przecinku sprawi, że  `print()` połączy te wartości ze sobą i wypisze to, co wyjdzie
+  - opcja `sep=` pozwala nam określić, w jaki sposób te wartości zostaną połączone. Domyślnie `print()` wstawia pomiędzy wartości jedną spację - ja natomiast kazałem mu zamiast tego wstawiać pusty string, czyli po prostu nic.
+
+  Istnieje jednak wygodniejsze rozwiązanie od powyższych - f-string.
+</details>
+
+F-string to "formatowany string" (*formatted string literal*). Można do niego "wstawić" zmienną lub wyrażenie.
+<br/>Tworzy się go poprzez dodanie litery `f` przed cudzysłowem.
+
+```py
+f"To jest formatowany string!"
+```
+
+Co prawda nie ma powodu, żeby powyższy string był f-stringiem, a być może wręcz **nie powinien** nim być - ze względu na przejrzystość kodu oraz kilka właściwości f-stringów, których tu nie omawiam, zalecam, abyś używał/a ich tylko wtedy, gdy masz ku temu powód.
+<br/>Przyjrzyjmy się więc przykładowi, w którym ich użycie jest uzasadnione, na przykład temu z powyższego ćwiczenia:
+
+```py
+name = "Andrzej"
+
+print( f"Cześć, {name}!" )
+```
+
+`Cześć, Andrzej!`
+
+Jak widzisz, użyłem nawiasu klamrowego (`{}`) aby umieścić wartość zmiennej `name` wewnątrz f-stringu.
+<br/>W ten sposób można też wstawić zmienną innego typu:
+
+```py
+age = 14
+
+print( f"Andrzej ma {age} lat." )
+```
+
+`Andrzej ma 14 lat.`
+
+To na razie tyle jeśli chodzi o dane typu string - co prawda kryją one jeszcze wiele tajemnic, ale o tym opowiem później, w lekcji dodatkowej [Typy danych - dodatek](<4.5 Typy bonus.md>).
+Na razie jednak zapoznaj się z pozostałymi typami danych.
+
+## Float
+### [🠉](#spis-treści)
+
+Float, podobnie jak Integer, reprezentuje liczby.
+<br/>Różnica polega na tym, że `int` służył do liczb całkowitych, natomiast `float` reprezentuje liczby zmiennoprzecinkowe, czyli niecałkowite.
+<br/>Zmienną typu float można utworzyć poprzez przypisanie liczby z wartością po przecinku - a właściwie, to po kropce - lub za pomocą polecenia `float()`.
+
+```py
+floating_point_number = 12.5
+another_number = float() # Automatycznie otrzyma wartość 0.0
+```
+
+Zauważ, że nie możesz zapisać wartości z użyciem przecinka, to musi być kropka.
+
+```py
+floating_point_number = 12,5
+```
+
+Powyższy kod co prawda nie zwraca błędu... ale uzyskana wartość nie jest liczbą typu `float`. Jest to `tuple`, który poznasz dopiero w następnej lekcji.
+
+Na wartościach typu float można używać tych samych *operatorów matematycznych*, co w przypadku integer: [Matematyka](#matematyka)
+
+## Boolean
+### [🠉](#spis-treści)
+
+Boolean jest bardzo prostym typem danych. Może on przyjąć tylko dwie wartości:
+<br/>Prawda (`True`) albo fałsz (`False`).
+
+W Pythonie nazywa się go skrótowo `bool`.
+<br/>Zmienną tego typu można utworzyć poprzez przypisanie jednej z powyższych wartości lub za pomocą polecenia `bool()`:
+
+```py
+boolean_true = True
+boolean_false = False
+
+default_bool = bool() # Automatycznie otrzyma wartość False
+```
+
+Zwróć uwagę, że `True` oraz `False` zawsze musi być pisane z wielkiej litery.
+
+Na tą chwilę ten typ danych zapewne nie wydaje się zbyt użyteczny, ale zapewniam, że będzie on nam bardzo potrzebny w przyszłości, w trakcie lekcji o *instrukcjach warunkowych*.
+
+## Konwersja typów
+### [🠉](#spis-treści)
+
+Czasem konieczna jest zamiana danych jednego typu w inny.
+<br/>Wyobraźmy sobie, że mamy poniższe zmienne:
+
+```py
+number = 15
+number2 = "7"
+```
+
+I chcielibyśmy je do siebie dodać...
+
+```py
+number + number2
+```
+
+```py
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+```
+
+Oj.
+<br/>Jak być może już się domyśliłeś/aś, ten błąd spowodowany jest tym, że pierwsza zmienna jest typu integer, a druga string (ponieważ przypisana wartość znajduje się w cudzysłowie).
+
+Python nie wie, w jaki sposób ma dodać tekst do liczby. (bo i jaki powinien być wynik? 22? A może "157"? A może... 70...? 😉😉)
+<br/>Więc co teraz?
+
+<div id="konwersja-int">
+
+<br/>${\color{blue} \huge \textbf{Konwersja do typu integer}}$
+
+Konwersji do typu integer dokonuje się zazwyczaj za pomocą polecenia `int()`.
