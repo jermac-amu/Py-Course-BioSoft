@@ -458,6 +458,7 @@ bool("cokolwiek") # str na bool, zwraca True
 ```
 
 <br/>
+<div id="cwiczenia">
 
 ${\color{green} \textbf{Z tą wiedzą jesteś teraz gotowy/a aby przejść do następnej lekcji, }}$[Typy danych II](<./4 Typy danych II.md>)
 ${\color{green} \textbf{...Ale zaraz, a może by ją tak utrwalić, wykonując kilka ćwiczeń?}}$ 
