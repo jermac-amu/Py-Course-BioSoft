@@ -1,3 +1,5 @@
+[Powrót do lekcji 3](</Lekcje/3 Typy danych I.md#cwiczenia>)
+
 Dokończ program, który oblicza, ile razy litera 'i' występuje w podanym zdaniu.
 <br/>Zapewne przyda ci się do tego metoda `.count()`. Przykład jej użycia podałem [tutaj](</Lekcje/3 Typy danych I.md#metody>).
 <br/>No chyba, że wolisz [dokumentację](<https://docs.python.org/3/library/stdtypes.html#string-methods>) (w języku angielskim).
