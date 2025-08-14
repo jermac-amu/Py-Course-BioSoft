@@ -463,4 +463,4 @@ ${\color{green} \textbf{Z tą wiedzą jesteś teraz gotowy/a aby przejść do na
 ${\color{green} \textbf{...Ale zaraz, a może by ją tak utrwalić, wykonując kilka ćwiczeń?}}$ 
 
 [Ćwiczenie 1 - Obliczanie pola koła](</Ćwiczenia/3_cw1_pole_kola.md>)
-[Ćwiczenie 2 - Liczenie liter w zdaniu](</Ćwiczenia/3_cw2_liczenie_liter.md>)
+<br/>[Ćwiczenie 2 - Liczenie liter w zdaniu](</Ćwiczenia/3_cw2_liczenie_liter.md>)
