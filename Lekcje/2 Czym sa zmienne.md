@@ -6,7 +6,7 @@ ${\color{gray} \small \texttt{Napisał Jeremi Maciejewski}}$
 Zanim zaczniesz pisać skomplikowane programy, istnieje kilka podstawowych konceptów w programowaniu, które musisz zrozumieć i nauczyć się z nimi pracować.
 <br/>Pierwszym z nich są *zmienne*.
 
-> Od tego momentu zakładam już, że masz przygotowane i umiesz obsługiwać narzędzia niezbędne do pisania kodu. W przeciwnym razie, zajrzyj do poprzedniej lekcji: [Przygotowanie do kursu](<Przygotowanie do kursu.md>)
+> Od tego momentu zakładam już, że masz przygotowane i umiesz obsługiwać narzędzia niezbędne do pisania kodu. W przeciwnym razie, zajrzyj do poprzedniej lekcji: [Przygotowanie do kursu](<1 Przygotowanie do kursu.md>)
 
 ## Spis treści
 - [Wstęp](#wstęp)
@@ -130,4 +130,4 @@ print(my_number)
 
 > Właściwie, to tak naprawdę nie jest komentarz, tylko wielolinijkowy string. Ale o tym w następnej lekcji...
 
-${\color{green} \textbf{Jesteś teraz gotowy/a aby przejść do lekcji numer 3:}}$ [Typy danych I](<./Typy danych I.md>)
+${\color{green} \textbf{Jesteś teraz gotowy/a aby przejść do lekcji numer 3:}}$ [Typy danych I](<./3 Typy danych I.md>)

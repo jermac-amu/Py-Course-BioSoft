@@ -8,11 +8,11 @@ Cześć!
 Python to jeden z najbardziej popularnych języków programowania na świecie.
 <br/>Nadaje się on do różnorodnych zastosowań, choć jako interpretowany język wysokiego poziomu do pewnego stopnia priorytetyzuje wygodę oraz prędkość pisania kodu ponad wydajność programów.
 
-> Dodatek - [Języki interpretowane vs kompilowane](./Assets/Przygotowanie/Bonus.md#języki-interpretowane-vs-kompilowane)
+> Dodatek - [Języki interpretowane vs kompilowane](<./1.5 Przygotowanie bonus.md#języki-interpretowane-vs-kompilowane>)
 
 <br/>Zanim zaczniesz programować, musisz najpierw zainstalować wszystkie niezbędne narzędzia.
 Przede wszystkim potrzebujesz interpretera języka Python, aby uruchomić swój kod.
-> Jeśli jesteś ciekaw, co to interpreter, zajrzyj pod link powyżej.
+> Jeśli jesteś ciekawy/a, co to interpreter, zajrzyj pod link powyżej.
 
 Dodatkowo, aby napisać jakikolwiek bardziej złożony program, potrzebny ci będzie dowolny edytor tekstu lub IDE
 (*Integrated Development Environment*, czyli program, który zawiera w sobie wszystkie podstawowe narzędzia potrzebne programiście).
@@ -112,7 +112,7 @@ Wybierz "New project".
 
 *![Tu powinien być obraz, ale coś poszło nie tak...](./Assets/Przygotowanie/Pycharm_new_project.png)*
 
-> To nieco bardziej zaawansowana kwestia, ale jeśli jesteś ciekaw/a, to wyjaśniam, co właśnie zrobiliśmy [tutaj](./Assets/Przygotowanie/Bonus.md#środowiska_wirtualne).
+> To nieco bardziej zaawansowana kwestia, ale jeśli jesteś ciekawy/a, to wyjaśniam, co właśnie zrobiliśmy [tutaj](<1.5 Przygotowanie bonus.md#środowiska_wirtualne>).
 
 Otworzy się pusty projekt.
 <br/>W centrum ekranu znajdują się 2 główne panele - drzewo plików po lewej, oraz panel, w którym widać zawartość otwartych plików, po prawej.
@@ -122,14 +122,14 @@ Jak na razie w plikach powinieneś/powinnaś widzieć pusty folder o nazwie two
 <br/>Dwa ostatnie możesz na tę chwilę zupełnie zignorować.
 
 <details>
-<summary>${\color{gray} \textit{Jesteś ciekaw czym są?}}$</summary>
+<summary>${\color{gray} \textit{Jesteś ciekawy/a czym są?}}$</summary>
 "External Libraries" to folder, w którym zawierają się pliki twojej instalacji Pythona (w tym ewentualne dodatkowe biblioteki, gdybyś miał/a jakieś zainstalowane).
 <br/>Możesz tam znaleźć między innymi kod programistyczny, który tworzy sam język Python (choć ostrzegam, nawet mi jest trudno się w nim połapać. Możesz tam zajrzeć w ramach ciekawostki, ale w rzeczywistości bardzo trudno czegokolwiek się w ten sposób dowiedzieć).
 
 Folder "Scratches and Consoles" służy do tworzenia plików i notatek, które nie są "przywiązane" do projektu, w którym obecnie pracujesz, i do których można się dostać również z poziomu innych projektów.
 </details>
 
-*![Tu powinien być obraz, ale coś poszło nie tak...](./Assets/Przygotowanie/Pycharm_empty_project.png)*
+<br/>*![Tu powinien być obraz, ale coś poszło nie tak...](./Assets/Przygotowanie/Pycharm_empty_project.png)*
 
 Kliknij teraz prawym przyciskiem myszy na folder twojego projektu.
 <br/>Powinno otworzyć się menu kontekstowe. Najedź na opcję "New" u jego szczytu i wybierz "Python File".
@@ -195,7 +195,7 @@ Ostatnią ważną rzeczą jest pasek z narzędziami ukryty pod przyciskiem z poz
 
 To by było na tyle jeśli chodzi o krótki wstęp w programowaniu w Pycharm. Jeśli postanowisz korzystać z niego w przyszłości z pewnością samemu odkryjesz wiele innych możliwości, jakie oferuje.
 
-${\color{green} \textbf{Jesteś teraz gotów/gotowa aby przejść do lekcji numer 2:}}$ [Czym są zmienne?](<./Czym są zmienne.md>)
+${\color{green} \textbf{Jesteś teraz gotów/gotowa aby przejść do lekcji numer 2:}}$ [Czym są zmienne?](<2 Czym sa zmienne.md>)
 <br/><br/>
 ## Praca z Pythonem bez IDE
 ### [🠉](#spis-treści)
@@ -279,4 +279,5 @@ No dobrze, a teraz uruchommy wreszcie ten program. Zrobisz to poprzez połączen
 W ten sposób możesz napisać dowolny program w swoim edytorze tekstu, a następnie uruchomić go z poziomu terminala.
 <br/>Na koniec możesz zamknąć terminal poleceniem `exit`.
 
-${\color{green} \textbf{Jesteś teraz gotów/gotowa aby przejść do lekcji numer 2:}}$ [Czym są zmienne?](<./Czym są zmienne.md>)
+${\color{green} \textbf{Jesteś teraz gotów/gotowa aby przejść do lekcji numer 2:}}$ [Czym są zmienne?](<./2 Czym sa zmienne.md>)
+

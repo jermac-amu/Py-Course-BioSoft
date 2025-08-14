@@ -14,7 +14,8 @@ Zasadniczo kurs jest (w założeniu) stworzony tak, żeby osoby z bardzo różny
 <br/>Jeśli uważasz, że coś już wiesz albo coś nie jest ci potrzebne, zachęcam do przeskakiwania od razu do następnego punktu czy lekcji.
 
 ## Spis treści
-- [Przygotowanie do kursu](<./Lekcje/Przygotowanie do kursu.md>)
-- [Czym są zmienne?](<./Lekcje/Czym są zmienne.md>)
-- [Typy danych I](<./Lekcje/Typy danych I.md>)
+- [Przygotowanie do kursu](<./Lekcje/1 Przygotowanie do kursu.md>)
+  - [Przygotowanie - dodatek](<./Lekcje/1.5 Przygotowanie bonus.md>)
+- [Czym są zmienne?](<./Lekcje/2 Czym sa zmienne.md>)
+- [Typy danych I](<./Lekcje/3 Typy danych I.md>)
 - *Coming Soon™*
