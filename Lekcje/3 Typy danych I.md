@@ -336,7 +336,7 @@ Na tą chwilę ten typ danych zapewne nie wydaje się zbyt użyteczny, ale zapew
 ### [🠉](#spis-treści)
 
 Czasem konieczna jest zamiana danych jednego typu w inny.
-<br/>Wyobraźmy sobie, że mamy poniższe zmienne:
+<br/>Na przykład wyobraźmy sobie, że mamy poniższe zmienne:
 
 ```py
 number = 15
@@ -366,3 +366,98 @@ Python nie wie, w jaki sposób ma dodać tekst do liczby. (bo i jaki powinien by
 <br/>${\color{blue} \huge \textbf{Konwersja do typu integer}}$
 
 Konwersji do typu integer dokonuje się zazwyczaj za pomocą polecenia `int()`.
+
+```py
+int(2) # int na int, nic się nie zmienia
+int(2.6) # float na int - uwaga, zaokrągla w dół, (obcina, tak właściwie) tym samym zwracając 2
+int("3") # string na int
+int(True) # bool na int, o tym powiem później
+
+int("2.6") # błąd - tekst w podanym stringu nie odpowiada liczbie całkowitej, co najwyżej zmiennoprzecinkowej
+```
+
+Tak więc nasz problem można rozwiązać w poniższy sposób:
+```py
+number = 15
+number2 = "7"
+
+number + int(number2)
+```
+
+`22`
+
+<div id="konwersja-string">
+
+<br/>${\color{blue} \huge \textbf{Konwersja do typu string}}$
+
+Konwersji do typu string dokonuje się zazwyczaj za pomocą polecenia `str()`.
+<br/>Jak na razie omawialiśmy tylko kilka podstawowych typów, ale przekonasz się w przyszłości, że do stringu można konwertować praktycznie każdy typ, jaki wpadnie ci w ręce.
+<br/>Choć uwaga, bo rezultat czasem może cię zaskoczyć...
+
+```py
+str(2) # int na string, zwraca "2"
+str(2.6) # float na string, zwraca "2.6"
+str("test") # string na string, nic się nie zmienia
+str(True) # bool na string, zwraca "True"
+
+str(str)
+''' class na string... Ktoś może zauważyć, że to w ogóle nie jest konwersja typów.
+Cóż... class to rzeczywiście nie jest żaden typ, ale ten kurs nie obejmuje programowania obiektowego,
+więc nie będę tłumaczył czym naprawdę jest... '''
+```
+
+
+<div id="konwersja-float">
+
+<br/>${\color{blue} \huge \textbf{Konwersja do typu float}}$
+
+Konwersji do typu float dokonuje się zazwyczaj za pomocą polecenia `float()`.
+
+```py
+float(2) # int na float, zwraca 2.0
+float(2.6) # float na float, nic się nie zmienia
+float("3.6") # str na float, zwraca 3.6
+float(True) # bool na float, o tym powiem za chwilę
+
+float("2") # str na float - co prawda brakuje części po przecinku, ale Python może się "domyślić", że powinno tam być ".0" - a więc zwraca 2.0
+```
+
+<div id="konwersja-bool">
+
+<br/>${\color{blue} \huge \textbf{Konwersja do typu Boolean}}$
+
+Konwersji do typu Boolean dokonuje się zazwyczaj za pomocą polecenia `bool()`.
+<br/>Zanim przejdziemy do przykładów, od razu wyjaśnię, że owszem, dane logiczne, prawda lub fałsz, można konwertować do typów numerycznych, (np. int, float) choć być może nie wydaje się to oczywiste.
+<br/>Wynika to po części z tego, że *wewnętrznie*, komputer "zapamiętuje" prawdę lub fałsz jako liczby 1 lub 0.
+<br/>Tak więc `int(True)` zwróci nam 1, a `int(False)` 0.
+
+```py
+bool(True) # bool na bool, nic się nie zmienia
+bool(0) # int na bool, zwraca False
+bool(1) # int na bool, zwraca True
+bool(0.0) # float na bool, zwraca False
+
+bool(12) # float na bool, zwraca True
+```
+
+Ostatni przykład może być zaskakujący - jak się okazuje, przyjmuje się, że przy konwersji, 0 (lub 0.0) odpowiada False, a *każda inna* liczba odpowiada True.
+<br/>Jednak to nie wszystko.
+
+```py
+bool("False") # str na bool, zwraca... True???
+```
+
+Powyższy przykład może być dość dezorientujący, szczególnie, że `str(False)` zwracało przecież `"False"`.
+<br/>Zasadniczo, konwersja stringów do booleanów nie ma zbyt wielu zastosowań, (bo w gruncie rzeczy, jak ocenić czy słowo "cześć" jest raczej prawdziwe czy fałszywe?) i właściwie mogłaby być zwyczajnie niedozwolona...
+<br/>Ale jednak istnieje jeden przykład sytuacji kiedy możemy chcieć sprawdzić, czy napis jest "prawdziwy" - sprawdzanie, czy string jest pusty.
+<br/>Ze względu na to zastosowanie, konwersja `str` do `bool` jest możliwa i zwraca `False` kiedy string jest pusty, a `True` kiedy zawiera *cokolwiek*, choćby nawet było to `"False"`.
+
+```py
+bool("") # str na bool, zwraca False (string jest pusty)
+bool("cokolwiek") # str na bool, zwraca True
+```
+
+<br/>
+
+${\color{green} \textbf{Z tą wiedzą jesteś teraz gotowy/a aby przejść do następnej lekcji, }}$[Typy danych II](<./4 Typy danych II.md>)
+${\color{green} \textbf{...Ale zaraz, a może by ją tak utrwalić, wykonując kilka ćwiczeń?}}$ 
