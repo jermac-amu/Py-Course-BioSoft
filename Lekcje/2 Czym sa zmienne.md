@@ -131,3 +131,7 @@ print(my_number)
 > Właściwie, to tak naprawdę nie jest komentarz, tylko wielolinijkowy string. Ale o tym w następnej lekcji...
 
 ${\color{green} \textbf{Jesteś teraz gotowy/a aby przejść do lekcji numer 3:}}$ [Typy danych I](<./3 Typy danych I.md>)
+
+<br/>
+
+*[Do spisu treści](#spis-treści)*
