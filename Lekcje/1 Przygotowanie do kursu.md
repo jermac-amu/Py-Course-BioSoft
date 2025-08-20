@@ -281,3 +281,6 @@ W ten sposób możesz napisać dowolny program w swoim edytorze tekstu, a nastę
 
 ${\color{green} \textbf{Jesteś teraz gotów/gotowa aby przejść do lekcji numer 2:}}$ [Czym są zmienne?](<./2 Czym sa zmienne.md>)
 
+<br/>
+
+*[Do spisu treści](#spis-treści)*
