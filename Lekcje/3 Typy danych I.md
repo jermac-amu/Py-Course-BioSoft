@@ -36,7 +36,7 @@ my_number = 12
 second_number = int() # Automatycznie otrzyma wartość 0
 ```
 
-<div id="Matematyka">
+<a name="matematyka"></a>
 
 ${\color{blue} \huge \textbf{Matematyka}}$
 
@@ -110,7 +110,7 @@ print(b)
 W poniższych podrozdziałach opiszę cały szereg możliwości, które udostępnia nam string.
 <br/>
 
-<div id="Metody">
+<a name="metody"></a>
 
 ${\color{blue} \huge \textbf{Metody}}$
 
@@ -152,7 +152,7 @@ Kilka bardziej użytecznych metod, których można użyć na danych typu string 
 
 Takich metod istnieje znacznie więcej. Po kompletną listę odsyłam do [dokumentacji Pythona](https://docs.python.org/3/library/stdtypes.html#string-methods) - choć na razie pewnie ci się nie przyda.
 
-<div id="Slicing">
+<a name="slicing"></a>
 
 ${\color{blue} \huge \textbf{Slicing}}$
 
@@ -221,7 +221,7 @@ print(part1)
 A co się stanie jeśli zamienimy indeksy początku i końca miejscami?
 <br/>Przekonaj się sam/a...
 
-<div id="Fstring">
+<a name="fstring"></a>
 
 <br/>${\color{blue} \huge \textbf{F-string}}$
 
@@ -361,7 +361,7 @@ Oj.
 Python nie wie, w jaki sposób ma dodać tekst do liczby. (bo i jaki powinien być wynik? 22? A może "157"? A może... 70...? 😉😉)
 <br/>Więc co teraz?
 
-<div id="konwersja-int">
+<a name="konwersja-int"></a>
 
 <br/>${\color{blue} \huge \textbf{Konwersja do typu integer}}$
 
@@ -386,7 +386,7 @@ number + int(number2)
 
 `22`
 
-<div id="konwersja-string">
+<a name="konwersja-string"></a>
 
 <br/>${\color{blue} \huge \textbf{Konwersja do typu string}}$
 
@@ -407,7 +407,7 @@ więc nie będę tłumaczył czym naprawdę jest... '''
 ```
 
 
-<div id="konwersja-float">
+<a name="konwersja-float"></a>
 
 <br/>${\color{blue} \huge \textbf{Konwersja do typu float}}$
 
@@ -422,7 +422,7 @@ float(True) # bool na float, o tym powiem za chwilę
 float("2") # str na float - co prawda brakuje części po przecinku, ale Python może się "domyślić", że powinno tam być ".0" - a więc zwraca 2.0
 ```
 
-<div id="konwersja-bool">
+<a name="konwersja-bool"></a>
 
 <br/>${\color{blue} \huge \textbf{Konwersja do typu Boolean}}$
 
@@ -458,10 +458,11 @@ bool("cokolwiek") # str na bool, zwraca True
 ```
 
 <br/>
-<div id="cwiczenia">
+<a name="cwiczenia"></a>
 
 ${\color{green} \textbf{Z tą wiedzą jesteś teraz gotowy/a aby przejść do następnej lekcji, }}$[Typy danych II](<./4 Typy danych II.md>)
 ${\color{green} \textbf{...Ale zaraz, a może by ją tak utrwalić, wykonując kilka ćwiczeń?}}$ 
 
 [Ćwiczenie 1 - Obliczanie pola koła](</Ćwiczenia/3_cw1_pole_kola.md>)
 <br/>[Ćwiczenie 2 - Liczenie liter w zdaniu](</Ćwiczenia/3_cw2_liczenie_liter.md>)
+<br/>[Ćwiczenie 3 - Dodawanie cyfr](</Ćwiczenia/3_cw3_dodawanie_cyfr.md>) ${\color{orange} \textit{To zadanie jest szczególnie trudne}}$
