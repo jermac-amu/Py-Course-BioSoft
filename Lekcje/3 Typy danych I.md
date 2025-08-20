@@ -24,6 +24,7 @@ Zaczniemy od nich, a następnie przejdziemy do pozostałych typów danych.
 - [Float](#float)
 - [Boolean](#boolean)
 - [Konwersja typów](#konwersja-typów)
+- [Ćwiczenia](#cwiczenia)
 
 ## Integer
 ### [🠉](#spis-treści)
@@ -465,4 +466,8 @@ ${\color{green} \textbf{...Ale zaraz, a może by ją tak utrwalić, wykonując k
 
 [Ćwiczenie 1 - Obliczanie pola koła](</Ćwiczenia/3_cw1_pole_kola.md>)
 <br/>[Ćwiczenie 2 - Liczenie liter w zdaniu](</Ćwiczenia/3_cw2_liczenie_liter.md>)
-<br/>[Ćwiczenie 3 - Dodawanie cyfr](</Ćwiczenia/3_cw3_dodawanie_cyfr.md>) ${\color{orange} \textit{To zadanie jest szczególnie trudne}}$
+<br/>[Ćwiczenie 3 - Dodawanie cyfr](</Ćwiczenia/3_cw3_dodawanie_cyfr.md>) ${\color{orange} \small \textit{To zadanie jest szczególnie trudne}}$
+
+<br/>
+
+*[Do spisu treści](#spis-treści)*
