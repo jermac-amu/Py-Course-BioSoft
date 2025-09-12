@@ -145,8 +145,9 @@ Dane tego typu tworzy się poleceniem `tuple()`, lub poprzez zapisanie wartości
 <br/>Można, właściwie wypada, umieszczać je wewnątrz nawiasów okrągłych, ale nie trzeba.
 
 ```py
-example_tuple = (0, True, 13, "piętnaście", 19.5) # lista z elementami różnych typów
-another_tuple = 0, True, 13, "piętnaście", 19.5 # nawiasy w gruncie rzeczy nie są potrzebne. Choć ten zapis jest mniej zrozumiały.
+example_tuple = (0, True, 13, "piętnaście", 19.5) # Tuple z elementami różnych typów
+another_tuple = 0, True, 13, "piętnaście", 19.5
+# Nawiasy w gruncie rzeczy nie są niezbędne. Choć bez nich zapis jest mniej przejrzysty.
 
 empty_tuple = () # pusta krotka
 another_empty_tuple = tuple() # również pusta krotka
@@ -251,19 +252,19 @@ empty_dict = dict()
 another_empty_dict = {}
 ```
 
-Choć może się wydawać dziwny i zbędny, to zapewniam, że ten typ danych jest BARDZO użyteczny i warto poświęcić chwilę, żeby nauczyć się go używać.
+Choć może się wydawać dziwny i zbędny, to zapewniam, że ten typ danych jest BARDZO użyteczny i warto poświęcić chwilę, żeby nauczyć się z niego korzystać.
 <br/>Przykłady użycia pojawią się z resztą już w ćwiczeniach po tej lekcji...
 
 <br/><a name="operacje-dict"></a>
 
 ${\color{blue} \huge \textbf{Operacje typowe dla słowników}}$
 
-Jeśli miałeś/aś już kiedyś styczność z Pythonem, być może sądzisz, że słowniki są nieuporządkowane (tak jak w przypadku zbiorów).
+Jeśli miałeś/aś już kiedyś styczność z Pythonem, możesz myśleć, że słowniki są nieuporządkowane (tak jak w przypadku zbiorów).
 <br/>Rzeczywiście, tak było w starszych wersjach Pythona, ale od czasu wersji 3.7 wszystkie słowniki są teraz uporządkowane - można więc używać na nich [slicingu](<3 Typy danych I.md#slicing>).
 
 <details>
   <summary>
-    Istnieją również metody oraz funkcje dedykowane do użytku ze słownikami:
+    Metody oraz funkcje dedykowane do użytku ze słownikami:
   </summary>
 
   - `d[k]` - Zwraca wartość klucza `k`.
@@ -296,7 +297,8 @@ Jeśli nie będziemy zdawać sobie z tego sprawy, i rozkażemy Pythonowi zmieni�
 
 ```py
 mylist = [1, 2, 3]
-another_list = mylist # niebezpieczna sytuacja - teraz obie zmienne zawierają tę samą mapę (wskaźnik), ale skrzynia jest tylko jedna
+another_list = mylist
+# niebezpieczna sytuacja - teraz obie zmienne zawierają tę samą mapę (wskaźnik), ale skrzynia jest tylko jedna
 
 print(mylist) # [1, 2, 3]
 print(another_list) # [1, 2, 3]
@@ -305,7 +307,8 @@ mylist.append(4)
 
 print(mylist) # [1, 2, 3, 4]
 print(another_list) # [1, 2, 3, 4]
-# Choć wydaje nam się, że dodaliśmy liczbę 4 tylko do pierwszej listy, obie ją teraz zawierają (ponieważ to w rzeczywistości jedna i ta sama lista)
+# Choć wydaje nam się, że dodaliśmy liczbę 4 tylko do pierwszej listy,
+# obie ją teraz zawierają (ponieważ to w rzeczywistości jedna i ta sama lista)
 ```
 
 Jak temu zapobiec?
@@ -336,9 +339,21 @@ print(a) # 56
 print(b) # 22
 ```
 
-W powyższej sytuacji, w momencie kiedy zmieniamy wartość zmiennej a, Python nie rusza w ogóle skrzyni zawierającej liczbę 22 - zamiast tego tworzy i zakopuje nową skrzynię, z liczbą 56.
+W powyższej sytuacji, w momencie kiedy zmieniamy wartość zmiennej `a`, Python nie rusza w ogóle skrzyni zawierającej liczbę 22 - zamiast tego tworzy i zakopuje nową skrzynię, z liczbą 56.
 <br/>Dzieje się tak dlatego, że typ integer - choć nie wspominałem o tym wcześniej (zwykle nie jest to w jego przypadku istotne) - jest niemutowalny. Python po prostu nie może zmienić zawartości takiej skrzyni, w przeciwieństwie do skrzyni zawierającej listę.
 
 Jest jeszcze jedna rzecz, o której muszę wspomnieć - w przypadku zagnieżdżonych struktur danych, na przykład list zawierających w sobie inne listy, metoda `.copy()` może nie wystarczyć.
 <br/>Kopia, którą nam zwróci co prawda będzie unikalna, jednak lista sama w sobie jest jak zestaw pudełek z mapami - w rezultacie lista znajdująca się *wewnątrz* naszej kopii, wciąż będzie tą samą listą, która znajdowała się wewnątrz oryginału.
-<br/>Rozwiązaniem takiego problemu jest utworzenie tak zwanej głębokiej kopii, do czego używa się funkcji `deepcopy(x)`. Funkcja ta niestety nie jest dostępna domyślnie - trzeba ją zaimportować z modułu `copy` - korzystania z modułów nauczysz się w dalszej części tego kursu.
+<br/>Rozwiązaniem takiego problemu jest utworzenie tak zwanej głębokiej kopii, do czego używa się funkcji `deepcopy(x)`. Funkcja ta niestety nie jest dostępna domyślnie - trzeba ją zaimportować z modułu `copy` - a korzystania z modułów nauczysz się w dalszej części tego kursu.
+
+<br/>
+<a name="cwiczenia"></a>
+
+${\color{green} \textbf{To już koniec tej lekcji. Ale zanim przejdziesz do następnej - }}$[Instrukcje warunkowe](<./5 Instrukcje warunkowe.md>)...
+${\color{green} \textbf{...wypadałoby przekonać się, co można zrobić z tą wiedzą:}}$ 
+
+<!-- [Ćwiczenie 1 - ???](</Ćwiczenia/4_cw1_???.md>) -->
+
+<br/>
+
+*[Do spisu treści](#spis-treści)*
