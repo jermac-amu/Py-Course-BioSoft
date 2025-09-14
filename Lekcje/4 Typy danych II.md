@@ -19,6 +19,7 @@ Służą one do przechowywania wielu wartości jednocześnie.
   - [Operacje typowe dla słowników](#operacje-dict)
 
 - [Uwaga, wskaźniki!](#uwaga-wskaźniki)
+- [Ćwiczenia](#cwiczenia)
 
 <br/>
 
@@ -71,7 +72,7 @@ print(list1 * 3)
 
 <br/><details>
   <summary>
-    Istnieje wiele metod oraz funkcji, których można używać z takimi typami:
+    Istnieje wiele metod oraz funkcji, których można używać z takimi typami: ${\color{gray} \small \textit{(naciśnij aby rozwinąć)}}$
   </summary>
   
   - `len(s)` - zwraca liczbę elementów w sekwencji, np. `len([0,1,2,3,4])` = `5`
@@ -89,6 +90,8 @@ print(list1 * 3)
     >
     > Możliwe jest też użycie ich na sekwencjach zawierających stringi, wtedy otrzymamy pierwszy lub ostatni element w przypadku ich uporządkowania alfabetycznego.
     > `min(["basia", "dorota", "Ania", "ania"])` = `"Ania"`
+  
+  - `sum(s)` - zwraca sumę elementów w sekwencji. Zwróci błąd jeśli sekwencja zwiera nie-numeryczne dane.
 </details>
 
 <br/><a name="operacje-lista"></a>
@@ -108,7 +111,7 @@ Istnieją także metody oraz funkcje wykorzystywane konkretnie z listami.
 - `l.sort(reverse=False)`
   <details>
     <summary>
-      Sortuje elementy listy.
+      Sortuje elementy listy.  ${\color{gray} \small \textit{(naciśnij aby rozwinąć)}}$
     </summary>
 
     > Podobnie jak `min()` oraz `max()`, zwróci błąd, jeśli lista zawiera elementy, których nie da się porównywać.
@@ -213,7 +216,7 @@ Ze względu na to, że są nieuporządkowane, na zbiorach **nie można** używa�
 
 <details>
   <summary>
-    Zbiory posiadają za to zestaw unikalnych dla siebie metod oraz funkcji:
+    Zbiory posiadają za to zestaw unikalnych dla siebie metod oraz funkcji: ${\color{gray} \small \textit{(naciśnij aby rozwinąć)}}$
   </summary>
 
   - `s.add(x)` - Dodaje element do listy.
@@ -264,7 +267,7 @@ Jeśli miałeś/aś już kiedyś styczność z Pythonem, możesz myśleć, że s
 
 <details>
   <summary>
-    Metody oraz funkcje dedykowane do użytku ze słownikami:
+    Metody oraz funkcje dedykowane do użytku ze słownikami: ${\color{gray} \small \textit{(naciśnij aby rozwinąć)}}$
   </summary>
 
   - `d[k]` - Zwraca wartość klucza `k`.
@@ -287,7 +290,9 @@ Jeśli miałeś/aś już kiedyś styczność z Pythonem, możesz myśleć, że s
 Jak dotychczas tłumaczyłem, że zmienna jest jak pudełko na jakąś informację. To wygodne uproszczenie, jednak jak się okazuje, nasze pudełko w rzeczywistości wcale nie zawiera naszej informacji.
 <br/>Choć na co dzień tego nie zauważamy, w rzeczywistości "pudełko", którym jest zmienna zawiera jedynie wskaźnik, "notatkę", która informuje Pythona gdzie nasza informacja jest ukryta...
 
-To trochę tak, jakbyśmy mieli pudełka z mapami skarbów - kiedy chcemy odczytać wartość zmiennej, Python "bierze" tę mapę (wskaźnik, adres w pamięci) z pudełka (zmiennej), idzie do ogródka (pamięci RAM tudzież cache) i wykopuje ukrytą skrzynię z informacją, którą następnie oddaje nam...
+To trochę tak, jakbyśmy mieli pudełka z mapami skarbów - kiedy chcemy odczytać wartość zmiennej, Python "bierze" tę mapę (wskaźnik, adres w pamięci) z pudełka (zmiennej), idzie do ogródka (pamięci - RAM, cache lub dyskowej) i wykopuje ukrytą skrzynię z informacją, którą następnie oddaje nam...
+
+*![Tu powinien być obraz, ale coś poszło nie tak...](./Assets/Typy_II/Schemat_zmienne.png)*
 
 No dobra, ale co to za różnica, skoro tak czy tak dostajemy naszą informację?
 <br/>Rzeczywiście w większości przypadków nie ma to znaczenia. Ale czasem możemy wpakować się w kłopoty, jeśli o tym zapomnimy.
@@ -310,6 +315,8 @@ print(another_list) # [1, 2, 3, 4]
 # Choć wydaje nam się, że dodaliśmy liczbę 4 tylko do pierwszej listy,
 # obie ją teraz zawierają (ponieważ to w rzeczywistości jedna i ta sama lista)
 ```
+
+*![Tu powinien być obraz, ale coś poszło nie tak...](./Assets/Typy_II/Schemat_zmienne_lista.png)*
 
 Jak temu zapobiec?
 <br/>Do tego właśnie służą metody `.copy()` - zamiast umieszczać w drugim pudełku kopię mapy, tworzą zupełnie nową skrzynię z nową informacją.
@@ -352,7 +359,9 @@ Jest jeszcze jedna rzecz, o której muszę wspomnieć - w przypadku zagnieżdżo
 ${\color{green} \textbf{To już koniec tej lekcji. Ale zanim przejdziesz do następnej - }}$[Instrukcje warunkowe](<./5 Instrukcje warunkowe.md>)...
 ${\color{green} \textbf{...wypadałoby przekonać się, co można zrobić z tą wiedzą:}}$ 
 
-<!-- [Ćwiczenie 1 - ???](</Ćwiczenia/4_cw1_???.md>) -->
+[Ćwiczenie 1 - Lista nukleotydów](</Ćwiczenia/4_cw1_lista_nukleotydów.md>)
+<br/>[Ćwiczenie 2 - Zbiór owoców](</Ćwiczenia/4_cw2_zbiór_owoców.md>)
+<br/>[Ćwiczenie 3 - Sekwencja tandemowa](</Ćwiczenia/4_cw3_sekw_tandemowa.md>) ${\color{orange} \small \textit{To zadanie jest szczególnie trudne}}$
 
 <br/>
 
