@@ -23,6 +23,7 @@ Zaczniemy od nich, a następnie przejdziemy do pozostałych typów danych.
   - [F-string](#fstring)
 - [Float](#float)
 - [Boolean](#boolean)
+- [None](#none)
 - [Konwersja typów](#konwersja-typów)
 - [Ćwiczenia](#cwiczenia)
 
