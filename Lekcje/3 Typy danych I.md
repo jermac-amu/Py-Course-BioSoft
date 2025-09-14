@@ -67,7 +67,7 @@ Typ danych służący do przechowywania tekstu.
 <br/>Znak jest to pojedyncza litera, cyfra itp.
 
 <br/>W Pythonie string jest zwykle nazywany skrótowo `str`.
-<br/>Zmienną tego typu można stworzyć poprzez przypisanie tekstu otoczonego cudzysłowem, (pojedynczym lub podwójnym, nie ma to znaczenia. O ile jesteśmy konsekwentni) lub za pomocą polecenia `str()`.
+<br/>Wartość tego typu można stworzyć poprzez przypisanie tekstu otoczonego cudzysłowem, (pojedynczym lub podwójnym, nie ma to znaczenia. O ile jesteśmy konsekwentni) lub za pomocą polecenia `str()`.
 
 ```py
 hello = "Cześć!"
@@ -296,7 +296,7 @@ Na razie jednak zapoznaj się z pozostałymi typami danych.
 
 Float, podobnie jak Integer, reprezentuje liczby.
 <br/>Różnica polega na tym, że `int` służył do liczb całkowitych, natomiast `float` reprezentuje liczby zmiennoprzecinkowe, czyli niecałkowite.
-<br/>Zmienną typu float można utworzyć poprzez przypisanie liczby z wartością po przecinku - a właściwie, to po kropce - lub za pomocą polecenia `float()`.
+<br/>Wartość typu float można utworzyć poprzez przypisanie liczby z wartością po przecinku - a właściwie, to po kropce - lub za pomocą polecenia `float()`.
 
 ```py
 floating_point_number = 12.5
@@ -320,7 +320,7 @@ Boolean jest bardzo prostym typem danych. Może on przyjąć tylko dwie wartośc
 <br/>Prawda (`True`) albo fałsz (`False`).
 
 W Pythonie nazywa się go skrótowo `bool`.
-<br/>Zmienną tego typu można utworzyć poprzez przypisanie jednej z powyższych wartości lub za pomocą polecenia `bool()`:
+<br/>Wartość tego typu można utworzyć poprzez przypisanie jednej z powyższych wartości lub za pomocą polecenia `bool()`:
 
 ```py
 boolean_true = True
@@ -332,6 +332,24 @@ default_bool = bool() # Automatycznie otrzyma wartość False
 Zwróć uwagę, że `True` oraz `False` zawsze musi być pisane z wielkiej litery.
 
 Na tą chwilę ten typ danych zapewne nie wydaje się zbyt użyteczny, ale zapewniam, że będzie on nam bardzo potrzebny w przyszłości, w trakcie lekcji o *instrukcjach warunkowych*.
+
+## None
+### [🠉](#spis-treści)
+
+`None`, a właściwie NoneType, jest szczególnym typem danych, który nie służy do przechowywania danych.
+<br/>Właściwie, można powiedzieć, że służy **właśnie do tego**, żeby **nie** przechowywać żadnych danych.
+
+Jest to po prostu wartość zastępcza.
+<br/>Jeśli chcemy, na przykład, stworzyć zmienną, w której na razie nic nie ma, (ale będzie) to używamy właśnie NoneType.
+
+Typ ten może przyjąć tylko jedną wartość - obiekt `None`.
+<br/>Możemy utworzyć wartość tego typu poprzez przypisanie tego właśnie obiektu:
+
+```py
+placeholder = None
+```
+
+Nie jest możliwa konwersja do ani z typu NoneType.
 
 ## Konwersja typów
 ### [🠉](#spis-treści)
