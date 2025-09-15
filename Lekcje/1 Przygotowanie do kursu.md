@@ -286,4 +286,3 @@ ${\color{green} \textbf{Jesteś teraz gotów/gotowa aby przejść do lekcji nume
 <br/>
 
 *[Do spisu treści](#spis-treści)*
-

@@ -67,7 +67,7 @@ Typ danych służący do przechowywania tekstu.
 <br/>Nazwa 'string' oznacza dosłownie sznurek. Bierze się ona z tego, że każdy string jest *łańcuchem znaków* (tudzież "sznurkiem znaków" jeśli wolisz 😉).
 <br/>Znak jest to pojedyncza litera, cyfra itp.
 
-<br/>W Pythonie string jest zwykle nazywany skrótowo `str`.
+W Pythonie string jest zwykle nazywany skrótowo `str`.
 <br/>Wartość tego typu można stworzyć poprzez przypisanie tekstu otoczonego cudzysłowem, (pojedynczym lub podwójnym, nie ma to znaczenia. O ile jesteśmy konsekwentni) lub za pomocą polecenia `str()`.
 
 ```py
