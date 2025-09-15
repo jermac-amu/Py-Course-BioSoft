@@ -242,23 +242,26 @@ Wynik:
 `Cześć, Andrzej!`
 
 <details>
-<summary>Rozwiązanie</summary>
-  Można to zrobić na kilka sposobów:
-  ```py
-  print("Cześć, " + name + "!")
-  ```
+<summary>Rozwiązanie ${\color{gray} \small \textit{(naciśnij aby rozwinąć)}}$</summary>
+Można to zrobić na kilka sposobów:
 
-  Albo:
-  ```py
-  print("Cześć, ", name, "!", sep="")
-  ```
+```py
+print("Cześć, " + name + "!")
+```
 
-  W powyższym rozwiązaniu wykorzystałem dwie właściwości polecenia `print()`, o których być może jeszcze nie wiesz:
-  - podanie do polecenia kilku wartości po przecinku sprawi, że  `print()` połączy te wartości ze sobą i wypisze to, co wyjdzie
-  - opcja `sep=` pozwala nam określić, w jaki sposób te wartości zostaną połączone. Domyślnie `print()` wstawia pomiędzy wartości jedną spację - ja natomiast kazałem mu zamiast tego wstawiać pusty string, czyli po prostu nic.
-
-  Istnieje jednak wygodniejsze rozwiązanie od powyższych - f-string.
+Albo:
+```py
+print("Cześć, ", name, "!", sep="")
+```
 </details>
+
+<br/>
+
+W powyższym rozwiązaniu wykorzystałem dwie właściwości polecenia `print()`, o których być może jeszcze nie wiesz:
+- podanie do polecenia kilku wartości po przecinku sprawi, że  `print()` połączy te wartości ze sobą i wypisze to, co wyjdzie
+- opcja `sep=` pozwala nam określić, w jaki sposób te wartości zostaną połączone. Domyślnie `print()` wstawia pomiędzy wartości jedną spację - ja natomiast kazałem mu zamiast tego wstawiać pusty string, czyli po prostu nic.
+
+Istnieje jednak wygodniejsze rozwiązanie od powyższych - **f-string**.
 
 F-string to "formatowany string" (*formatted string literal*). Można do niego "wstawić" zmienną lub wyrażenie.
 <br/>Tworzy się go poprzez dodanie litery `f` przed cudzysłowem.
