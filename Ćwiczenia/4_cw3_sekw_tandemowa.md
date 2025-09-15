@@ -17,12 +17,12 @@ Przyjmij, że nie występują w niej niepełne ani zmutowane fragmenty motywu.
         Wskazówka: ${\color{gray} \small \textit{(naciśnij aby rozwinąć)}}$
     </summary>
 
-Dane ze słownika możesz wyciągnąć stosując formułę `value = dict[key]`, na przykład `num_A = nuc_counts['A']`.
+> Dane ze słownika możesz wyciągnąć stosując formułę `value = dict[key]`, na przykład `num_A = nuc_counts['A']`.
+>
+> Mogą ci się przydać [operatory matematyczne](</Lekcje/Typy danych I.md#matematyka>).
+> <br/>W tym, [powielanie stringów](</Lekcje/Typy danych I.md#string>).
 
-Mogą ci się przydać [operatory matematyczne](</Lekcje/Typy danych I.md#matematyka>).
-<br/>W tym, [powielanie stringów](</Lekcje/Typy danych I.md#string>).
-
-**Uwaga!** Zauważ, że istnieją dwa różne operatory odpowiadające za dzielenie... ;)
+> **Uwaga!** Zauważ, że istnieją dwa różne operatory odpowiadające za dzielenie... 😉
 </details>
 
 <br/>
