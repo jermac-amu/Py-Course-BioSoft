@@ -19,4 +19,4 @@ Zasadniczo kurs jest (w założeniu) stworzony tak, żeby osoby z bardzo różny
 - [Czym są zmienne?](<./Lekcje/2 Czym sa zmienne.md>)
 - [Typy danych I](<./Lekcje/3 Typy danych I.md>)
 - [Typy danych II](<./Lekcje/4 Typy danych II.md>)
-- *Coming Soon™*
+- Coming *Soon™* or *Christmas of 2007* (Valve Time)
