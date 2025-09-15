@@ -18,4 +18,5 @@ Zasadniczo kurs jest (w założeniu) stworzony tak, żeby osoby z bardzo różny
   - [Przygotowanie - dodatek](<./Lekcje/1.5 Przygotowanie bonus.md>)
 - [Czym są zmienne?](<./Lekcje/2 Czym sa zmienne.md>)
 - [Typy danych I](<./Lekcje/3 Typy danych I.md>)
-- *Coming Soon™*
+- [Typy danych II](<./Lekcje/4 Typy danych II.md>)
+- Coming *Soon™* or on *Christmas of 2007* (Valve Time)

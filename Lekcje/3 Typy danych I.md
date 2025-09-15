@@ -23,7 +23,9 @@ Zaczniemy od nich, a następnie przejdziemy do pozostałych typów danych.
   - [F-string](#fstring)
 - [Float](#float)
 - [Boolean](#boolean)
+- [None](#none)
 - [Konwersja typów](#konwersja-typów)
+- [Ćwiczenia](#cwiczenia)
 
 ## Integer
 ### [🠉](#spis-treści)
@@ -36,7 +38,7 @@ my_number = 12
 second_number = int() # Automatycznie otrzyma wartość 0
 ```
 
-<div id="Matematyka">
+<a name="matematyka"></a>
 
 ${\color{blue} \huge \textbf{Matematyka}}$
 
@@ -65,8 +67,8 @@ Typ danych służący do przechowywania tekstu.
 <br/>Nazwa 'string' oznacza dosłownie sznurek. Bierze się ona z tego, że każdy string jest *łańcuchem znaków* (tudzież "sznurkiem znaków" jeśli wolisz 😉).
 <br/>Znak jest to pojedyncza litera, cyfra itp.
 
-<br/>W Pythonie string jest zwykle nazywany skrótowo `str`.
-<br/>Zmienną tego typu można stworzyć poprzez przypisanie tekstu otoczonego cudzysłowem, (pojedynczym lub podwójnym, nie ma to znaczenia. O ile jesteśmy konsekwentni) lub za pomocą polecenia `str()`.
+W Pythonie string jest zwykle nazywany skrótowo `str`.
+<br/>Wartość tego typu można stworzyć poprzez przypisanie tekstu otoczonego cudzysłowem, (pojedynczym lub podwójnym, nie ma to znaczenia. O ile jesteśmy konsekwentni) lub za pomocą polecenia `str()`.
 
 ```py
 hello = "Cześć!"
@@ -110,7 +112,7 @@ print(b)
 W poniższych podrozdziałach opiszę cały szereg możliwości, które udostępnia nam string.
 <br/>
 
-<div id="Metody">
+<a name="metody"></a>
 
 ${\color{blue} \huge \textbf{Metody}}$
 
@@ -152,7 +154,7 @@ Kilka bardziej użytecznych metod, których można użyć na danych typu string 
 
 Takich metod istnieje znacznie więcej. Po kompletną listę odsyłam do [dokumentacji Pythona](https://docs.python.org/3/library/stdtypes.html#string-methods) - choć na razie pewnie ci się nie przyda.
 
-<div id="Slicing">
+<a name="slicing"></a>
 
 ${\color{blue} \huge \textbf{Slicing}}$
 
@@ -221,7 +223,7 @@ print(part1)
 A co się stanie jeśli zamienimy indeksy początku i końca miejscami?
 <br/>Przekonaj się sam/a...
 
-<div id="Fstring">
+<a name="fstring"></a>
 
 <br/>${\color{blue} \huge \textbf{F-string}}$
 
@@ -240,23 +242,26 @@ Wynik:
 `Cześć, Andrzej!`
 
 <details>
-<summary>Rozwiązanie</summary>
-  Można to zrobić na kilka sposobów:
-  ```py
-  print("Cześć, " + name + "!")
-  ```
+<summary>Rozwiązanie ${\color{gray} \small \textit{(naciśnij aby rozwinąć)}}$</summary>
+Można to zrobić na kilka sposobów:
 
-  Albo:
-  ```py
-  print("Cześć, ", name, "!", sep="")
-  ```
+```py
+print("Cześć, " + name + "!")
+```
 
-  W powyższym rozwiązaniu wykorzystałem dwie właściwości polecenia `print()`, o których być może jeszcze nie wiesz:
-  - podanie do polecenia kilku wartości po przecinku sprawi, że  `print()` połączy te wartości ze sobą i wypisze to, co wyjdzie
-  - opcja `sep=` pozwala nam określić, w jaki sposób te wartości zostaną połączone. Domyślnie `print()` wstawia pomiędzy wartości jedną spację - ja natomiast kazałem mu zamiast tego wstawiać pusty string, czyli po prostu nic.
-
-  Istnieje jednak wygodniejsze rozwiązanie od powyższych - f-string.
+Albo:
+```py
+print("Cześć, ", name, "!", sep="")
+```
 </details>
+
+<br/>
+
+W powyższym rozwiązaniu wykorzystałem dwie właściwości polecenia `print()`, o których być może jeszcze nie wiesz:
+- podanie do polecenia kilku wartości po przecinku sprawi, że  `print()` połączy te wartości ze sobą i wypisze to, co wyjdzie
+- opcja `sep=` pozwala nam określić, w jaki sposób te wartości zostaną połączone. Domyślnie `print()` wstawia pomiędzy wartości jedną spację - ja natomiast kazałem mu zamiast tego wstawiać pusty string, czyli po prostu nic.
+
+Istnieje jednak wygodniejsze rozwiązanie od powyższych - **f-string**.
 
 F-string to "formatowany string" (*formatted string literal*). Można do niego "wstawić" zmienną lub wyrażenie.
 <br/>Tworzy się go poprzez dodanie litery `f` przed cudzysłowem.
@@ -295,7 +300,7 @@ Na razie jednak zapoznaj się z pozostałymi typami danych.
 
 Float, podobnie jak Integer, reprezentuje liczby.
 <br/>Różnica polega na tym, że `int` służył do liczb całkowitych, natomiast `float` reprezentuje liczby zmiennoprzecinkowe, czyli niecałkowite.
-<br/>Zmienną typu float można utworzyć poprzez przypisanie liczby z wartością po przecinku - a właściwie, to po kropce - lub za pomocą polecenia `float()`.
+<br/>Wartość typu float można utworzyć poprzez przypisanie liczby z wartością po przecinku - a właściwie, to po kropce - lub za pomocą polecenia `float()`.
 
 ```py
 floating_point_number = 12.5
@@ -319,7 +324,7 @@ Boolean jest bardzo prostym typem danych. Może on przyjąć tylko dwie wartośc
 <br/>Prawda (`True`) albo fałsz (`False`).
 
 W Pythonie nazywa się go skrótowo `bool`.
-<br/>Zmienną tego typu można utworzyć poprzez przypisanie jednej z powyższych wartości lub za pomocą polecenia `bool()`:
+<br/>Wartość tego typu można utworzyć poprzez przypisanie jednej z powyższych wartości lub za pomocą polecenia `bool()`:
 
 ```py
 boolean_true = True
@@ -331,6 +336,24 @@ default_bool = bool() # Automatycznie otrzyma wartość False
 Zwróć uwagę, że `True` oraz `False` zawsze musi być pisane z wielkiej litery.
 
 Na tą chwilę ten typ danych zapewne nie wydaje się zbyt użyteczny, ale zapewniam, że będzie on nam bardzo potrzebny w przyszłości, w trakcie lekcji o *instrukcjach warunkowych*.
+
+## None
+### [🠉](#spis-treści)
+
+`None`, a właściwie NoneType, jest szczególnym typem danych, który nie służy do przechowywania danych.
+<br/>Właściwie, można powiedzieć, że służy **właśnie do tego**, żeby **nie** przechowywać żadnych danych.
+
+Jest to po prostu wartość zastępcza.
+<br/>Jeśli chcemy, na przykład, stworzyć zmienną, w której na razie nic nie ma, (ale będzie) to używamy właśnie NoneType.
+
+Typ ten może przyjąć tylko jedną wartość - obiekt `None`.
+<br/>Możemy utworzyć wartość tego typu poprzez przypisanie tego właśnie obiektu:
+
+```py
+placeholder = None
+```
+
+Nie jest możliwa konwersja do ani z typu NoneType.
 
 ## Konwersja typów
 ### [🠉](#spis-treści)
@@ -361,7 +384,7 @@ Oj.
 Python nie wie, w jaki sposób ma dodać tekst do liczby. (bo i jaki powinien być wynik? 22? A może "157"? A może... 70...? 😉😉)
 <br/>Więc co teraz?
 
-<div id="konwersja-int">
+<a name="konwersja-int"></a>
 
 <br/>${\color{blue} \huge \textbf{Konwersja do typu integer}}$
 
@@ -386,7 +409,7 @@ number + int(number2)
 
 `22`
 
-<div id="konwersja-string">
+<a name="konwersja-string"></a>
 
 <br/>${\color{blue} \huge \textbf{Konwersja do typu string}}$
 
@@ -407,7 +430,7 @@ więc nie będę tłumaczył czym naprawdę jest... '''
 ```
 
 
-<div id="konwersja-float">
+<a name="konwersja-float"></a>
 
 <br/>${\color{blue} \huge \textbf{Konwersja do typu float}}$
 
@@ -422,7 +445,7 @@ float(True) # bool na float, o tym powiem za chwilę
 float("2") # str na float - co prawda brakuje części po przecinku, ale Python może się "domyślić", że powinno tam być ".0" - a więc zwraca 2.0
 ```
 
-<div id="konwersja-bool">
+<a name="konwersja-bool"></a>
 
 <br/>${\color{blue} \huge \textbf{Konwersja do typu Boolean}}$
 
@@ -458,10 +481,15 @@ bool("cokolwiek") # str na bool, zwraca True
 ```
 
 <br/>
-<div id="cwiczenia">
+<a name="cwiczenia"></a>
 
 ${\color{green} \textbf{Z tą wiedzą jesteś teraz gotowy/a aby przejść do następnej lekcji, }}$[Typy danych II](<./4 Typy danych II.md>)
 ${\color{green} \textbf{...Ale zaraz, a może by ją tak utrwalić, wykonując kilka ćwiczeń?}}$ 
 
 [Ćwiczenie 1 - Obliczanie pola koła](</Ćwiczenia/3_cw1_pole_kola.md>)
 <br/>[Ćwiczenie 2 - Liczenie liter w zdaniu](</Ćwiczenia/3_cw2_liczenie_liter.md>)
+<br/>[Ćwiczenie 3 - Dodawanie cyfr](</Ćwiczenia/3_cw3_dodawanie_cyfr.md>) ${\color{orange} \small \textit{To zadanie jest szczególnie trudne}}$
+
+<br/>
+
+*[Do spisu treści](#spis-treści)*
