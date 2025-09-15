@@ -122,11 +122,12 @@ Jak na razie w plikach powinieneś/powinnaś widzieć pusty folder o nazwie two
 <br/>Dwa ostatnie możesz na tę chwilę zupełnie zignorować.
 
 <details>
-<summary>${\color{gray} \textit{Jesteś ciekawy/a czym są?}}$</summary>
-"External Libraries" to folder, w którym zawierają się pliki twojej instalacji Pythona (w tym ewentualne dodatkowe biblioteki, gdybyś miał/a jakieś zainstalowane).
-<br/>Możesz tam znaleźć między innymi kod programistyczny, który tworzy sam język Python (choć ostrzegam, nawet mi jest trudno się w nim połapać. Możesz tam zajrzeć w ramach ciekawostki, ale w rzeczywistości bardzo trudno czegokolwiek się w ten sposób dowiedzieć).
+<summary>${\color{gray} \textit{Jesteś ciekawy/a czym są?}}$ ${\color{gray} \small \textit{(naciśnij aby rozwinąć)}}$</summary>
 
-Folder "Scratches and Consoles" służy do tworzenia plików i notatek, które nie są "przywiązane" do projektu, w którym obecnie pracujesz, i do których można się dostać również z poziomu innych projektów.
+> "External Libraries" to folder, w którym zawierają się pliki twojej instalacji Pythona (w tym ewentualne dodatkowe biblioteki, gdybyś miał/a jakieś zainstalowane).
+> <br/>Możesz tam znaleźć między innymi kod programistyczny, który tworzy sam język Python (choć ostrzegam, nawet mi jest trudno się w nim połapać. Możesz tam zajrzeć w ramach ciekawostki, ale w rzeczywistości bardzo trudno czegokolwiek się w ten sposób dowiedzieć).
+> 
+> Folder "Scratches and Consoles" służy do tworzenia plików i notatek, które nie są "przywiązane" do projektu, w którym obecnie pracujesz, i do których można się dostać również z poziomu innych projektów.
 </details>
 
 <br/>*![Tu powinien być obraz, ale coś poszło nie tak...](./Assets/Przygotowanie/Pycharm_empty_project.png)*
@@ -260,13 +261,14 @@ Upewnij się tylko, że zmieniasz lokalizację na folder, nie na plik!
 <br/>Np. `cd C:\Python\` a nie `C:\Python\Hello.py`
 
 <details>
-<summary>Inne detale nawigacji za pomocą cd</summary>
-Warto wiedzieć, że nie zawsze trzeba wpisywać całą ścieżkę. Jeśli np. znajdujemy się w `C:\Python\`, w którym jest folder "Programy", to możemy do niego przejść za pomocą:
-<br/>`cd Programy` lub `cd ./Programy` (kropka oznacza lokalizację, w której obecnie się znajdujemy.
+<summary>Inne detale nawigacji za pomocą cd ${\color{gray} \small \textit{(naciśnij aby rozwinąć)}}$</summary>
 
-Jeśli następnie chcielibyśmy wrócić do `C:\Python`, możemy skorzystać z operatora dwóch kropek:
-<br/>`cd ..`
-<br/>Symbolizują one folder nadrzędny (poprzedni).
+> Warto wiedzieć, że nie zawsze trzeba wpisywać całą ścieżkę. Jeśli np. znajdujemy się w `C:\Python\`, w którym jest folder "Programy", to możemy do niego przejść za pomocą:
+> <br/>`cd Programy` lub `cd ./Programy` (kropka oznacza lokalizację, w której obecnie się znajdujemy).
+>
+> Jeśli następnie chcielibyśmy wrócić do `C:\Python`, możemy skorzystać z operatora dwóch kropek:
+> <br/>`cd ..`
+> <br/>Symbolizują one folder nadrzędny (poprzedni).
 </details>
 
 Kiedy znajdziesz się już w docelowym folderze, być może chciałbyś/chciałabyś sprawdzić, co się w nim znajduje. Zrobisz to poleceniem `dir` (PowerShell / cmd) lub `ls` (bash).
@@ -284,3 +286,4 @@ ${\color{green} \textbf{Jesteś teraz gotów/gotowa aby przejść do lekcji nume
 <br/>
 
 *[Do spisu treści](#spis-treści)*
+
