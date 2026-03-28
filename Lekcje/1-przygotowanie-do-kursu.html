@@ -1,0 +1,494 @@
+<!doctype html>
+<html>
+<head>
+    <title>Kurs programowania w języku Python</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/Py-Course-BioSoft/static/style.css">
+    <!-- Bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <nav>
+        <div class="nav-links">
+            <a href="/Py-Course-BioSoft/index.html#spis-tresci"><i class="bi bi-house-door" style="font-size: 1.5rem; vertical-align: text-bottom;"></i> Spis treści</a>
+        </div>
+        <div class="nav-title">
+            <h2>Kurs Pythona</h2>
+        </div>
+        <div class="nav-right"></div>
+    </nav>
+
+
+    <div class="content">
+        <!-- MAIN HEADER -->
+        <h1>Przygotowanie do kursu</h1>
+
+        Cześć!<br><br>
+
+        Python to jeden z najbardziej popularnych języków programowania na świecie.<br>
+        Nadaje się on do różnorodnych zastosowań, choć jako interpretowany język wysokiego poziomu do pewnego stopnia
+            priorytetyzuje wygodę oraz prędkość pisania kodu ponad wydajność programów.
+
+        <p class="quote">
+            Dodatek - <a href="1_5-przygotowanie-bonus.html#jezyki-interpretowane-vs-kompilowane">Języki interpretowane vs kompilowane</a>
+        </p>
+
+        Zanim zaczniesz programować, musisz najpierw zainstalować wszystkie niezbędne narzędzia.<br>
+        Przede wszystkim potrzebujesz interpretera języka Python, aby uruchomić swój kod.<br>
+
+        <p class="quote">
+            Jeśli jesteś ciekawy/a, co to interpreter, zajrzyj pod link powyżej.
+        </p>
+
+        Dodatkowo, aby napisać jakikolwiek bardziej złożony program, potrzebny ci będzie dowolny edytor tekstu lub IDE
+            (<i>Integrated Development Environment</i>, czyli program, który zawiera w sobie wszystkie podstawowe narzędzia potrzebne programiście).<br><br>
+
+        Poniżej znajdziesz instrukcje instalacji oraz podstaw użytkowania Pythona w środowisku (IDE) Pycharm lub bez niego.<br>
+        Jeśli nie masz żadnego doświadczenia z programowaniem i nie wiesz, czy używać IDE, czy nie,
+            to najpierw spróbuj z nim - będzie ci łatwiej na początku.<br><br>
+
+        <b>Jeśli masz już zainstalowanego Pythona i własny zestaw narzędzi do edycji kodu - możesz pominąć tę lekcję.</b><br><br>
+
+        Zwróć uwagę, że wszystkie te programy, włącznie z samym Pythonem, są wciąż rozwijane, więc pewne rzeczy mogły się zmienić od kiedy napisałem ten kurs.
+
+        <h2 id="spis-tresci">Spis treści</h2>
+        <ul>
+            <li>
+                <a href="#instalacja-interpretera-python">Instalacja interpretera Python</a>
+            </li>
+            <li>
+                <a href="#praca-w-srodowisku-pycharm">Praca w środowisku Pycharm</a>
+            </li>
+            <li>
+                <a href="#praca-z-pythonem-bez-ide">Praca z Pythonem bez IDE</a>
+            </li>
+        </ul>
+
+
+        <!-- SECTION HEADER -->
+        <h2 id="instalacja-interpretera-python">Instalacja interpretera Python</h2>
+        <a href="#spis-tresci"><i class="bi bi-arrow-up-circle"></i></a><br><br>
+
+        Oficjalna strona z paczkami instalacyjnymi:<br>
+        <a href="https://www.python.org/downloads/">www.python.org/downloads/</a><br><br>
+
+        Opisuję tu instalację w systemie Windows. Jeśli korzystasz z innego systemu,
+            skorzystaj ze strony powyżej lub sklepu/menedżera pakietów wbudowanego w twój system (np. apt w Linuxach z rodziny Debian)
+
+        <h3 id="interpreter-microsoft-store">Z Microsoft Store</h3>
+        Możesz pobrać interpreter z Microsoft Store. Uruchom aplikację sklepu lub wejdź na jego stronę,
+            wyszukaj "Python" i wybierz dowolną (ale lepiej jedną z najnowszych) wersję.<br>
+        Pythona 3.12, którego ja obecnie używam, znajdziesz pod adresem
+            <a href="https://apps.microsoft.com/detail/9ncvdn91xzqp?hl=pl-PL&gl=PL">apps.microsoft.com/detail/9ncvdn91xzqp</a>.<br><br>
+
+        <a href="Assets/Przygotowanie/Store_python.png" target="_blank">
+            <img class="standard" src="Assets/Przygotowanie/Store_python.png" alt="Tu powinien być obraz, ale coś poszło nie tak...">
+        </a><br>
+
+        Następnie kliknij po prostu "Pobierz". Jeśli jesteś w przeglądarce, musisz jeszcze uruchomić pobrany plik.<br>
+        W każdym razie system Windows przeprowadzi resztę instalacji automatycznie.
+
+        <h3 id="interpreter-recznie">Ręcznie</h3>
+
+        Jeśli wolisz przeprowadzić instalację ręcznie, wejdź na oficjalną stronę z paczkami do pobrania (link u góry tej sekcji).<br>
+        Kliknij żółty przycisk pod napisem "Download the latest source release" aby pobrać najnowszą wersję.<br>
+        Inne wersje są dostępne poniżej, ale możliwe, że będziesz się musiał/a trochę naszukać żeby znaleźć tam instalator.<br><br>
+
+        Uruchom pobrany plik - powinno się otworzyć okno instalatora.<br>
+        Upewnij się, że okienko "Add python.exe to PATH" jest zaznaczone, a następnie wybierz "Customize installation".<br>
+
+        <a href="Assets/Przygotowanie/Python_install1.png" target="_blank">
+            <img class="standard" src="Assets/Przygotowanie/Python_install1.png" alt="Tu powinien być obraz, ale coś poszło nie tak...">
+        </a><br>
+
+        W kolejnym oknie po prostu kiliknij "Next".<br>
+
+        <a href="Assets/Przygotowanie/Python_install2.png" target="_blank">
+            <img class="standard" src="Assets/Przygotowanie/Python_install2.png" alt="Tu powinien być obraz, ale coś poszło nie tak...">
+        </a><br>
+
+        Natomiast w tym oknie zaznacz opcje:<br>
+        <ul>
+            <li>
+                "Associate files with Python (requires the 'py' launcher)"
+            </li>
+            <li>
+                "Create shortcuts for installed applications"
+            </li>
+            <li>
+                "Add Python to environment variables"
+            </li>
+            <li>
+                "Precompile standard library"
+            </li>
+        </ul><br>
+
+        W okienku na dole możesz wybrać miejsce instalacji.<br>
+        Kliknij teraz "Install", aby rozpocząć instalację.<br>
+
+        <a href="Assets/Przygotowanie/Python_install3.png" target="_blank">
+            <img class="standard" src="Assets/Przygotowanie/Python_install3.png" alt="Tu powinien być obraz, ale coś poszło nie tak...">
+        </a><br>
+
+        Po zakończeniu instalacji możesz już zamknąć okno.
+
+
+        <!-- SECTION HEADER -->
+        <h2 id="praca-w-srodowisku-pycharm">Praca w środowisku Pycharm</h2>
+        <a href="#spis-tresci"><i class="bi bi-arrow-up-circle"></i></a><br><br>
+
+        IDE takie jak Pycharm to najwygodniejsza opcja jeśli chodzi o narzędzia do tworzenia kodu, oferująca wiele ułatwień.<br>
+        Poza Pycharmem istnieją też inne opcje, które możesz wypróbować
+            (jeśli instalowałeś/aś Pythona w systemie Windows, prawdopodobnie masz już też dołączone do niego, minimalistyczne środowisko IDLE).
+
+        <h3 id="pycharm-instalacja">Instalacja</h3>
+
+        Ponownie, opisuję instalację na systemie Windows, ale z tej samej strony możesz również pobrać Pycharm na inne systemy.<br><br>
+
+        Wejdź na stronę
+            <a href="https://www.jetbrains.com/pycharm/download/">www.jetbrains.com/pycharm/download/</a>"
+            i kliknij na przycisk "Download" (ten poniżej, nie w nagłówku strony).<br>
+        Uruchom pobrany plik instalatora. Prawdopodobnie będziesz musiał/a zezwolić na użycie uprawnień administratora.<br>
+        W pierwszym oknie kliknij "Next"; następnie wybierz miejsce instalacji; 
+            "Next" i zaznacz wszystkie opcje (może poza "Create Dektop Shortcut", jeśli nie chcesz skrótu na pulpicie)<br>
+
+        <a href="Assets/Przygotowanie/Pycharm_install.png" target="_blank">
+            <img class="standard" src="Assets/Przygotowanie/Pycharm_install.png" alt="Tu powinien być obraz, ale coś poszło nie tak...">
+        </a><br>
+
+        "Next", folder Start Menu możesz zostawić domyślny. No i na koniec "Install".<br><br>
+
+        Po zakończeniu instalacji konieczny będzie restart komputera.<br>
+        Upewnij się, że masz wszystko zapisane, zaznacz "Reboot now" i kliknij "Finish".<br><br>
+
+        Twój komputer zostanie zrestartowany, po czym będziesz już mógł/mogła uruchomić Pycharm.
+
+        <h3 id="pycharm-uzywanie">Używanie</h3>
+
+        <p class="quote">
+            Uwaga: przedstawiam tu tylko kilka podstawowych funkcji, które oferuje środowisko Pycharm.
+                Ja sam nie używam go na co dzień, więc nie znam wielu z jego funkcji.
+        </p><br>
+
+        Przy pierwszym uruchomieniu, Pycharm zapewne zapyta się o wersję "pro".
+            Po prostu zamknij okno, które wyskoczy lub wybierz, że zostajesz przy darmowej wersji i pozwól mu zrestartować program w wersji darmowej.<br><br>
+
+        Zobaczysz zapewne (mniej więcej) taki ekran startowy:<br>
+
+        <a href="Assets/Przygotowanie/Pycharm_main.png" target="_blank">
+            <img class="standard" src="Assets/Przygotowanie/Pycharm_main.png" alt="Tu powinien być obraz, ale coś poszło nie tak...">
+        </a><br>
+
+        Wybierz "New project".<br><br>
+        
+        Otworzy się okno tworzenia nowego projektu.<br>
+        W pasku u góry możesz wybrać lokalizację, w której będą przechowywane pliki tego projektu (albo po prostu zostaw domyślną).<br>
+        Upewnij się, że w panelu po lewej wybrana jest opcja "Pure Python", a następnie w opcji "Interpreter type" zaznacz "Custom environment".<br><br>
+        
+        W menu, które się pojawi, zaznacz:<br>
+        <b>Environment:</b> Select existing<br>
+        <b>Type:</b> Python<br><br>
+
+        Następnie kliknij "Create".<br>
+
+        <a href="Assets/Przygotowanie/Pycharm_new_project.png" target="_blank">
+            <img class="standard" src="Assets/Przygotowanie/Pycharm_new_project.png" alt="Tu powinien być obraz, ale coś poszło nie tak...">
+        </a><br>
+
+        <p class="quote">
+            To nieco bardziej zaawansowana kwestia, ale jeśli jesteś ciekawy/a, to wyjaśniam, co właśnie zrobiliśmy,
+                <a href="1_5-przygotowanie-bonus.html#srodowiska-wirtualne">tutaj</a>.
+        </p><br>
+
+        Otworzy się pusty projekt.<br>
+        W centrum ekranu znajdują się 2 główne panele - drzewo plików po lewej, oraz panel, w którym widać zawartość otwartych plików, po prawej.<br>
+        Na samym skraju okna po lewej jest również wąski pasek narzędzi, w którym możesz schować albo zmodyfikować lewy panel,
+            a także otworzyć trzeci panel u dołu ekranu.<br><br>
+
+        Jak na razie w plikach powinieneś/aś widzieć pusty folder o nazwie twojego projektu, 
+            (jeśli nie zmieniałeś/aś lokalizacji projektu jest to zapewne coś w rodzaju "PythonProject") folder "External Libraries" oraz
+            "Scratches and Consoles".<br>
+        Dwa ostatnie możesz na tę chwilę zupełnie zignorować.<br><br>
+
+        <details>
+            <summary style="color:gray">Jesteś ciekawy/a czym są?<span class="small"> (naciśnij aby rozwinąć)</span></summary>
+            <p class="quote">
+                "External Libraries" to folder, w którym zawierają się pliki twojej instalacji Pythona
+                    (w tym ewentualne dodatkowe biblioteki, gdybyś miał/a jakieś zainstalowane).<br>
+                Możesz tam znaleźć między innymi kod programistyczny, który tworzy sam język Python
+                    (choć ostrzegam, nawet mi jest trudno się w nim połapać. Możesz tam zajrzeć w ramach ciekawostki,
+                        ale w rzeczywistości bardzo trudno czegokolwiek się w ten sposób dowiedzieć).<br><br>
+                
+                Folder "Scratches and Consoles" służy do tworzenia plików i notatek, które nie są "przywiązane" do projektu,
+                    w którym obecnie pracujesz, i do których można się dostać również z poziomu innych projektów.
+            </p>
+        </details><br>
+
+        <a href="Assets/Przygotowanie/Pycharm_empty_project.png" target="_blank">
+            <img class="standard" src="Assets/Przygotowanie/Pycharm_empty_project.png" alt="Tu powinien być obraz, ale coś poszło nie tak...">
+        </a><br>
+
+        Kliknij teraz prawym przyciskiem myszy na folder twojego projektu.<br>
+        Powinno otworzyć się menu kontekstowe. Najedź na opcję "New" u jego szczytu i wybierz "Python File".<br>
+
+        <a href="Assets/Przygotowanie/Pycharm_context_menu_file.png" target="_blank">
+            <img class="standard" src="Assets/Przygotowanie/Pycharm_context_menu_file.png" alt="Tu powinien być obraz, ale coś poszło nie tak...">
+        </a><br>
+
+        W okienku, które wyskoczy, wpisz nazwę swojego pierwszego programu - zgodnie z programistyczną tradycją, proponuję, żeby było to "Hello.py".
+
+        <p class="quote">
+            '.py' jest rozszerzeniem nazwy pliku, które informuje użytkownika oraz system, że plik zawiera kod napisany w języku Python.
+        </p>
+
+        Stworzyłeś/aś właśnie swój pierwszy plik z kodem.<br>
+        W panelu z drzewem plików powinien być teraz widoczny plik z wybraną nazwą i symbolem Pythona
+            (jeśli go nie widzisz, kliknij na folder prejktu, aby otworzyć jego zawartość).<br>
+        Natomiast w panelu po prawej otwarło się teraz okno edycji pliku.<br>
+
+        <a href="Assets/Przygotowanie/Pycharm_hello.png" target="_blank">
+            <img class="standard" src="Assets/Przygotowanie/Pycharm_hello.png" alt="Tu powinien być obraz, ale coś poszło nie tak...">
+        </a><br>
+
+        Napisz teraz swój pierwszy program (również zgodnie z programistyczną tradycją).<br>
+        Przepisz (lub lepiej, przekopiuj) po prostu kod poniżej do okna edycji pliku:
+        
+        <code class="bl">print("Hello World!")</code>
+
+        Kiedy skończysz, kliknij na zielony trójkąt ponad panelem edycji pliku, aby uruchomić swój program.<br>
+        Automatycznie wyskoczy dolny panel z wynikami działania programu.<br>
+
+        <a href="Assets/Przygotowanie/Pycharm_hello_results.png" target="_blank">
+            <img class="standard" src="Assets/Przygotowanie/Pycharm_hello_results.png" alt="Tu powinien być obraz, ale coś poszło nie tak...">
+        </a><br>
+
+        Przeanalizujmy dokładniej, co zawierają:<br>
+
+        <a href="Assets/Przygotowanie/Pycharm_hello_results_detailed.png" target="_blank">
+            <img class="standard" src="Assets/Przygotowanie/Pycharm_hello_results_detailed.png" alt="Tu powinien być obraz, ale coś poszło nie tak...">
+        </a><br>
+
+        Dwa napisy zaznaczone na <span class="blue">niebiesko</span> to polecenie,
+            które Pycharm wykonał w powłoce systemowej (terminalu), aby uruchomić twój program.<br>
+        Odpowiadają one lokalizacji dwóch programów, które zostały uruchomione - pierwszego, interpretera Pythona,
+            oraz drugiego, twojego (uruchomionego już *przez* Pythona).<br><br>
+
+        Napis w <span class="green">zielonej</span> ramce to informacja, którą wypisał twój program - to właśnie robi polecenie `print()`, którego użyliśmy.<br>
+        Spróbuj zmienić napis w cudysłowie wewnątrz tego polecenia i uruchom program ponownie, a zobaczysz, że napis w wynikach również się zmieni.<br><br>
+
+        Napis zaznaczony na <span class="orange">pomarańczowo</span> to informacja o zakończeniu działania programu.
+            W tym wypadku program zakończył działanie i automatycznie wysłał do systemu informację zwrotną w postaci liczby 0 - tak właśnie powinno być.<br>
+
+        <p class="quote">
+            Co prawda liczba, którą zwraca program może być zmieniona wedle woli programisty, ale przyjęło się,
+                że liczba 0 oznacza pomyślne zakończenie działania programu, natomiast każda inna oznacza,
+                że program zakończył działanie w wyniku jakiegoś błędu.
+        </p>
+
+        Przyjrzyjmy się teraz paskowi narzędziowemu po lewej:<br>
+
+        <a href="Assets/Przygotowanie/Pycharm_toolbar.png" target="_blank">
+            <img class="standard" src="Assets/Przygotowanie/Pycharm_toolbar.png" alt="Tu powinien być obraz, ale coś poszło nie tak...">
+        </a><br>
+
+        Po kolei od góry do dołu:<br>
+        <ul style="background-color: lightgray;">
+            <li>
+                <span class="yellow">Panel z drzewem plików</span>
+            </li>
+            <li>
+                <span class="orange">Panel struktury kodu</span>  - przydatny przy nawigowaniu w kodzie bardziej skomplikowanych programów,
+                    w przypadku Hello.py raczej nic tam nie zobaczysz.
+            </li>
+            <li>
+                <span class="blue">Dodatkowe panele</span> - można tam znaleźć sporo dodatkowych funkcji, ale trudno, żeby opisywał wszystkie.
+            </li>
+            <li>
+                <span class="green">Wyniki uruchomienia programu</span>
+            </li>
+            <li>
+                <span style="color: pink;">Konsola interpretera</span> - możesz tu wykonywać Pythonowy kod bez tworzenia pliku - spróbuj przekopiować tu linijkę
+                    kodu z Hello.py i kliknąć Enter a by wykonać.
+            </li>
+            <li>
+                <span class="purple">Dodatkowe paczki</span> - można tu przejrzeć zainstalowane dodatkowe "narzędzia", ale na razie nie będziemy z nich korzystać.
+            </li>
+            <li>
+                <span style="color: gray;">Usługi</span> - to zaawansowana funkcja Pycharm, która pozwala na połączenie dodatkowych funkcji ze swoim IDE.
+            </li>
+             <li>
+                <span style="color: cyan;">Terminal</span> - tudzież powłoka systemowa - to poprzez nią tak naprawdę odbywa się uruchomienie twojego programu.
+                    Jeśli przekopiujesz tutaj linijkę, którą zaznaczyłem na niebiesko w wynikach Hello.py, uruchomisz go "ręcznie", bez pośrednictwa Pycharma.
+            </li>
+             <li>
+                <span class="red">Błędy</span> - znajdziesz tu listę błędów w kodzie, które automatycznie wykryło IDE.
+            </li>
+             <li>
+                <span style="color: plum;">Kontrola wersji</span> - służy do wersjonowania kodu, nie przyda ci się dopóki nie zabierzesz się za jakiś duży,
+                    długoterminowy projekt.
+            </li>
+        </ul><br>
+
+        Ostatnią ważną rzeczą jest pasek z narzędziami ukryty pod przyciskiem z poziomymi paskami w lewym górnym rogu.<br>
+        Po jego kliknięciu pojawi się cały szereg zakładek z wieloma opcjami, ale najistotniejsze z nich znajdują się w zakładce "File".<br>
+        <ul>
+            <li>
+                New project - pozwala stworzyć nowy projekt
+            </li>
+            <li>
+                New File or Directory - inny sposób na stworzenie nowego pliku lub folderu
+            </li>
+            <li>
+                Close Project - zamyka obecny projekt i powraca do ekranu startowego
+            </li>
+            <li>
+                Settings - otwiera obszerne menu z rozmaitymi ustawieniami
+            </li>
+        </ul><br>
+
+        To by było na tyle jeśli chodzi o krótki wstęp w programowaniu w Pycharm.<br>
+        Jeśli postanowisz korzystać z niego w przyszłości z pewnością samemu odkryjesz wiele innych możliwości, jakie oferuje.<br><br>
+
+        <span class="green">Jesteś teraz gotowy/a aby przejść do lekcji numer 2:</span> <a href="2-czym-sa-zmienne.html">Czym są zmienne?</a>
+        
+
+        <!-- SECTION HEADER -->
+        <h2 id="praca-z-pythonem-bez-ide">Praca z Pythonem bez IDE</h2>
+        <a href="#spis-tresci"><i class="bi bi-arrow-up-circle"></i></a><br><br>
+
+
+        Jeśli przytłacza cię multum opcji i ułatwień, które oferują IDE albo chcesz spróbować programowania bez ułatwień w postaci
+            specjalistycznego oprogramowania, to rzecz jasna, wszystko da się zrobić bez instalowania dodatkowych narzędzi (poza Pythonem, rzecz jasna).<br><br>
+
+        Bedzie ci potrzebny terminal/powłoka systemowa - w systemie Windows jest to Command Line ("wiersz polecenia") lub
+            PowerShell - oraz dowolny edytor tekstu.<br>
+        Może to być Notepad, Notepad++, nano, Vim, VS Code itp.<br>
+        Jeśli używasz Windowsa, na pewno masz już Notepad, aczkolwiek o ile nie poszukujesz naprawdę <b><i>szczególnego</i></b> wyzwania,
+            zalecałbym jednak coś wygodniejszego, chociażby Notepad++.<br><br>
+
+        Nie będę tu opisywał dostępnych opcji - musisz sam/a znaleźć coś dla siebie.<br><br>
+
+        Kiedy już będziesz miał/a edytor tekstu, otwórz terminal właściwy dla swojego systemu - w systemie Windows wpisz
+            po prostu w pasek wyszukiwania "PowerShell" i uruchom aplikację, która wyskoczy.<br>
+        Powita cię zapewne proste, jednokolorowe okno z jakimś tekstem powitalnym.<br>
+
+        <a href="Assets/Przygotowanie/Powershell_start.png" target="_blank">
+            <img class="standard" src="Assets/Przygotowanie/Powershell_start.png" alt="Tu powinien być obraz, ale coś poszło nie tak...">
+        </a><br>
+
+        Ten najniżej wskazuje na ścieżkę, (folder) w której się obecnie znajdujesz.<br><br>
+
+        Na początek wypróbujmy Pythona.<br>
+        O ile został on zainstalowany poprawnie, wpisanie któregoś z poniższych poleceń i zatwierdzenie enterem powinno wyświetlić komunikat o
+            uruchomieniu Pythona. (przetestuj wszystkie, któreś powinno zadziałać)
+        
+        <code class="bl">py
+            python
+            python3
+        </code>
+
+        Jeśli otrzymujesz komunikat o nierozpoznanym poleceniu albo zostajesz wysłany na stronę Pythona w sklepie - to raczej nie to.<br>
+
+        <a href="Assets/Przygotowanie/Powershell_python.png" target="_blank">
+            <img class="standard" src="Assets/Przygotowanie/Powershell_python.png" alt="Tu powinien być obraz, ale coś poszło nie tak...">
+        </a><br>
+
+        Jeśli już znalazłeś/łaś tę właściwą opcję, znajdujesz się teraz w konsoli interpretera.
+            Niewiele się zmieniło prawda? Cóż, jeszcze jest szansa żeby wrócić do ładnego IDE... 😉<br>
+        Wpisz lub przekopiuj do interpretera poniższe polecenie:
+
+        <code class="bl">print("Hello World")</code>
+
+        I zatwierdź klikając enter.<br>
+
+        <a href="Assets/Przygotowanie/Powershell_hello.png" target="_blank">
+            <img class="standard" src="Assets/Przygotowanie/Powershell_hello.png" alt="Tu powinien być obraz, ale coś poszło nie tak...">
+        </a><br>
+
+
+        Pierwsze wykonane przez ciebie polecenie programistyczne nie jest być może zbyt spektakularne, ale to dobry początek.<br>
+        Funkcja <code>print()</code> wypisuje tekst to konsoli.<br>
+        (na razie może się to wydawać mało użyteczne, ale później okaże się przydatne)<br><br>
+
+        Na razie wyjdźmy z interpretera. Możesz go opuścić, wpisując polecenie <code>quit()</code> lub <code>exit()</code>.<br><br>
+
+        Stwórz teraz, za pomocą swojego edytora tekstu, nowy plik o nazwie "Hello.py" i przekopiuj do niego ten sam kod:
+        
+        <code class="bl">print("Hello World")</code>
+
+        <a href="Assets/Przygotowanie/Notepad_hello.png" target="_blank">
+            <img class="standard" src="Assets/Przygotowanie/Notepad_hello.png" alt="Tu powinien być obraz, ale coś poszło nie tak...">
+        </a><br>
+
+        <span class="meager"><i>To jest Notepad. Ale nie bierz ze mnie przykładu. Na co dzień używam nano.<br>
+        ...Tu w sumie też nie bierz ze mnie przykładu, są wygodniejsze opcje.</i></span><br><br>
+
+        Teraz za pomocą terminala spróbujemy znaleźć ten plik. Ale najpierw pozbądźmy się niepotrzebnego tekstu, który zaśmieca nam terminal.<br>
+        Zrobisz to poleceniem <code>cls</code> (PowerShell i cmd) lub
+            <code>clear</code> (niektóre inne terminale/powłoki, np. bash).<br><br>
+
+        Jak wspomniałem, napis przed polem do wpisywania poleceń wskazuje na lokalizację, w której obecnie się znajdujesz.<br>
+        Lokalizację w większości terminali zmienia się poleceniem <code>cd</code> (od <i>Change Directory</i>).
+            Jeśli więc na przykład stworzyłeś swój plik w folderze "Python" na dysku C, to możesz się tam dostać za pomocą polecenia:
+        
+        <code class="bl">cd C:\Python\</code>
+
+        Jeśli nie wiesz, jaka <i>ścieżka</i> prowadzi do twojego pliku,
+            być może łatwiej będzie ci znaleźć go najpierw w swoim systemowym eksploratorze plików.<br>
+        Jeśli w eksploratorze wejdziesz we właściwości tego pliku, powinna się tam znajdować informacja o jego lokalizacji
+            (zwykle: prawy przycisk myszy na pliku -> właściwości).<br><br>
+
+        Upewnij się tylko, że zmieniasz lokalizację na folder, nie na plik!<br>
+        Np. <code>cd C:\Python\</code> a nie <code>C:\Python\Hello.py</code><br><br>
+
+        <details>
+            <summary>Inne detale nawigacji za pomocą <code>cd</code><span class="meager"> (naciśnij aby rozwinąć)</span></summary>
+
+            <p class="quote">
+                Warto wiedzieć, że nie zawsze trzeba wpisywać całą ścieżkę. Jeśli np. znajdujemy się w <code>C:\Python\</code>,
+                    w którym jest folder "Programy", to możemy do niego przejść za pomocą:<br>
+                <code>cd Programy</code> lub <code>cd ./Programy</code> (kropka oznacza lokalizację, w której obecnie się znajdujemy).<br><br>
+                
+                Jeśli następnie chcielibyśmy wrócić do <code>C:\Python</code>, możemy skorzystać z operatora dwóch kropek:
+
+                <code class="bl">cd ..</code>
+
+                Symbolizują one folder nadrzędny (poprzedni).
+            </p>
+        </details><br>
+
+        Kiedy znajdziesz się już w docelowym folderze, być może chciałbyś/chciałabyś sprawdzić, co się w nim znajduje.
+            Zrobisz to poleceniem <code>dir</code> (PowerShell / cmd) lub <code>ls</code> (bash).<br><br>
+
+        No dobrze, a teraz uruchommy wreszcie ten program. Zrobisz to poprzez połączenie polecenia uruchamiającego Pythona oraz
+            nazwy pliku (właściwie - poprzez <i>przekazanie</i> nazwy pliku Pythonowi).<br>
+        <code>py Hello.py</code>, <code>python3 Hello.py</code> itp.<br>
+
+        <a href="Assets/Przygotowanie/Powershell_program_hello.png" target="_blank">
+            <img class="standard" src="Assets/Przygotowanie/Powershell_program_hello.png" alt="Tu powinien być obraz, ale coś poszło nie tak...">
+        </a><br>
+
+        W ten sposób możesz napisać dowolny program w swoim edytorze tekstu, a następnie uruchomić go z poziomu terminala.<br>
+        Na koniec możesz zamknąć terminal poleceniem <code>exit</code>.<br><br>
+
+        <span class="green">Jesteś teraz gotowy/a aby przejść do lekcji numer 2:</span> <a href="2-czym-sa-zmienne.html">Czym są zmienne?</a><br><br><br>
+
+
+        <i><a href="#spis-tresci">Do spisu treści</a></i>
+
+
+        <div class="bottom">
+            Napisane przez:
+            <br><i>Jeremi Maciejewski</i>
+        </div>
+    </div>
+
+
+    <footer>
+        <a href="https://knp.web.amu.edu.pl/sekcja-oprogramowania-biologicznego/">Sekcja Oprogramowania Biologicznego <i class="bi bi-box-arrow-up-right" style="font-size: 80%; vertical-align: text-top;"></i></a>
+        <br><a href="https://knp.web.amu.edu.pl/">KNP UAM <i class="bi bi-box-arrow-up-right" style="font-size: 80%; vertical-align: text-top;"></i></a>
+    </footer>
+</body>
+</html>

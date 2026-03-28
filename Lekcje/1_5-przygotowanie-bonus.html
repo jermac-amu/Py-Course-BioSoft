@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+<head>
+    <title>Kurs programowania w języku Python</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/Py-Course-BioSoft/static/style.css">
+    <!-- Bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <div style="height:1px;"></div>
+    <nav>
+        <div class="nav-links">
+            <a href="/Py-Course-BioSoft/index.html#spis-tresci"><i class="bi bi-house-door" style="font-size: 1.5rem; vertical-align: text-bottom;"></i> Spis treści</a>
+        </div>
+        <div class="nav-title">
+            <h2>Kurs Pythona</h2>
+        </div>
+        <div class="nav-right"></div>
+    </nav>
+
+
+    <div class="content">
+        <!-- MAIN HEADER -->
+        <h1>Tematy dodatkowe do lekcji "<a href="1-przygotowanie-do-kursu.html">Przygotowanie do kursu</a>"</h1>
+
+        <h2 id="spis-tresci">Spis treści</h2>
+        <ul>
+            <li>
+                <a href="#jezyki-interpretowane-vs-kompilowane">Języki interpretowane vs kompilowane</a>
+            </li>
+            <li>
+                <a href="#srodowiska-wirtualne">Środowiska wirtualne</a>
+            </li>
+        </ul>
+
+        <!-- SECTION HEADER -->
+        <h2 id="jezyki-interpretowane-vs-kompilowane">Języki interpretowane vs kompilowane</h2>
+        <a href="#spis-tresci"><i class="bi bi-arrow-up-circle"></i></a><br><br>
+
+        Jak być może słyszałeś/aś, komputer "rozumie" tylko informacje w postaci kodu binarnego.<br>
+        Jeśli natomiast kiedykolwiek widziałeś/aś jak wygląda zdanie zapisane w nim, to zapewne wiesz też,
+            że z kolei ludzie nie za bardzo umieją czytać kod binarny.<br>
+        To oczywiście problem, ponieważ jako programiści chcemy "porozumieć się" z komputerem.<br>
+        <span class="meager"><i>Na wypadek gdybyście zwątpili, to nie, ten kurs nie będzie o ręcznym zapisywaniu całych stron zer i jedynek.<br>
+        Na całe szczęście.</i></span><br><br>
+
+        Jest to możliwe dzięki już istniejącym programom, które potrafią kod programistyczny, zapisany w zrozumiałym dla (niektórych 😉) ludzi języku,
+            przetłumaczyć na kod binarny.<br>
+        <span class="meager"><i>Tak właściwie, należałoby tu raczej mówić o <b>kodzie maszynowym</b>, ale nie komplikujmy jeszcze bardziej...</i></span><br><br>
+
+        Istnieją dwa główne podejścia do tłumaczenia kodu programistycznego na binarny - <b>kompilacja</b> oraz <b>interpretacja</b>.<br>
+        Każdy (czytelny <span class="meager">(definicja języka programowania jest szeroka)</span>) język programowania zbudowany jest w oparciu o jedną z
+            tych metod.<br><br>
+
+        <span class="green">Języki kompilowane</span> - jest to starsze podejście do problemu.
+            Po napisaniu kodu, programista przekazuje go do tzw. <i>kompilatora</i>, czyli programu, który tłumaczy go na kod binarny.<br>
+        Powstaje program zapisany już w kodzie binarnym, który można uruchomić w dowolnej chwili,
+            również na innym komputerze, bez instalowania żadnego dodatkowego oprogramowania.<br>
+        (o ile korzysta on z tego samego systemu operacyjnego. Np. program skompilowany w systemie Windows zadziała na innym komputerze z Windowsem,
+            ale w systemach Linux już nie)<br><br>
+
+        <span class="green">Języki interpretowane</span> - nowszy i popularny ze względu na wygodę sposób. Po napisaniu kodu nie trzeba nic więcej robić.<br>
+        Za to kiedy chcemy uruchomić program, musimy to zrobić poprzez tzw. <i>interpreter</i> - program,
+            który na bieżąco tłumaczy kod programistyczny na binarny i od razu
+            wykonuje przetłumaczone polecenia.<br>
+        Aby uruchomić program, musimy mieć na swoim komputerze zainstalowany interpreter, ale system operacyjny nie ma znaczenia.<br>
+
+        <p class="quote">Jak już wspominałem, to uproszczone wyjaśnienie. W rzeczywistości oba procesy są znacznie bardziej skomplikowane,
+            a pomiędzy kodem na ekranie a sygnałami binarnymi w procesorze jest zwykle więcej stadiów pośrednich - ale jeśli zależy ci,
+            żeby poznać szczegóły, będziesz musiał/a poszukać bardziej technicznych żródeł wiedzy.</p><br>
+
+        <span class="purple">Główne różnice:</span><br>
+        <ul>
+            <li>
+                Proces <i>kompilacji</i> jest często czasochłonny. W rezultacie, po napisaniu kodu programista musi cierpliwie zaczekać aż dobiegnie on końca,
+                    zanim będzie mógł go wypróbować. Natomiast wykonywanie poprzez <i>interpreter</i> jest mniej wydajne - choć programista może uruchomić
+                    swój program od razu po napisaniu kodu, to za to program ten działa powoli w porównaniu do programu,
+                    który został już <i>skompilowany</i>.
+            </li>
+            <li>
+                Jak wspomniałem powyżej, program skompilowany można uruchomić tylko na komputerze z tym samym systemem operacyjnym.
+                    Program interpretowany można uruchomić na dowolnym komputerze, pod warunkiem, że jest na nim zainstalowany interpreter.
+            </li>
+            <li>
+                W przypadku języków interpretowanych kod źródłowy (czyli to co programista napisał) jest łatwo dostępny dla każdego użytkownika.
+                    Jeśli nie chcesz, żeby ktoś oglądał twój kod, możesz preferować języki kompilowane,
+                    w przypadku których użytkownik programu otrzymuje go tylko w postaci binarnej (a więc nieczytelnej).<br>
+                Co prawda, zarówno odwrócenie procesu kompilacji jak i utrudnienie odczytania kodu interpretowanego są przedsięwzięciami
+                    wykonalnymi i stosowanymi, ale też skomplikowanymi i wymagającymi większego nakładu pracy.
+            </li>
+        </ul><br>
+
+        <a href="1-przygotowanie-do-kursu.html">Powrót do lekcji 1</a>
+
+
+        <!-- SECTION HEADER -->
+        <h2 id="srodowiska-wirtualne">Środowiska wirtualne</h2>
+        <a href="#spis-tresci"><i class="bi bi-arrow-up-circle"></i></a><br><br>
+
+        Masz już zainstalowanego "czystego" (niezmodyfikowanego) Pythona,
+            ale czasem do stworzenia projektów potrzebne są różne modyfikacje i dodatkowe narzędzia.<br>
+        Programiści nie zawsze chcą takie zasoby instalować bezpośrednio w swoim "głównym" Pythonie,
+            dlatego korzystają z tzw. <b>środowisk wirtualnych</b>. (<i>virtual environment</i>)<br>
+        Są to odizolowane "paczki", zawierające kopię (lub nawet inną wersję) interpretera oraz wybrane dodatkowe narzędzia czy biblioteki.<br><br>
+
+        Środowisko wirtualne można "aktywować", dzięki czemu programy, które uruchamimy w następnej kolejności,
+            będą korzystać ze znajdujących się w nim narzędzi.<br>
+        Kiedy potrzebujemy innego zestawu narzędzi - możemy dezaktywować środowisko i aktywować inne.<br><br>
+
+        Własne środwisko wirtualne można stworzyć z pomocą samego Pythona, lub też specjalnych narzędzi,
+            takich jak np. <b>conda</b> - ale nie będę omawiał tego procesu w tym kursie.<br><br>
+
+        <span class="green">Jeśli chodzi o Pycharm:</span><br>
+        Pycharm domyślnie proponuje tworzenie oddzielnego środowiska wirtualnego dla każdego nowego projektu, który tworzysz.<br>
+        Jako, że na razie nie będziesz korzystać z żadnych dodatkowych narzędzi,
+            w trakcie lekcji "Przygotowanie do kursu" skonfigurowaliśmy twój pierwszy projekt tak,
+            żeby zamiast tego korzystał z istniejącej podstawowej instalacji interpretera.<br><br>
+
+        <a href="1-przygotowanie-do-kursu.html#pycharm-uzywanie">Powrót do lekcji 1</a>
+
+        
+        <div class="bottom">
+            Napisane przez:
+            <br><i>Jeremi Maciejewski</i>
+        </div>
+    </div>
+
+    
+    <footer>
+        <a href="https://knp.web.amu.edu.pl/sekcja-oprogramowania-biologicznego/">Sekcja Oprogramowania Biologicznego <i class="bi bi-box-arrow-up-right" style="font-size: 80%; vertical-align: text-top;"></i></a>
+        <br><a href="https://knp.web.amu.edu.pl/">KNP UAM <i class="bi bi-box-arrow-up-right" style="font-size: 80%; vertical-align: text-top;"></i></a>
+    </footer>
+    <div style="height:1px;"></div>
+</body>
+</html>

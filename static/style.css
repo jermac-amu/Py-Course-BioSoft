@@ -4,7 +4,12 @@
 }
 
 html {
+    --knp-color: #01965E;
+
     height: 100%;
+
+    scroll-behavior: smooth;
+    scroll-padding-top: 50px;
 }
 
 nav {
@@ -16,7 +21,7 @@ nav {
 
     padding: 0.5em 1em 0.5em 1em;
 
-    background: mediumseagreen;
+    background: var(--knp-color);
     color: white;
 }
 
@@ -57,6 +62,15 @@ nav div.nav-right {
     float: right;
 }
 
+
+nav h2 {
+    margin: 0;
+}
+
+body {
+    background-color: white;
+}
+
 div.content {
     max-height: 90%;
 
@@ -66,14 +80,115 @@ div.content {
     margin-bottom: 60px;
 }
 
-div.content h1 {
+h1, h2, h3, h4 {
     margin-bottom: 0.5rem;
 }
 
-div.content div.bottom {
-    position: absolute;
-    bottom: 5rem;
+h1 {
+    margin-top: 2rem;
+}
 
+h2 {
+    margin-top: 1rem;
+}
+
+h3 {
+    margin-top: 0.5rem;
+}
+
+span.small {
+    font-size: 0.8em;
+}
+
+span.meager {
+    font-size: 0.8em;
+    color: rgb(107, 107, 107);
+}
+
+.red, .green, .blue, .yellow,
+    .orange, .purple {
+    font-weight: bold;
+}
+
+.red {color: red;}
+
+.green {color: rgb(11, 170, 11);}
+
+.blue {color: blue;}
+
+.yellow {color: yellow;}
+
+.orange {color: orangered;}
+
+.purple {color: purple;}
+
+code {
+    display: inline-block;
+    white-space: pre-line;
+    padding: 1px 0.5rem 1px 0.5rem;
+
+    background-color: rgb(50, 50, 50);
+    color: greenyellow;
+    
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--knp-color);
+}
+
+code.bl {
+    display: block;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+
+    border-width: 2px;
+}
+
+details summary {
+    cursor: pointer;
+}
+
+details p {
+    margin-left: 1rem;
+}
+
+p.quote {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+
+    padding-left: 1rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    border-left-style: solid;
+
+    border-color: rgb(116, 116, 116);
+    background-color: rgb(248, 248, 248);
+    color: rgb(80, 80, 80);
+}
+
+p.quote code {
+    background: rgb(75, 75, 75);
+    color: rgb(186, 255, 83);
+}
+
+li {
+    margin-top: 0.3rem;
+}
+
+img.standard {
+    max-width: 60vw;
+    max-height: 50vh;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    border-style: solid;
+    border-radius: 5%;
+    border-color: var(--knp-color);
+}
+
+div.bottom {
+    margin-top: 2rem;
+    margin-bottom: 5rem;
     color: gray;
 }
 
@@ -91,7 +206,7 @@ footer {
 
     text-align: right;
 
-    background: mediumseagreen;
+    background: var(--knp-color);
     color: lightgray;
 }
 
