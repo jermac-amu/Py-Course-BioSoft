@@ -1,0 +1,216 @@
+<!doctype html>
+<html>
+<head>
+    <title>Kurs programowania w języku Python</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/Py-Course-BioSoft/static/style.css">
+    <!-- Bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <div style="height:1px;"></div>
+    <nav>
+        <div class="nav-links">
+            <a href="/Py-Course-BioSoft/index.html#spis-tresci"><i class="bi bi-house-door" style="font-size: 1.5rem; vertical-align: text-bottom;"></i> Spis treści</a>
+        </div>
+        <div class="nav-title">
+            <h2>Kurs Pythona</h2>
+        </div>
+        <div class="nav-right"></div>
+    </nav>
+
+
+
+    <div class="content">
+        <!-- MAIN HEADER -->
+        <h1>Czym są zmienne?</h1>
+
+        Zanim zaczniesz pisać skomplikowane programy, istnieje kilka podstawowych konceptów w programowaniu,
+            które musisz zrozumieć i nauczyć się z nimi pracować.<br>
+        Pierwszym z nich są <i>zmienne</i>.<br>
+
+        <p class="quote">
+            Od tego momentu zakładam już, że masz przygotowane i umiesz obsługiwać narzędzia niezbędne do pisania kodu.
+                W przeciwnym razie, zajrzyj do poprzedniej lekcji: <a href="1-przygotowanie-do-kursu.html">Przygotowanie do kursu</a>
+        </p>
+
+        <h2 id="spis-tresci">Spis treści</h2>
+        <ul>
+            <li>
+                <a href="#wstep">Wstęp</a>
+            </li>
+            <li>
+                <a href="#uzywanie-zmiennych">Używanie zmiennych</a>
+            </li>
+            <li>
+                <a href="#a-wracajac-do-notatek-komentarze">A wracając do notatek... - Komentarze</a>
+            </li>
+        </ul>
+
+
+        <!-- SECTION HEADER -->
+        <h2 id="wstep">Wstęp</h2>
+        <a href="#spis-tresci"><i class="bi bi-arrow-up-circle"></i></a><br><br>
+
+        Niemal każdy program musi przechowywać jakieś informacje.<br>
+        Jeśli chcielibyśmy napisać program, który oblicza długość sekwencji DNA, to rzecz jasna nasz program musi najpierw znać tę sekwencję.<br><br>
+
+        Jako użytkownik komputera możesz być przyzwyczajony/a do przechowywania danych w plikach.<br>
+        Pracy z plikami (programistycznej) nauczysz się później, ale musisz wiedzieć, że z punktu widzenia programu,
+            odczytywanie i zapisywanie informacji w plikach jest czasochłonne.<br><br>
+
+        Okazuje się, że w plikach "opłaca się" przechowywać tylko większe ilości danych, natomiast kiedy chcemy szybko zapamiętać jakąś krótką informację,
+            zamiast tego lepiej jest skorzystać z szybszego rozwiązania.<br>
+        Zmienne do tego właśnie służą. Są to, cytując mojego kolegę Kacpra, "pudełka na dane".<br><br>
+
+        Poza prędkością "zapamiętywania", zmienne różnią się od plików jeszcze jedną rzeczą - są tymczasowe.<br>
+        Jeśli zapiszemy sobie jakąś notatkę w pliku, to możemy wyłączyć komputer, pójść na obiad i kiedy znowu go uruchomimy jakieś pół godziny później,
+            nasza notatka wciąż tam będzie.<br><br>
+
+        Natomiast zmienne znikają bezpowrotnie w momencie, kiedy nasz program przestaje działać.<br>
+        Więc jeśli musicie sobie zanotować, żeby pamiętać o urodzinach babci, lepiej skorzystajcie z kalendarza...
+
+
+        <!-- SECTION HEADER -->
+        <h2 id="uzywanie-zmiennych">Używanie zmiennych</h2>
+        <a href="#spis-tresci"><i class="bi bi-arrow-up-circle"></i></a><br><br>
+
+        Aby odróżnić jedną zmienną od drugiej, musimy nadać im <b>unikalne</b> nazwy.<br>
+        Właściwie, nie różni się to wcale od opisywania pudełek ze starymi gratami, które porzucamy w garażu...
+
+        <code class="bl">my_number = 12</code>
+
+        Użyłem właśnie <i>operatora przypisania</i> (=), aby przypisać zmiennej o nazwie 'my_number' liczbę 12 - a więc
+            "wrzuciłem" liczbę 12 do pudełka i opisałem je 'my_number'.
+
+        <p class="quote">
+            <span class="small orange"><i>Uwaga: przy nazywaniu zmiennych musimy trzymać się pewnych zasad.<br>
+            W nazwie zmiennej mogą znajdować się tylko litery, podkreślniki oraz cyfry - z zastrzeżeniem, że pierwszy znak nazwy nie może być cyfrą.<br>
+            Tak więc np. spacje odpadają.</i></span>
+        </p>
+
+        Jeśli przeszedłeś/aś poprzednią lekcję, wiesz już, że polecenie <code>print()</code> pozwala nam na wypisanie tekstu do konsoli.<br>
+        Spróbujmy teraz użyć go, aby zajrzeć do naszego pudełka.
+
+        <code class="bl">my_number = 12
+            print(my_number)
+        </code>
+
+        <p class="quote">
+            <span class="small orange"><i>Uwaga: w przeciwieństwie do wypisywania tekstu, kiedy chcemy wypisać zawartość zmiennej,
+                nie umieszczamy jej nazwy w cudzysłowie.<br>
+            Dlaczego tak jest, dowiesz się w następnej lekcji.</i></span>
+        </p>
+
+        Jeśli wykonałeś/aś powyższy kod z pliku lub przez konsolę interpretera, powinieneś/aś zobaczyć w wynikach liczbę 12.<br><br>
+
+        Jeśli chcemy zapamiętać więcej liczb, musimy im nadać inne nazwy:
+
+        <code class="bl">my_number = 12
+            my_number2 = 8
+        </code>
+
+        <p class="quote">
+            Co prawda da się wrzucić dwie liczby do jednego pudełka, ale o tym później - na razie lepiej ich nie mieszajmy.<br>
+            Bez obaw, pudełek nam nie zabraknie.
+        </p>
+
+        Rzecz jasna, w naszym garażu możemy dwa pudełka opisać dokładnie tak samo - ale wtedy ryzykujemy, że je pomylimy.<br>
+        Nasz komputer nie chce ryzykować, że się pomyli, tak więc w programowaniu nie jest to możliwe.<br>
+        Jeśli koniecznie chcemy wrzucić coś do pudełka o jakiejś nazwie, to musimy najpierw wyrzucić z niego wszystko, co już się w nim znajduje.
+
+        <code class="bl">my_number = 12
+            print("Moja liczba na początku:")
+            print(my_number)
+
+            my_number = 20
+            print("Moja liczba po zamianie:")
+            print(my_number)
+        </code>
+
+        A co z tym wyrzucaniem? Jak widzisz, nie użyłem w tym celu żadnego specjalnego polecenia. Po prostu wrzuciłem do "pudełka" inną wartość - Python sam
+            wyrzucił tę poprzednią.<br>
+        Jeśli wykonasz powyższy kod, przekonasz się, że po przypisaniu do zmiennej 'my_number' liczby 20, zniknęła z niej liczba 12,
+            którą wcześniej tam trzymaliśmy.<br>
+        <b>Takiej wyrzuconej zawartości zmiennej nie da się już odzyskać - bądź ostrożny/a</b><br>
+
+        <a href="Assets/Zmienne/Zmienne.png" target="_blank">
+            <img class="standard" src="Assets/Zmienne/Zmienne.png" alt="Tu powinien być obraz, ale coś poszło nie tak...">
+        </a><br>
+
+        A co jeśli nie potrzebujesz już ani liczby ani pudełka?<br>
+        Możesz je wtedy wyrzucić za pomocą polecenia <code>del</code> - zauważ, że w tym wypadku nie używamy nawiasów.
+
+        <code class="bl">my_number = 12
+            print(my_number)
+
+            del my_number
+        </code>
+
+        I to tyle jeśli chodzi o zmienne.
+
+        <!-- SECTION HEADER -->
+        <h2 id="a-wracajac-do-notatek-komentarze">A wracając do notatek... - Komentarze</h2>
+        <a href="#spis-tresci"><i class="bi bi-arrow-up-circle"></i></a><br><br>
+
+        Wiesz już o co chodzi w zmiennych, ale zanim przejdziesz do następnej lekcji, chciałem pokazać ci coś jeszcze.<br>
+        Mówiłem, jak to zmienne nie nadają się do przechowywania notatek.<br>
+        Ale podczas pisania kodu notatki są ważne.<br>
+        No bo przecież, jeśli porzucimy teraz nasz program i wrócimy do niego za miesiąc, (tak, to się zdarza) to nie będziemy pamiętać,
+            co ta nasza liczba w ogóle oznaczała.<br><br>
+
+        Do zostawiania notatek w kodzie służą <b>komentarze</b>.<br>
+        Nie wiem, czy już próbowałeś/aś, ale jeśli by tak napisać byle co gdzieś w programie i spróbować go uruchomić,
+            to interpreter zapewne radośnie zapełni twój ekran komunikatami o błędach.<br>
+        Jest jednak sposób, żeby Python zupełnie zignorował linijkę takiego nie-kodu - trzeba oznaczyć ją znakiem '#'.
+
+        <code class="bl"># Liczba pudełek po butach w moim garażu
+            my_number = 12
+            print(my_number)
+        </code>
+
+        Pierwsza linijka w powyższym kodzie to właśnie komentarz.<br>
+        Kiedy Python "widzi" znak #, to wie, że reszta linijki jest komentarzem i w ogóle tam nie zagląda.<br>
+        Możliwe jest też napisanie komentarza, który obejmuje więcej niż jedną linijkę.
+            Trzeba tylko otoczyć go trzema znakami cudzysłowu lub apostrofu z każdej strony:
+
+        <code class="bl">
+            # Liczba pudełek po butach w moim garażu
+            my_number = 12
+            print(my_number)
+
+            '''
+            Znalazłem jeszcze kilka pudełek,
+            na strychu i w piwnicy,
+            a nawet jedno pod łóżkiem.
+            '''
+            my_number = 20
+            print(my_number)
+        </code>
+
+        <p class="quote">
+            Właściwie, to tak naprawdę nie jest komentarz, tylko wielolinijkowy <i>string</i>. Ale o tym w następnej lekcji...
+        </p><br><br>
+
+        <span class="green">Jesteś teraz gotowy/a aby przejść do lekcji numer 3:</span> <a href="3-typy-danych-I.html">Typy danych I</a><br><br><br>
+
+
+        <i><a href="#spis-tresci">Do spisu treści</a></i>
+
+        
+        <div class="bottom">
+            Napisane przez:
+            <br><i>Jeremi Maciejewski</i>
+        </div>
+    </div>
+
+    
+    <footer>
+        <a href="https://knp.web.amu.edu.pl/sekcja-oprogramowania-biologicznego/">Sekcja Oprogramowania Biologicznego <i class="bi bi-box-arrow-up-right" style="font-size: 80%; vertical-align: text-top;"></i></a>
+        <br><a href="https://knp.web.amu.edu.pl/">KNP UAM <i class="bi bi-box-arrow-up-right" style="font-size: 80%; vertical-align: text-top;"></i></a>
+    </footer>
+    <div style="height:1px;"></div>
+</body>
+</html>
