@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+    <title>Kurs programowania w języku Python</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/Py-Course-BioSoft/static/style.css">
+    <!-- Bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <div style="height:1px;"></div>
+    <nav>
+        <div class="nav-links">
+            <a href="/Py-Course-BioSoft/index.html#spis-tresci"><i class="bi bi-house-door" style="font-size: 1.5rem; vertical-align: text-bottom;"></i> Spis treści</a>
+        </div>
+        <div class="nav-title">
+            <h2>Kurs Pythona</h2>
+        </div>
+        <div class="nav-right"></div>
+    </nav>
+
+
+    <div class="content">
+        <h1>Sekwencja tandemowa</h1>
+        <a href="/Py-Course-BioSoft/Lekcje/4-typy-danych-II.html#cwiczenia">Powrót do lekcji 4</a><br><br>
+
+        W kodzie poniżej znajduje się słownik zawierający liczby wystąpień poszczególnych nukleotydów w pewnej sekwencji DNA.<br>
+        Wiesz, że jest to <i>sekwencja tandemowa</i>, której podstawowy motyw to "TTAGGG" - występuje ona w
+            <i><a href="https://pl.wikipedia.org/wiki/Telomer_(genetyka)" target="_blank">telomerach</a></i> kręgowców.<br>
+        Nie posiadasz jednak samego zapisu tej sekwencji.<br><br>
+
+        Sekwencje tandemowe są to sekwencje składające się z wielokrotnych powtórzeń krótszej sekwencji.<br>
+        Sekwencja tandemowa o motywie "TTAGGG" składa się więc z wielokrotnych powtórzeń fragmentu "TTAGGG".<br><br>
+
+        Na podstawie informacji o liczbie poszczególnych nukleotydów w pełnej sekwencji, oraz znajomości jej motywu,
+            <b>policz, ile razy motyw powtarza się w sekwencji.</b><br>
+        Następnie <b>odtwórz tę sekwencję</b>.<br><br>
+
+        Przyjmij, że nie występują w niej niepełne ani zmutowane fragmenty motywu.<br><br>
+
+        <details>
+            <summary>
+                Wskazówka: <span class="meager"><i>(naciśnij aby rozwinąć)</i></span>
+            </summary>
+            <p class="quote">
+                Dane ze słownika możesz wyciągnąć stosując formułę <code>value = dict[key]</code>, na przykład <code>num_A = nuc_counts['A']</code>.
+                
+                Mogą ci się przydać <a href="/Py-Course-BioSoft/Lekcje/3-typy-danych-I.html#matematyka">operatory matematyczne</a>.<br>
+                W tym, <a href="/Py-Course-BioSoft/Lekcje/3-typy-danych-I.html#string">powielanie stringów</a>.<br><br>
+
+                <b>Uwaga!</b> Zauważ, że istnieją dwa różne operatory odpowiadające za dzielenie... 😉
+            </p>
+        </details><br>
+
+        <code class="bl">motif = "TTAGGG"
+
+            nuc_counts = {'A' : 57, 'T' : 114, 'C' : 0, 'G' : 171}
+
+            # ???
+
+            number_of_repeats = # ???
+
+            sequence = # ???
+        </code><br>
+
+        <a href="Pliki/4_rozw3.py">Rozwiązanie</a>
+
+        
+        <div class="bottom">
+            <!--Napisane przez:
+            <br><i>Jeremi Maciejewski</i>-->
+        </div>
+    </div>
+
+    
+    <footer>
+        <a href="https://knp.web.amu.edu.pl/sekcja-oprogramowania-biologicznego/">Sekcja Oprogramowania Biologicznego <i class="bi bi-box-arrow-up-right" style="font-size: 80%; vertical-align: text-top;"></i></a>
+        <br><a href="https://knp.web.amu.edu.pl/">KNP UAM <i class="bi bi-box-arrow-up-right" style="font-size: 80%; vertical-align: text-top;"></i></a>
+    </footer>
+    <div style="height:1px;"></div>
+</body>
+</html>

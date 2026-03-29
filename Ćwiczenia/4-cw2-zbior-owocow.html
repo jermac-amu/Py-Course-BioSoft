@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+    <title>Kurs programowania w języku Python</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/Py-Course-BioSoft/static/style.css">
+    <!-- Bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <div style="height:1px;"></div>
+    <nav>
+        <div class="nav-links">
+            <a href="/Py-Course-BioSoft/index.html#spis-tresci"><i class="bi bi-house-door" style="font-size: 1.5rem; vertical-align: text-bottom;"></i> Spis treści</a>
+        </div>
+        <div class="nav-title">
+            <h2>Kurs Pythona</h2>
+        </div>
+        <div class="nav-right"></div>
+    </nav>
+
+
+    <div class="content">
+        <h1>Zbiór owoców</h1>
+        <a href="/Py-Course-BioSoft/Lekcje/4-typy-danych-II.html#cwiczenia">Powrót do lekcji 4</a><br><br>
+
+        Wyobraź sobie, że przygotowujesz owocową sałatkę dla dwojga ważnych gości.<br>
+        Przygotowałem dla ciebie listę owoców, które posiadasz, oraz dwa zbiory owoców, których poszczególni goście nie lubią.<br><br>
+
+        Użyj tych informacji, aby <b>znaleźć zbiór owoców</b>, które są <b>lubiane</b> przez oboje gości, i których możesz użyć w sałatce.<br><br>
+
+        Ktoś <i>(któż to mógł być...)</i> przez "pomyłkę", niektóre posiadane owoce dopisał do listy kilkukrotnie - na szczęście można łatwo
+            rozwiązać ten problem, <i>zmieniając ją w zbiór...</i><br><br>
+
+        <details>
+            <summary>
+                Wskazówka: <span class="meager"><i>(naciśnij aby rozwinąć)</i></span>
+            </summary>
+            <p class="quote">
+                Możesz zmienić listę w zbiór - i tym samym usunąć zduplikowane elementy - za pomocą polecenia <code>set()</code>.<br><br>
+                
+                Myślę, żę przyda ci się również coś, żeby obliczyć
+                    <i><a href="/Py-Course-BioSoft/Lekcje/4-typy-danych-II.html#operacje-set">różnicę zbiorów</a></i>...
+            </p>
+        </details><br>
+
+        <!-- Note, the following block intentionally ignores indentation, since all whitespace is preserved inside -->
+        <code class="bl" style="white-space: pre-wrap;">available_fruits = ["Lychee", "Apple", "Mango", "Pear", "Pineapple", "Peach",
+                    "Nectarine", "Orange","Lychee", "Papaya", "Pineapple",
+                    "Peach", "Pear", "Pineapple", "Apple", "Mandarine", "Plum",
+                    "Melon", "Passionfruit", "Nectarine", "Plum"]
+
+wrong_fruits1 = {"Peach", "Nectarine", "Orange", "Pineapple", "Melon"}
+wrong_fruits2 = {"Mandarine", "Plum", "Lychee", "Orange", "Peach", "Papaya"}
+
+available_set = # ???
+
+liked_fruits1 = # ???
+liked_fruits_both = # ???</code>
+
+        <a href="Pliki/4_rozw2.py">Rozwiązanie</a>
+
+        
+        <div class="bottom">
+            <!--Napisane przez:
+            <br><i>Jeremi Maciejewski</i>-->
+        </div>
+    </div>
+
+    
+    <footer>
+        <a href="https://knp.web.amu.edu.pl/sekcja-oprogramowania-biologicznego/">Sekcja Oprogramowania Biologicznego <i class="bi bi-box-arrow-up-right" style="font-size: 80%; vertical-align: text-top;"></i></a>
+        <br><a href="https://knp.web.amu.edu.pl/">KNP UAM <i class="bi bi-box-arrow-up-right" style="font-size: 80%; vertical-align: text-top;"></i></a>
+    </footer>
+    <div style="height:1px;"></div>
+</body>
+</html>

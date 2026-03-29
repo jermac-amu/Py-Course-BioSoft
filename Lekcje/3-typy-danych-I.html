@@ -1,0 +1,624 @@
+<!doctype html>
+<html>
+<head>
+    <title>Kurs programowania w języku Python</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/Py-Course-BioSoft/static/style.css">
+    <!-- Bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <div style="height:1px;"></div>
+    <nav>
+        <div class="nav-links">
+            <a href="/Py-Course-BioSoft/index.html#spis-tresci"><i class="bi bi-house-door" style="font-size: 1.5rem; vertical-align: text-bottom;"></i> Spis treści</a>
+        </div>
+        <div class="nav-title">
+            <h2>Kurs Pythona</h2>
+        </div>
+        <div class="nav-right"></div>
+    </nav>
+
+
+    <div class="content">
+        <!-- MAIN HEADER -->
+        <h1>Typy danych I</h1>
+
+        Kolejny koncept programistyczny, który omówimy to typy danych.<br>
+        Wiesz już, <a href="2-czym-sa-zmienne.html">jak przechowywać dane w zmiennych</a>,
+            a więc czas się dowiedzieć, co konkretnie można w nich przechowywać.<br><br>
+
+        Każda zmienna ma swój typ.<br>
+        <span class="meager"><i>I nie mowa tu o facetach...</i></span><br><br>
+
+        Spotkaliśmy się już z dwoma spośród podstawowych typów danych:<br>
+        <ul>
+            <li>
+                Liczby całkowite (<i>integer</i>)
+            </li>
+            <li>
+                Tekst (<i>string</i>)
+            </li>
+        </ul><br>
+
+        Zaczniemy od nich, a następnie przejdziemy do pozostałych typów danych.
+
+        <h2 id="spis-tresci">Spis treści</h2>
+        <ul>
+            <li>
+                <a href="#integer">Integer</a>
+            </li>
+            <li>
+                <a href="#string">String</a>
+                <ul>
+                    <li>
+                        <a href="#metody">Metody</a>
+                    </li>
+                    <li>
+                        <a href="#slicing">Slicing</a>
+                    </li>
+                    <li>
+                        <a href="#fstring">F-string</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#float">Float</a>
+            </li>
+            <li>
+                <a href="#boolean">Boolean</a>
+            </li>
+            <li>
+                <a href="#none">None</a>
+            </li>
+            <li>
+                <a href="#konwersja-typow">Konwersja typów</a>
+            </li>
+            <li>
+                <a href="#cwiczenia">Ćwiczenia</a>
+            </li>
+        </ul>
+
+
+        <!-- SECTION HEADER -->
+        <h2 id="integer">Integer</h2>
+        <a href="#spis-tresci"><i class="bi bi-arrow-up-circle"></i></a><br><br>
+
+        Jest to typ danych odpowiadający liczbom całkowitym.<br>
+        W Pythonie nazywany jest skrótowo <code>int</code>.<br>
+        Zmienną typu <code>int</code> można stworzyć poprzez przypisanie liczby całkowitej lub za pomocą polecenia <code>int()</code>.
+
+        <code class="bl">my_number = 12
+            second_number = int() # Automatycznie otrzyma wartość 0
+        </code>
+
+
+        <h3 id="matematyka"><span class="blue">Matematyka</span></h3>
+
+        Na wartościach tego typu można używać <i>operatorów matematycznych</i>:
+        <ul>
+            <li>
+                <code>+</code> - dodawanie
+            </li>
+            <li>
+                <code>-</code> - odejmowanie
+            </li>
+            <li>
+                <code>*</code> - mnożenie
+            </li>
+            <li>
+                <code>/</code> - dzielenie
+            </li>
+            <li>
+                <code>//</code> - dzielenie całkowite (wynik pozbawiony jest części po przecinku, np. <code>10 / 4</code> = 2.5, ale <code>10 // 4</code> = 2)
+            </li>
+            <li>
+                <code>**</code> - potęgowanie
+            </li>
+            <li>
+                <code>%</code> - modulo, czyli reszta z dzielenia (np. <code>5 / 3</code> = 1 r.2, zatem <code>5 % 3</code> = 2)
+            </li>
+        </ul><br>
+
+        Nie ma <i>operatora</i>, który umożliwia pierwiastkowanie, ale istnieje na to sprytny sposób:
+
+        <code class="bl">square_root_of_2 = 2 ** (1/2)</code>
+
+        Przy okazji użyłem też operatorów otwarcia i zamknięcia nawiasu, których działanie, jak sądzę, jest oczywiste.
+
+        <p class="quote">
+            Przypomnienie ze szkoły na wszelki wypadek:<br>
+            <math style="font-size: 1.4em;">
+                <mroot>
+                    <mi>x</mi>
+                    <mi>y</mi>
+                </mroot>
+                <mo>=</mo>
+                <msup>
+                    <mi>x</mi>
+                    <mfrac>
+                        <mn>1</mn>
+                        <mi>y</mi>
+                    </mfrac>
+                </msup>
+            </math> zatem <math style="font-size: 1.4em;">
+                                <mroot>
+                                    <mn>2</mn>
+                                    <mn>2</mn>
+                                </mroot>
+                                <mo>=</mo>
+                                <msup>
+                                    <mn>2</mn>
+                                    <mfrac>
+                                        <mn>1</mn>
+                                        <mn>2</mn>
+                                    </mfrac>
+                                </msup>
+                            </math>
+        </p>
+
+
+        <!-- SECTION HEADER -->
+        <h2 id="string">String</h2>
+        <a href="#spis-tresci"><i class="bi bi-arrow-up-circle"></i></a><br><br>
+
+        Typ danych służący do przechowywania tekstu.<br>
+        Nazwa 'string' oznacza dosłownie sznurek. Bierze się ona z tego,
+            że każdy string jest <i>łańcuchem znaków</i> (tudzież "sznurkiem znaków" jeśli wolisz 😉).<br>
+        Znak jest to pojedyncza litera, cyfra itp.<br><br>
+
+        W Pythonie string jest zwykle nazywany skrótowo <code>str</code>.<br>
+        Wartość tego typu można stworzyć poprzez przypisanie tekstu otoczonego cudzysłowem,
+            (pojedynczym lub podwójnym, nie ma to znaczenia. O ile jesteśmy konsekwentni) lub za pomocą polecenia <code>str()</code>.
+
+        <code class="bl">hello = "Cześć!"
+            empty = str() # Pusty napis
+        </code>
+
+        Można również stworzyć string wielolinijkowy, o którym wspomniałem już w poprzednim temacie:
+
+        <code class="bl">long = '''Ten tekst
+            jest trochę zbyt długi,
+            więc podzieliłem go na
+            kilka linijek.'''
+        </code>
+
+        Dane typu string można konkatenować (łączyć, <i>concatenate</i>) za pomocą operatora <code>+</code>:
+
+        <code class="bl">a = "Hello"
+            b = " World!"
+
+            print(a + b)
+        </code>
+
+        <code>Hello World!</code><br><br>
+
+        String można również powielić za pomocą operatora <code>*</code>:
+
+        <code class="bl">a = "Hello"
+            b = a * 3
+
+            print(b)
+        </code>
+
+        <code>HelloHelloHello</code><br><br>
+
+        Warto jeszcze zaznaczyć, że dane typu string są <i>niemutowalne</i>, czyli niezmienne.<br>
+        W praktyce oznacza to, że nie da się ich zmodyfikować - jeśli chcemy np. zmienić jedną literę w jakimś napisie,
+            to musimy cały wyrzucić i zastąpić nowym, ze zmienioną literą.<br><br>
+
+        W poniższych podrozdziałach opiszę cały szereg możliwości, które udostępnia nam string.
+
+        <a name="metody"></a>
+        <h3 id="metody"><span class="blue">Metody</span></h3>
+
+        Dane typu string posiadają cały zestaw metod, czyli specjalnych poleceń,
+            które służą głównie do stworzenia nowego tekstu na podstawie tego, na którym używamy polecenia.<br>
+        W związku z niemutowalnością danych typu string, musimy pamiętać, że zawartość zmiennej nie zmieni się sama.<br>
+        A więc po użyciu takiej metody zwykle chcemy przypisać wynik jej działania do nowej zmiennej (albo i tej samej, zastępując w ten sposób oryginał).
+
+        <code class="bl">text = "mój napis"
+            TEXT = text.upper()
+
+            print(text)
+            print(TEXT)
+        </code>
+
+        <code>mój napis</code><br>
+        <code>MÓJ NAPIS</code><br><br>
+
+        Użyłem właśnie metody <code>upper()</code>, która na podstawie napisu zawartego w zmiennej <code>text</code>,
+            stworzyła nowy, zapisany wielkimi literami.<br>
+        Zauważ, że zmienna <code>text</code> nie zmieniła swojej zawartości. Wynik działania metody musiałem zapisać w zmiennej <code>TEXT</code>.<br>
+        Co prawda, jeśli nie byłby mi już potrzebny oryginalny napis, mógłbym zrobić tak:
+
+        <code class="bl">text = "mój napis"
+            text = text.upper()
+
+            print(text)
+        </code>
+
+        <code>MÓJ NAPIS</code><br><br>
+
+        Kilka co bardziej użytecznych metod, których można użyć na danych typu string znajdziecie poniżej:
+        <ul>
+            <li>
+                <code>upper()</code> - zmienia wszystkie litery na wielkie
+            </li>
+            <li>
+                <code>lower()</code> - zmienia wszystkie litery na małe
+            </li>
+            <li>
+                <code>capitalize()</code> - zmienia pierwszą literę na wielką, np. <code>"ania ma kota".capitalize()</code> = <code>"Ania ma kota"</code>
+            </li>
+            <li>
+                <code>title()</code> - zmienia pierwszą literę <b>każdego słowa</b> na wielką,
+                    np. <code>"ania ma kota".title()</code> = <code>"Ania Ma Kota"</code>
+            </li>
+            <li>
+                <code>replace(x, y)</code> - zmienia wszystkie wystąpienia litery/słowa <code>x</code> na <code>y</code>,
+                    np. <code>"ania ma kota".replace('a', '*')</code> = <code>"*ni* m* kot*"</code>
+            </li>
+            <li>
+                <code>count(x)</code> - zwraca liczbę wystąpień litery/słowa <code>x</code>, np. <code>"ania ma kota".count('a')</code> = <code>4</code>
+            </li>
+        </ul><br>
+
+        Takich metod istnieje znacznie więcej.
+            Po kompletną listę odsyłam do <a href="https://docs.python.org/3/library/stdtypes.html#string-methods">dokumentacji Pythona</a> - choć na razie
+            pewnie ci się nie przyda.
+
+        <h3 id="slicing"><span class="blue">Slicing</span></h3>
+
+        <i>Slicing</i> (ang. dosł. kroić) to technika pozwalająca nam "wyciąć" z dłuższego tekstu jakiś jego fragment.<br>
+        W tym celu wykorzystuje się operator nawiasów kwadratowych.<br><br>
+
+        Trzeba tu wspomnieć, że każdy znak w string-u - łańcuchu znaków - ma przypisany swój numer, nazywany indeksem (<i>index</i>).<br>
+        W języku Python pierwszy znak ma zawsze indeks 0.<br>
+        Slicing odbywa się poprzez umieszczenie indeksów pierwszego oraz ostatniego znaku we fragmencie,
+            który chcemy wyciąć, wewnątrz operatora nawiasów kwadratowych - oddzielonych dwukropkiem.
+
+        <code class="bl">chain = "0123456789abcdef"
+            part1 = chain[0:6]
+            part2 = chain[9:16]
+
+            print(part1)
+            print(part2)
+        </code><br>
+
+        <a href="Assets/Typy_I/slicing1.png" target="_blank">
+            <img class="standard" src="Assets/Typy_I/slicing1.png" alt="Tu powinien być obraz, ale coś poszło nie tak...">
+        </a><br>
+
+        Ale zaraz. Czy aby pierwszy fragment nie miał obejmować cyfr od 0 do 6?<br>
+        Okazuje się, że dla Pythona "od 0 do 6" oznacza wszystko pomiędzy 0 a 6, ale z wyłączeniem samego 6.<br>
+        Trzeba o tym pamiętać, inaczej w kółko będziemy gubili ostatnią literę...<br><br>
+
+        Jeśli chcemy wyciąć fragment obejmujący początek lub koniec stringu, możemy pominąć indeks pierwszego lub ostatniego znaku:
+
+        <code class="bl">chain = "0123456789abcdef"
+            part1 = chain[:6]
+            part2 = chain[9:]
+            part3 = chain[:] # Whole string from start to beginning!
+
+            print(part1)
+            print(part2)
+            print(part3)
+        </code><br>
+
+        <a href="Assets/Typy_I/slicing2.png" target="_blank">
+            <img class="standard" src="Assets/Typy_I/slicing2.png" alt="Tu powinien być obraz, ale coś poszło nie tak...">
+        </a><br>
+
+        Możemy też wyciąć co drugi albo co trzeci itd. znak, dodając trzecią liczbę:
+
+        <code class="bl">chain = "0123456789abcdef"
+            part1 = chain[:10:2]
+            part2 = chain[:10:3]
+
+            print(part1)
+            print(part2)
+        </code>
+
+        <a href="Assets/Typy_I/slicing3.png" target="_blank">
+            <img class="standard" src="Assets/Typy_I/slicing3.png" alt="Tu powinien być obraz, ale coś poszło nie tak...">
+        </a><br>
+
+        No i na koniec, możemy skorzystać z indeksów ujemnych.<br>
+        -n-ty indeks oznacza n-ty indeks od końca:
+        
+        <!-- Note, the following block intentionally ignores indentation, since all whitespace is preserved inside -->
+        <code class="bl" style="white-space: pre-wrap;">chain = "0123456789abcdef"
+#                     🠉-3
+part1 = chain[:-3] # 16-3 = 13
+
+print(part1)</code><br>
+
+        <a href="Assets/Typy_I/slicing4.png" target="_blank">
+            <img class="standard" src="Assets/Typy_I/slicing4.png" alt="Tu powinien być obraz, ale coś poszło nie tak...">
+        </a><br>
+
+        A co się stanie jeśli zamienimy indeksy początku i końca miejscami?<br>
+        Przekonaj się sam/a...
+
+
+        <h3 id="fstring"><span class="blue">F-string</span></h3>
+
+        Czasem możesz potrzebować napisu, który zawiera wartość jakiejś zmiennej albo wyrażenia (np. matematycznego).<br>
+        Proponuję, żebyś spróbował/a teraz wykonać proste ćwiczenie:<br><br>
+
+        Dokończ poniższy program tak, aby wypisać oczekiwany wynik:<br>
+        (I nie chodzi tu po prostu o wpisanie wyniku "na sztywno" - spróbuj faktycznie wykorzystać zmienną <code>name</code>)
+
+        <code class="bl">name = "Andrzej"
+
+            print(???)
+        </code>
+
+        Wynik:<br>
+        <code>Cześć, Andrzej!</code><br><br>
+
+        <details>
+            <summary>Rozwiązanie <span class="meager">(naciśnij aby rozwinąć)</span></summary>
+            Można to zrobić na kilka sposobów:
+
+            <code class="bl">print("Cześć, " + name + "!")</code>
+
+            Albo:
+
+            <code class="bl">print("Cześć, ", name, "!", sep="")</code>
+        </details><br>
+
+        W powyższym rozwiązaniu wykorzystałem dwie właściwości polecenia <code>print()</code>, o których być może jeszcze nie wiesz:
+        <ul>
+            <li>
+                Podanie do polecenia kilku wartości po przecinku sprawi, że <code>print()</code> połączy te wartości ze sobą i wypisze to, co wyjdzie
+            </li>
+            <li>
+                opcja <code>sep=</code> pozwala nam określić, w jaki sposób te wartości zostaną połączone.
+                    Domyślnie <code>print()</code> wstawia pomiędzy wartości jedną spację - ja natomiast kazałem mu zamiast tego wstawiać pusty string,
+                    czyli po prostu nic.
+            </li> 
+        </ul>
+
+        Istnieje jednak wygodniejsze rozwiązanie od powyższych - <b>f-string</b>.<br><br>
+
+        F-string to "formatowany string" (<i>formatted string literal</i>). Można do niego "wstawić" zmienną lub wyrażenie.<br>
+        Tworzy się go poprzez dodanie litery <code>f</code> przed cudzysłowem.
+
+        <code class="bl">f"To jest formatowany string!"</code>
+
+        Co prawda nie ma powodu, żeby powyższy string był f-stringiem, a być może wręcz <b>nie powinien</b> nim być - ze względu na
+            przejrzystość kodu oraz kilka właściwości f-stringów, których tu nie omawiam, zalecam,
+            abyś używał/a ich tylko wtedy, gdy masz ku temu powód.<br>
+        Przyjrzyjmy się więc przykładowi, w którym ich użycie jest uzasadnione, na przykład temu z powyższego ćwiczenia:
+
+        <code class="bl">name = "Andrzej"
+
+            print( f"Cześć, {name}!" )
+        </code>
+
+        <code>Cześć, Andrzej!</code><br><br>
+
+        Jak widzisz, użyłem nawiasu klamrowego (<code>{}</code>) aby umieścić wartość zmiennej <code>name</code> wewnątrz f-stringu.<br>
+        W ten sposób można też wstawić zmienną innego typu:
+
+        <code class="bl">age = 14
+
+            print( f"Andrzej ma {age} lat." )
+        </code>
+
+        <code>Andrzej ma 14 lat.</code><br><br>
+
+        To na razie tyle jeśli chodzi o dane typu string - co prawda kryją one jeszcze wiele tajemnic,
+            ale o tym opowiem później, w lekcji dodatkowej <a href="4_5-typy-bonus.html">Typy danych - dodatek</a>.<br>
+        Na razie jednak zapoznaj się z pozostałymi typami danych.
+
+
+        <!-- SECTION HEADER -->
+        <h2 id="float">Float</h2>
+        <a href="#spis-tresci"><i class="bi bi-arrow-up-circle"></i></a><br><br>
+
+        Float, podobnie jak Integer, reprezentuje liczby.<br>
+        Różnica polega na tym, że <code>int</code> służył do liczb całkowitych, natomiast <code>float</code> reprezentuje liczby zmiennoprzecinkowe,
+            czyli niecałkowite.<br>
+        Wartość typu float można utworzyć poprzez przypisanie liczby z wartością po przecinku - a właściwie,
+            to po kropce - lub za pomocą polecenia <code>float()</code>.
+
+        <code class="bl">floating_point_number = 12.5
+            another_number = float() # Automatycznie otrzyma wartość 0.0
+        </code>
+
+        Zauważ, że nie możesz zapisać wartości z użyciem przecinka, to musi być kropka.
+
+        <code class="bl">floating_point_number = 12,5</code>
+
+        Powyższy kod co prawda nie zwraca błędu... ale uzyskana wartość nie jest liczbą typu <code>float</code>. Jest to <code>tuple</code>,
+            który poznasz dopiero w następnej lekcji.<br><br>
+
+        Na wartościach typu float można używać tych samych <i>operatorów matematycznych</i>, co w przypadku integer: <a href="#matematyka">Matematyka</a>
+
+
+        <!-- SECTION HEADER -->
+        <h2 id="boolean">Boolean</h2>
+        <a href="#spis-tresci"><i class="bi bi-arrow-up-circle"></i></a><br><br>
+
+        Boolean jest bardzo prostym typem danych. Może on przyjąć tylko dwie wartości:<br>
+        Prawda (<code>True</code>) albo fałsz (<code>False</code>).<br><br>
+
+        W Pythonie nazywa się go skrótowo <code>bool</code>.<br>
+        Wartość tego typu można utworzyć poprzez przypisanie jednej z powyższych wartości lub za pomocą polecenia <code>bool()</code>:
+
+        <code class="bl">boolean_true = True
+            boolean_false = False
+
+            default_bool = bool() # Automatycznie otrzyma wartość False
+        </code>
+
+        Zwróć uwagę, że `True` oraz `False` zawsze musi być pisane z wielkiej litery.<br><br>
+
+        Na tą chwilę ten typ danych zapewne nie wydaje się zbyt użyteczny, ale zapewniam, że będzie on nam bardzo potrzebny w przyszłości,
+            w trakcie lekcji o <i>instrukcjach warunkowych</i>.
+
+
+        <!-- SECTION HEADER -->
+        <h2 id="none">None</h2>
+        <a href="#spis-tresci"><i class="bi bi-arrow-up-circle"></i></a><br><br>
+
+        <code>None</code>, a właściwie NoneType, jest szczególnym typem danych, który nie służy do przechowywania danych.<br>
+        Właściwie, można powiedzieć, że służy <b>właśnie do tego</b>, żeby <b>nie</b> przechowywać żadnych danych.<br><br>
+
+        Jest to po prostu wartość zastępcza.<br>
+        Jeśli chcemy, na przykład, stworzyć zmienną, w której na razie nic nie ma, (ale będzie) to używamy właśnie NoneType.<br><br>
+
+        Typ ten może przyjąć tylko jedną wartość - obiekt <code>None</code>.<br>
+        Możemy utworzyć wartość tego typu poprzez przypisanie tego właśnie obiektu:
+
+        <code class="bl">placeholder = None</code>
+
+        Nie jest możliwa konwersja do ani z typu NoneType.<br>
+        Konwersja? A no właśnie...
+
+
+        <!-- SECTION HEADER -->
+        <h2 id="konwersja-typow">Konwersja typów</h2>
+        <a href="#spis-tresci"><i class="bi bi-arrow-up-circle"></i></a><br><br>
+
+        Czasem konieczna jest zamiana danych jednego typu w inny.<br>
+        Na przykład wyobraźmy sobie, że mamy poniższe zmienne:
+
+        <code class="bl">number = 15
+            number2 = "7"
+        </code>
+
+        I chcielibyśmy je do siebie dodać...
+
+        <code class="bl">number + number2</code>
+
+        <code class="bl">Traceback (most recent call last):
+            File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+            TypeError: unsupported operand type(s) for +: 'int' and 'str'
+        </code>
+
+        Oj.<br>
+        Jak być może już się domyśliłeś/aś, ten błąd spowodowany jest tym, że pierwsza zmienna jest typu integer,
+            a druga string (ponieważ przypisana wartość znajduje się w cudzysłowie).<br><br>
+
+        Python nie wie, w jaki sposób ma dodać tekst do liczby. (bo i jaki powinien być wynik? 22? A może "157"? A może... 70...? 😉😉)<br>
+        Więc co teraz?
+
+        <h3 id="konwersja-int"><span class="blue">Konwersja do typu integer</span></h3>
+
+        Konwersji do typu integer dokonuje się zazwyczaj za pomocą polecenia <code>int()</code>.
+
+        <code class="bl">int(2) # int na int, nic się nie zmienia
+            int(2.6) # float na int - uwaga, zaokrągla w dół, (obcina, tak właściwie) tym samym zwracając 2
+            int("3") # string na int
+            int(True) # bool na int, o tym powiem później
+
+            int("2.6") # błąd - tekst w podanym stringu nie odpowiada liczbie całkowitej, co najwyżej zmiennoprzecinkowej
+        </code>
+
+        Tak więc nasz problem można rozwiązać w poniższy sposób:
+
+        <code class="bl">number = 15
+            number2 = "7"
+
+            number + int(number2)
+        </code>
+
+        <code>22</code>
+
+        <h3 id="konwersja-string"><span class="blue">Konwersja do typu string</span></h3>
+
+        Konwersji do typu string dokonuje się zazwyczaj za pomocą polecenia <code>str()</code>.<br>
+        Jak na razie omawialiśmy tylko kilka podstawowych typów, ale przekonasz się w przyszłości,
+            że do stringu można konwertować praktycznie każdy typ, jaki wpadnie ci w ręce.<br>
+        Choć uwaga, bo rezultat czasem może cię zaskoczyć...
+
+        <code class="bl">str(2) # int na string, zwraca "2"
+            str(2.6) # float na string, zwraca "2.6"
+            str("test") # string na string, nic się nie zmienia
+            str(True) # bool na string, zwraca "True"
+
+            str(str)
+            ''' class na string... Ktoś może zauważyć, że to w ogóle nie jest konwersja typów.
+            Cóż... class to rzeczywiście nie jest żaden typ, ale ten kurs nie obejmuje programowania obiektowego,
+            więc nie będę tłumaczył czym naprawdę jest... '''
+            ```
+        </code>
+
+
+        <h3 id="konwersja-float"><span class="blue">Konwersja do typu float</span></h3>
+
+        Konwersji do typu float dokonuje się zazwyczaj za pomocą polecenia <code>float()</code>.
+
+        <code class="bl">float(2) # int na float, zwraca 2.0
+            float(2.6) # float na float, nic się nie zmienia
+            float("3.6") # str na float, zwraca 3.6
+            float(True) # bool na float, o tym powiem za chwilę
+
+            float("2") # str na float - co prawda brakuje części po przecinku, ale Python może się "domyślić", że powinno tam być ".0" - a więc zwraca 2.0
+        </code>
+
+        <h3 id="konwersja-bool"><span class="blue">Konwersja do typu Boolean</span></h3>
+
+        Konwersji do typu Boolean dokonuje się zazwyczaj za pomocą polecenia <code>bool()</code>.<br>
+        Zanim przejdziemy do przykładów, od razu wyjaśnię, że owszem, jak już widzizeliśmy, dane logiczne,
+            prawda lub fałsz, można konwertować do typów numerycznych, (np. int, float) choć być może nie wydaje się to oczywiste.<br>
+        Wynika to po części z tego, że <i>wewnętrznie</i>, komputer "zapamiętuje" prawdę lub fałsz jako liczby 1 lub 0.<br>
+        Tak więc <code>int(True)</code> zwróci nam 1, a <code>int(False)</code> 0.
+
+        <code class="bl">bool(True) # bool na bool, nic się nie zmienia
+            bool(0) # int na bool, zwraca False
+            bool(1) # int na bool, zwraca True
+            bool(0.0) # float na bool, zwraca False
+
+            bool(12) # float na bool, zwraca True
+        </code>
+
+        Ostatni przykład może być zaskakujący - jak się okazuje, przyjmuje się, że przy konwersji,
+            0 (lub 0.0) odpowiada False, a <i>każda inna</i> liczba odpowiada True.<br>
+        Jednak to nie wszystko.
+
+        <code class="bl">bool("False") # str na bool, zwraca... True???</code>
+
+        Powyższy przykład jest dość, lub nawet bardzo, dezorientujący, szczególnie, że <code>str(False)</code> zwracało przecież <code>"False"</code>.<br>
+        Zasadniczo, konwersja stringów do booleanów nie ma zbyt wielu zastosowań,
+            (bo w gruncie rzeczy, jak ocenić czy słowo "cześć" jest raczej prawdziwe czy fałszywe?) i właściwie mogłaby być zwyczajnie niedozwolona...<br>
+        Ale jednak istnieje jeden przykład sytuacji kiedy możemy chcieć sprawdzić, czy napis jest "prawdziwy" - sprawdzanie, czy string jest pusty.<br>
+        Ze względu na to zastosowanie, konwersja <code>str</code> do <code>bool</code> jest możliwa i zwraca <code>False</code> kiedy string jest pusty,
+            a <code>True</code> kiedy zawiera <i>cokolwiek</i>, choćby nawet było to <code>"False"</code>.
+
+        <code class="bl">bool("") # str na bool, zwraca False (string jest pusty)
+            bool("cokolwiek") # str na bool, zwraca True
+        </code><br>
+
+        <span class="green">Z tą wiedzą jesteś teraz gotowy/a aby przejść do następnej lekcji,</span> <a href="4-typy-danych-II.html"> Typy danych II</a> ...<br>
+        <span class="green" id="cwiczenia">...Ale zaraz, a może by ją tak utrwalić, wykonując kilka ćwiczeń?</span><br><br>
+
+        <a href="/Py-Course-BioSoft/Ćwiczenia/3-cw1-pole-kola.html">Ćwiczenie 1 - Obliczanie pola koła</a><br>
+        <a href="/Py-Course-BioSoft/Ćwiczenia/3-cw2-liczenie-liter.html">Ćwiczenie 2 - Liczenie liter w zdaniu</a><br>
+        <a href="/Py-Course-BioSoft/Ćwiczenia/3-cw3-dodawanie-cyfr.html">Ćwiczenie 3 - Dodawanie cyfr</a>
+            <span class="small orange"><i>To zadanie jest szczególnie trudne</i></span><br><br><br>
+
+
+        <i><a href="#spis-tresci">Do spisu treści</a></i>
+
+        
+        <div class="bottom">
+            Napisane przez:
+            <br><i>Jeremi Maciejewski</i>
+        </div>
+    </div>
+
+    
+    <footer>
+        <a href="https://knp.web.amu.edu.pl/sekcja-oprogramowania-biologicznego/">Sekcja Oprogramowania Biologicznego <i class="bi bi-box-arrow-up-right" style="font-size: 80%; vertical-align: text-top;"></i></a>
+        <br><a href="https://knp.web.amu.edu.pl/">KNP UAM <i class="bi bi-box-arrow-up-right" style="font-size: 80%; vertical-align: text-top;"></i></a>
+    </footer>
+    <div style="height:1px;"></div>
+</body>
+</html>

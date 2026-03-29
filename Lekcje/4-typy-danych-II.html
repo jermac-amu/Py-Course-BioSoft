@@ -1,0 +1,533 @@
+<!doctype html>
+<html>
+<head>
+    <title>Kurs programowania w języku Python</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/Py-Course-BioSoft/static/style.css">
+    <!-- Bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <div style="height:1px;"></div>
+    <nav>
+        <div class="nav-links">
+            <a href="/Py-Course-BioSoft/index.html#spis-tresci"><i class="bi bi-house-door" style="font-size: 1.5rem; vertical-align: text-bottom;"></i> Spis treści</a>
+        </div>
+        <div class="nav-title">
+            <h2>Kurs Pythona</h2>
+        </div>
+        <div class="nav-right"></div>
+    </nav>
+
+
+    <div class="content">
+        <!-- MAIN HEADER -->
+        <h1>Typy danych II</h1>
+
+        Omówiliśmy już kilka <a href="3-typy-danych-I.html">podstawowych typów danych</a>.<br>
+        Aby umożliwić przechowywanie i pracę z bardziej złożonymi danymi, potrzebna będzie ci również znajomość typów kolekcji.<br><br>
+
+        Służą one do przechowywania wielu wartości jednocześnie.
+
+        <h2 id="spis-tresci">Spis treści</h2>
+        <ul>
+            <li>
+                <a href="#lista">Lista</a>
+                <ul>
+                    <li>
+                        <a href="#operacje-sekwencje">Operacje na typach sekwencyjnych</a>
+                    </li>
+                    <li>
+                        <a href="#operacje-lista">Operacje typowe dla listy</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#tuple">Tuple</a>
+                <ul>
+                    <li>
+                        <a href="#operacje-tuple">Operacje typowe dla tuple</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#zbior">Zbiór</a>
+                <ul>
+                    <li>
+                        <a href="#operacje-set">Operacje typowe dla zbiorów</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#słownik">Słownik</a>
+                <ul>
+                    <li>
+                        <a href="#operacje-dict">Operacje typowe dla słowników</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#uwaga-wskazniki">Uwaga, wskaźniki!</a>
+            </li>
+            <li>
+                <a href="#cwiczenia">Ćwiczenia</a>
+            </li>
+        </ul>
+
+
+        <!-- SECTION HEADER -->
+        <h2 id="lista">Lista</h2>
+        <a href="#spis-tresci"><i class="bi bi-arrow-up-circle"></i></a><br><br>
+
+        W Pythonie nazywana <code>list</code>.<br>
+        Sama nazwa tego typu danych wskazuje na jego naturę.<br>
+        Jest to po prostu lista, czy sekwencja, wielu wartości (elementów).<br>
+        Warto zaznaczyć, że lista może przechowywać wartości różnych typów (np. zarówno <code>string</code> jak i <code>int</code>) jednocześnie.<br><br>
+
+        Zmienną tego typu można utworzyć za pomocą polecenia <code>list()</code>,
+            lub umieszczając wartości oddzielone przecinkami wewnątrz <b>nawiasów kwadratowych</b>:
+
+        <code class="bl">example_list = [0, True, 13, "piętnaście", 19.5] # lista z elementami różnych typów
+            empty_list = [] # pusta lista
+            another_empty_list = list() # również pusta lista
+        </code>
+
+
+        <h3 id="operacje-sekwencje"><span class="blue">Operacje na typach sekwencyjnych</span></h3>
+
+        Typy <i>sekwencyjne</i> opisują uporządkowane sekwencje wartości.<br>
+        Należą do nich między innymi <b>lista</b>, <b>tuple</b> oraz <b>string</b> (w końcu string jest sekwencją znaków).<br>
+        Na danych takich typów można przeprowadzać <i><a href="3-typy-danych-I.html#slicing">slicing</a></i>.
+
+        <code class="bl">third = example_list[2]
+            print(third)
+        </code>
+
+        <code>13</code><br><br>
+
+        Można je również <i>konkatenować</i> (łączyć) za pomocą operatora <code>+</code>, oraz <i>powielać</i> za pomocą operatora <code>*</code>.
+
+        <code class="bl">list1 = [1, 2, 3]
+            list2 = [4.5, 5.5, 6.5]
+
+            print(list1 + list2)
+        </code>
+
+        <code>[1, 2, 3, 4.5, 5.5, 6.5]</code>
+
+        <code class="bl">print(list1 * 3)</code>
+
+        <code>[1, 2, 3, 1, 2, 3, 1, 2, 3]</code><br><br>
+
+        <details>
+            <summary>
+                Istnieje wiele metod oraz funkcji, których można używać z takimi typami: <span class="meager"><i>(naciśnij aby rozwinąć)</i></span>
+            </summary>
+            <ul>
+                <li>
+                    <code>len(s)</code> - zwraca liczbę elementów w sekwencji, np. <code>len([0,1,2,3,4])</code> = <code>5</code>
+                </li>
+                <li>
+                    <code>s.count(x)</code> - zwraca liczbę wystąpień podanego elementu w sekwencji, np. <code>[3,8,1,7,8].count(8)</code> = <code>2</code>
+                </li>
+                <li>
+                    <code>s.index(x)</code>
+                    <p class="quote">
+                        Zwraca indeks, (pozycję) pod którym znajduje się podana wartość.<br>
+                        Jeśli taka wartość nie występuje w sekwencji, zwraca błąd.<br>
+                        Jeśli taka wartość występuje kilkukrotnie, zwraca indeks, pod którym występuje po raz pierwszy.<br>
+                        <code>[3,8,1,7,8].index(8)</code> = <code>1</code>
+                    </p>
+                </li>
+                <li>
+                    <code>min(s)</code> oraz <code>max(s)</code>
+                    <p class="quote">
+                        Zwracają, odpowiednio, najmniejszy oraz największy element w sekwencji.<br>
+                        Zwrócą błąd, jeśli w sekwencji znajdują się dane różnych typów (których nie można łatwo porównać).<br>
+                        <code>min([11, 3.4, 5, 2])</code> = <code>2</code>, ale: <code>max(["a", 12, 4])</code> = <code>TypeError</code><br><br>
+                        
+                        Możliwe jest też użycie ich na sekwencjach zawierających stringi,
+                            wtedy otrzymamy pierwszy lub ostatni element w kolejności alfabetycznej.<br>
+                        <code>min(["basia", "dorota", "Ania", "ania"])</code> = <code>"Ania"</code>
+                    </p>
+                </li>
+                <li>
+                    <code>sum(s)</code> - zwraca sumę elementów w sekwencji. Zwróci błąd jeśli sekwencja zwiera nie-numeryczne dane.
+                </li>
+            </ul>
+        </details>
+
+
+        <h3 id="operacje-lista"><span class="blue">Operacje typowe dla listy</span></h3>
+
+        Istnieją także metody oraz funkcje wykorzystywane konkretnie z listami.<br>
+        (niemniej, wszystkich powyższych operacji również można z nimi używać)
+        <ul>
+            <li>
+                <code>l.append(x)</code> - dodaje element <code>x</code> na koniec listy.
+            </li>
+            <li>
+                <code>l.insert(i, x)</code> - wstawia element <code>x</code> pod indeks <code>i</code>.
+            </li>
+            <li>
+                <code>l.append(x)</code> - dodaje element <code>x</code> na koniec listy.
+            </li>
+            <li>
+                <code>l.remove(x)</code> - usuwa z listy element o wartości <code>x</code>. Jeśli występuje on kilka razy, usuwa tylko pierwszy.
+            </li>
+            <li>
+                <code>l.pop()</code> - usuwa, oraz zwraca, ostatni element z listy.
+            </li>
+            <li>
+                <code>l.pop(i)</code> - usuwa oraz zwraca element spod indeksu <code>i</code>.
+            </li>
+            <li>
+                <code>l.clear()</code> - usuwa wszystkie elementy z listy.
+            </li>
+            <li>
+                <code>l.copy()</code> - zwraca (płytką) kopię listy.
+                    (dla ekspertów, głęboką kopię można utworzyć za pomocą funkcji <code>deepcopy(l)</code> z modułu <code>copy</code>)
+            </li>
+            <li>
+                <code>l.sort(reverse=False)</code>
+                <details>
+                    <summary>
+                        Sortuje elementy listy. <span class="meager"><i>(naciśnij aby rozwinąć)</i></span>
+                    </summary>
+                    <p class="quote">
+                        Podobnie jak <code>min()</code> oraz <code>max()</code>, zwróci błąd, jeśli lista zawiera elementy, których nie da się porównywać.<br>
+                        Listy stringów są sortowane alfabetycznie.<br>
+                        Domyślnie sortuje od najmniejszej do największej wartości,
+                            jednak można ustawić parametr <code>reverse</code> na <code>True</code> aby sortować malejąco.
+                        
+                        <code class="bl">> a = [5, 1, 8, 12]
+                            a.sort()
+                            
+                            b = [5, 1, 8, 12]
+                            b.sort(reverse=True)
+                            print(a)
+                            print(b)
+                        </code>
+
+                        <code>[1, 5, 8, 12]</code><br>
+                        <code>[12, 8, 5, 1]</code>
+                    </p>
+                </details>
+            </li>
+            <li>
+                <code>sorted(l, reverse=False)</code> - alternatywa dla powyższej metody, zamiast zmieniać listę, zwraca posortowaną kopię.
+            </li>
+        </ul>
+
+
+        <!-- SECTION HEADER -->
+        <h2 id="tuple">Tuple</h2>
+        <a href="#spis-tresci"><i class="bi bi-arrow-up-circle"></i></a><br><br>
+
+        Tak właściwie, to ten typ danych w języku Polskim nazywa się <i><b>krotką</b></i>, ale osobiście nie lubię tej nazwy...<br>
+        W każdym razie, Python używa nazwy <code>tuple</code>.<br><br>
+
+        Typ tuple jest właściwie zupełnie jak lista - tylko <i>niemutowalna</i>, a za to <i>haszowalna</i>.<br>
+        <i>Niemutowalność</i> (jak w przypadku typu string!) oznacza, że danych tego typu nie da się modyfikować.<br>
+        Natomiast <i>haszowalność</i> w praktyce oznacza tyle, że tuple może być kluczem w <i>słowniku</i>... ale o słownikach powiem później.<br><br>
+
+        Dane tego typu tworzy się poleceniem <code>tuple()</code>, lub poprzez zapisanie wartości oddzielonych przecinkiem.<br>
+        Można, właściwie wypada, umieszczać je wewnątrz nawiasów okrągłych, ale nie trzeba.
+
+        <code class="bl">example_tuple = (0, True, 13, "piętnaście", 19.5) # Tuple z elementami różnych typów
+            another_tuple = 0, True, 13, "piętnaście", 19.5
+            # Nawiasy w gruncie rzeczy nie są niezbędne. Choć bez nich zapis jest mniej przejrzysty.
+
+            empty_tuple = () # pusta krotka
+            another_empty_tuple = tuple() # również pusta krotka
+        </code>
+
+
+        <h3 id="operacje-tuple"><span class="blue">Operacje typowe dla tuple</span></h3>
+
+        Tuple jest <i>sekwencyjnym</i> typem danych, a zatem można na nim stosować <a href="#operacje-sekwencje">charakterystyczne dla nich operacje</a>.<br>
+        Poza tym, można na nim także stosować funkcję <code>sorted(t, reverse=False)</code>, która zwraca posortowaną wersję krotki.
+
+
+        <!-- SECTION HEADER -->
+        <h2 id="zbior">Zbiór</h2>
+        <a href="#spis-tresci"><i class="bi bi-arrow-up-circle"></i></a><br><br>
+
+        Zbiór, w Pythonie (i po angielsku) nazywany <code>set</code>, różni się dość znacząco od <code>list</code> oraz <code>tuple</code>.<br>
+        Zapewne znasz pojęcie zbiorów w matematyce - ten typ danych służy jako ich odwzorowanie.<br><br>
+
+        Jest on <i><b>nieuporządkowany</b></i>, a więc znajdujące się w nim elementy nie są ustawione w żadnej konkretnej kolejności.<br>
+        Jest także <i><b>mutowalny</b></i> oraz <i><b>niehaszowalny</b></i>.<br>
+        <b>Każdy element</b> zbioru musi być <b>unikalny</b>, czyli żadna wartość nie może wystąpić w nim dwukrotnie
+            (przy próbie dodania wielu identycznych wartości, zostanie dodana jedna, a kopie zostaną zignorowane).<br><br>
+
+        Wartość tego typu tworzy się za pomocą polecenia <code>set</code>,
+            lub umieszczając wartości oddzielone przecinkami wewnątrz nawiasów <b>klamrowych</b>.<br>
+        Koniecznie trzeba tu zaznaczyć, że <b>nie można</b> stworzyć <b>pustego</b> zbioru za pomocą pustych nawiasów klamrowych - w ten sposób utworzymy
+            słownik (o którym za chwilę).
+
+        <code class="bl">example_set = {0, True, 13, "piętnaście", 19.5} # zbiór z elementami różnych typów
+
+            empty_set = set() # pusty zbiór
+            not_actually_a_set = {} # To NIE jest pusty zbiór, tylko słownik.
+        </code>
+
+        Jak wspominałem, elementy zbioru nie powtarzają się.
+
+        <code class="bl">example_set = {1, 2, 3, 3, 2, 1} # próba stworzenia zbioru z powtarzającymi się elementami.
+            print(example_set)
+        </code>
+
+        <code class="bl">{1, 2, 3}
+            # Kopie elementów zostały automatycznie usunięte
+        </code>
+
+        Zauważ, że kolejność elementów nie jest zachowana.
+
+        <code class="bl">example_set = {3, 1, 2}
+            print(example_set)
+        </code>
+
+        <code>{1, 2, 3}</code><br><br>
+
+        Przy odczytywaniu zbioru elementy pojawiają się <i>zwykle</i> w kolejności rosnącej/alfabetycznej,
+            ale <b>nie radzę na tym polegać</b>, gdyż Python nie gwarantuje,
+            że w innej wersji języka czy nawet przy następnym uruchomieniu programu coś się nie zmieni.
+
+        
+        <h3 id="operacje-set"><span class="blue">Operacje typowe dla zbiorów</span></h3>
+
+        Ze względu na to, że są nieuporządkowane, na zbiorach <b>nie można</b> używać
+            <i><a href="3-typy-danych-I.html#slicing">slicingu</a></i> ani większości operacji sekwencyjnych.
+            (<code>len(s)</code>, <code>min(s)</code> itp. są niektórymi z wyjątków)<br><br>
+
+        <details>
+            <summary>
+                Zbiory posiadają za to zestaw unikalnych dla siebie metod oraz funkcji: <span class="meager"><i>(naciśnij aby rozwinąć)</i></span>
+            </summary>
+            <ul>
+                <li>
+                    <code>s.add(x)</code> - Dodaje element do listy.
+                </li>
+                <li>
+                    <code>s.update(x)</code> - Dodaje do zbioru elementy z innej kolekcji (zbioru, listy itp.).
+                </li>
+                <li>
+                    <code>s.remove(x)</code> - Usuwa ze zbioru element o podanej wartości. Zwraca błąd jeśli taki element nie występuje w zbiorze.
+                </li>
+                <li>
+                    <code>s.discard(x)</code> - Usuwa ze zbioru element o podanej wartości, ale <b>nie zwraca błędu</b>, jeśli takiego nie ma.
+                </li>
+                <li>
+                    <code>s.pop()</code> - Usuwa i zwraca <b>losowy</b> element ze zbioru. Zwraca błąd jeśli zbiór jest pusty.
+                </li>
+                <li>
+                    <code>s.clear()</code> - Usuwa wszystkie elementy ze zbioru.
+                </li>
+                <li>
+                    <code>s.difference(k)</code> - Zwraca różnicę zbiorów - wszystkie elementy ze zbioru <code>s</code>,
+                        które nie występują w <i>kolekcji</i> <code>k</code>. Równoznaczne z zapisem <code>s - k</code>.
+                </li>
+                <li>
+                    <code>s.intersection(k)</code> - Zwraca przecięcie (część wspólną) zbioru <code>s</code> z kolekcją <code>k</code>.
+                        Równoznaczne z zapisem <code>s & k</code>.
+                </li>
+                <li>
+                    <code>s.union(k)</code> - Zwraca sumę zbioru <code>s</code> i kolekcji <code>k</code>. Równoznaczne z zapisem <code>s | k</code>.
+                </li>
+                <li>
+                    <code>s.copy()</code> - Zwraca kopię zbioru.
+                </li>
+            </ul>
+        </details>
+
+
+        <!-- SECTION HEADER -->
+        <h2 id="slownik">Słownik</h2>
+        <a href="#spis-tresci"><i class="bi bi-arrow-up-circle"></i></a><br><br>
+
+        Słownik, o którym wspomniałem już wcześniej, to po angielsku <i>dictionary</i>, a po Pythonowemu po prostu <code>dict</code>.<br>
+        Dict służy do przechowywania par <i>kluczy</i> i <i>wartości</i> - tak jak w tradycyjnym słowniku wyszukujemy słowa,
+            którym odpowiadają jakieś definicje, tak w Pythonie słownik posiada <i>klucze</i> (<i>key</i>),
+            a każdemu kluczowi odpowiada jakaś <i>wartość</i> (<i>value</i>).<br><br>
+
+        Kluczem w słowniku może być dowolny <i><b>haszowalny</b></i> typ danych, a więc na przykład integer, string,
+            czy nawet tuple. Wartością może być dosłownie cokolwiek, nawet kolejny słownik.<br><br>
+
+        Wartość tego typu tworzy się za pomocą polecenia <code>dict()</code> lub umieszczając pary wartości oddzielone przecinkami wewnątrz
+            nawiasów klamrowych (uwaga na podobieństwo do <a href="#zbior">zbioru</a>!).<br>
+        Najlepiej z resztą jeśli zaprezentuję:<br><br>
+
+        <code>{ key1 : value1, key2 : value2 }</code>
+
+        <code class="bl">example_dict = {"mykey" : 12, 8 : "mysecondvalue", (12, "mythirdkey") : True}
+            # Słownik z 3 parami kluczy-wartości: "mykey" odpowiada liczbie 12, 8 odpowiada stringowi "mysecondvalue" itd.
+
+            empty_dict = dict()
+            another_empty_dict = {}
+        </code>
+
+        Choć może się wydawać dziwny i zbędny, to zapewniam, że ten typ danych jest BARDZO użyteczny i warto poświęcić chwilę,
+            żeby nauczyć się z niego korzystać.<br>
+        Przykłady użycia pojawią się z resztą już w ćwiczeniach po tej lekcji...
+
+
+        <h3 id="operacje-dict"><span class="blue">Operacje typowe dla słowników</span></h3>
+
+        Jeśli miałeś/aś już kiedyś styczność z Pythonem, możesz myśleć, że słowniki są nieuporządkowane (tak jak w przypadku zbiorów).<br>
+        Rzeczywiście, tak było w starszych wersjach Pythona, ale od czasu wersji 3.7 wszystkie słowniki są teraz uporządkowane - można więc
+            używać na nich <a href="3-typy-danych-I.html#slicing">slicingu</a>.<br><br>
+
+        <details>
+            <summary>
+                Metody oraz funkcje dedykowane do użytku ze słownikami: <span class="meager"><i>(naciśnij aby rozwinąć)</i></span>
+            </summary>
+            <ul>
+                <li>
+                    <code>d[k]</code> - Zwraca wartość klucza <code>k</code>.
+                </li>
+                <li>
+                    <code>d[k] = v</code> - Przypisuje wartość <code>v</code> pod kluczem <code>k</code>.
+                        Można w ten sposób zarówno dodawać nowe pary klucz-wartość jak i zmieniać wartość istniejących.
+                </li>
+                <li>
+                    <code>d.keys()</code> - Zwraca listę wszystkich <b>kluczy</b> w słowniku.
+                </li>
+                <li>
+                    <code>d.values()</code> - Zwraca listę wszystkich <b>wartości</b> w słowniku.
+                </li>
+                <li>
+                    <code>d.items()</code> - Zwraca listę tupli (krotek) zawierających klucz jako pierwszy element i jego wartość jako drugi.
+                </li>
+                <li>
+                    <code>d.pop(k, default)</code> - Usuwa ze słownika parę o podanym kluczu i zwraca jego wartość.
+                        Jeśli nie ma takiego klucza, zwraca wartość <code>default</code>, a jeśli nie jest ona podana - błąd.
+                </li>
+                <li>
+                    <code>d.get(k, default=None)</code> - Zwraca wartość odpowiadającą podanemu kluczowi (bez usuwania).
+                        Jeśli nie ma takiego klucza, zwraca wartość <code>default</code>, a jeśli nie jest ona podana - zwraca <code>None</code>.
+                </li>
+                <li>
+                    <code>d.clear()</code> - Usuwa wszystkie pary klucz-wartość ze słownika.
+                </li>
+                <li>
+                    <code>d.copy()</code> - Zwraca (płytką) kopię słownika.
+                </li>
+            </ul>
+        </details>
+
+
+        <!-- SECTION HEADER -->
+        <h2 id="uwaga-wskazniki">Uwaga, wskaźniki!</h2>
+        <a href="#spis-tresci"><i class="bi bi-arrow-up-circle"></i></a><br><br>
+
+        Jak dotychczas tłumaczyłem, że zmienna jest jak pudełko na jakąś informację. To wygodne uproszczenie, jednak jak się okazuje,
+            nasze pudełko w rzeczywistości wcale nie zawiera naszej informacji.<br>
+        Choć na co dzień tego nie zauważamy, w rzeczywistości "pudełko", którym jest zmienna zawiera jedynie wskaźnik, "notatkę",
+            która informuje Pythona gdzie nasza informacja jest ukryta...<br><br>
+
+        To trochę tak, jakbyśmy mieli pudełka z mapami skarbów - kiedy chcemy odczytać wartość zmiennej,
+            Python "bierze" tę mapę (wskaźnik, adres w pamięci) z pudełka (zmiennej), idzie do ogródka (pamięci - RAM, cache lub dyskowej) i wykopuje
+            ukrytą skrzynię z informacją, którą następnie oddaje nam...<br>
+
+        <a href="Assets/Typy_II/Schemat_zmienne.png" target="_blank">
+            <img class="standard" src="Assets/Typy_II/Schemat_zmienne.png" alt="Tu powinien być obraz, ale coś poszło nie tak...">
+        </a><br>
+
+        No dobra, ale co to za różnica, skoro tak czy tak dostajemy naszą informację?<br>
+        Rzeczywiście w większości przypadków nie ma to znaczenia. Ale czasem możemy wpakować się w kłopoty, jeśli o tym zapomnimy.<br>
+        Rzecz w tym, że czasem dwa różne pudełka zawierają mapę do tej samej skrzyni i tej samej informacji.<br><br>
+
+        Jeśli nie będziemy zdawać sobie z tego sprawy, i rozkażemy Pythonowi zmienić zawartość jednej ze zmiennych,
+            on w rzeczywistości zmieni zawartość zakopanej skrzyni - a więc zmieni się wartość obu zmiennych, a my nie będziemy o tym wiedzieć!
+
+        <code class="bl">mylist = [1, 2, 3]
+            another_list = mylist
+            # niebezpieczna sytuacja - teraz obie zmienne zawierają tę samą mapę (wskaźnik) do listy, a skrzynia z listą jest tylko jedna
+
+            print(mylist) # [1, 2, 3]
+            print(another_list) # [1, 2, 3]
+
+            mylist.append(4)
+
+            print(mylist) # [1, 2, 3, 4]
+            print(another_list) # [1, 2, 3, 4]
+            # Choć wydaje nam się, że dodaliśmy liczbę 4 tylko do pierwszej listy,
+            # obie ją teraz zawierają (ponieważ to w rzeczywistości jedna i ta sama lista)
+        </code>
+
+        <a href="Assets/Typy_II/Schemat_zmienne_lista.png" target="_blank">
+            <img class="standard" src="Assets/Typy_II/Schemat_zmienne_lista.png" alt="Tu powinien być obraz, ale coś poszło nie tak...">
+        </a><br>
+
+        Jak temu zapobiec?<br>
+        Do tego właśnie służą metody <code>.copy()</code> - zamiast umieszczać w drugim pudełku kopię mapy,
+            tworzą zupełnie nową skrzynię z nową (ale taką samą) informacją.
+
+        <code class="bl">mylist = [1, 2, 3]
+            another_list = mylist.copy() # Tym razem tworzymy kopię listy
+
+            mylist.append(4)
+
+            print(mylist) # [1, 2, 3, 4]
+            print(another_list) # [1, 2, 3]
+            # Druga lista jest teraz zupełnie niezależna od pierwszej
+        </code>
+
+        Dlaczego wspominam o tym dopiero teraz?<br>
+        Okazuje się, że - na szczęście - ten problem napotkamy tylko kiedy pracujemy z mutowalnymi typami danych, takimi jak lista czy słownik.<br>
+        W przypadku omawianych w poprzedniej lekcji prostszych typów danych, takich jak integer czy string,
+            Python nie modyfikuje istniejących "ukrytych skrzyń".
+
+        <code class="bl">a = 22
+            b = a
+
+            a = 56 # zmiana wartości zmiennej a
+
+            print(a) # 56
+            print(b) # 22
+        </code>
+
+        W powyższej sytuacji, w momencie kiedy zmieniamy wartość zmiennej <code>a</code>,
+            Python nie rusza w ogóle skrzyni zawierającej liczbę 22 - zamiast tego tworzy i zakopuje nową skrzynię, z liczbą 56.<br>
+        Dzieje się tak dlatego, że typ integer - choć nie wspominałem o tym wcześniej (zwykle nie jest to w jego przypadku istotne) - jest niemutowalny.<br>
+        Python po prostu nie może zmienić zawartości takiej skrzyni, w przeciwieństwie do skrzyni zawierającej listę.<br><br>
+
+        Jest jeszcze jedna rzecz, o której muszę wspomnieć - w przypadku zagnieżdżonych struktur danych,
+            na przykład list zawierających w sobie inne listy, metoda <code>.copy()</code> może nie wystarczyć.<br>
+        Kopia, którą nam zwróci co prawda będzie unikalna, jednak lista sama w sobie jest jak zestaw pudełek z mapami - w rezultacie lista znajdująca się
+            <i>wewnątrz</i> naszej kopii, wciąż będzie tą samą listą, która znajdowała się wewnątrz oryginału.<br><br>
+
+        Rozwiązaniem takiego problemu jest utworzenie tak zwanej głębokiej kopii, do czego używa się funkcji <code>deepcopy(x)</code>.
+            Funkcja ta niestety nie jest dostępna domyślnie - trzeba ją zaimportować z modułu <code>copy</code> - ale korzystania z modułów nauczysz się
+            dopiero w dalszej części tego kursu.<br><br>
+
+        <span class="green">To już koniec tej lekcji. Ale zanim przejdziesz do następnej -</span>
+            <a href="5-instrukcje-warunkowe.html">Instrukcje warunkowe</a><span class="green">...</span><br>
+        <span class="green" id="cwiczenia">...wypadałoby przekonać się, co można zrobić z tą wiedzą:</span><br><br>
+
+        <a href="/Py-Course-BioSoft/Ćwiczenia/4-cw1-lista-nukleotydow.html">Ćwiczenie 1 - Lista nukleotydów</a><br>
+        <a href="/Py-Course-BioSoft/Ćwiczenia/4-cw2-zbior-owocow.html">Ćwiczenie 2 - Zbiór owoców</a><br>
+        <a href="/Py-Course-BioSoft/Ćwiczenia/4-cw3-sekw-tandemowa.html">Ćwiczenie 3 - Sekwencja tandemowa</a>
+            <span class="small orange"><i>To zadanie jest szczególnie trudne</i></span><br><br><br>
+
+        
+        <i><a href="#spis-tresci">Do spisu treści</a></i>
+
+        
+        <div class="bottom">
+            Napisane przez:
+            <br><i>Jeremi Maciejewski</i>
+        </div>
+    </div>
+
+    
+    <footer>
+        <a href="https://knp.web.amu.edu.pl/sekcja-oprogramowania-biologicznego/">Sekcja Oprogramowania Biologicznego <i class="bi bi-box-arrow-up-right" style="font-size: 80%; vertical-align: text-top;"></i></a>
+        <br><a href="https://knp.web.amu.edu.pl/">KNP UAM <i class="bi bi-box-arrow-up-right" style="font-size: 80%; vertical-align: text-top;"></i></a>
+    </footer>
+    <div style="height:1px;"></div>
+</body>
+</html>
